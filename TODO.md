@@ -1,0 +1,6 @@
+- jekyll review
+  - comment syntax
+  - array creation
+  - warning and error logs
+- html bullet list problem
+- 
