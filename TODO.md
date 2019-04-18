@@ -10,3 +10,4 @@ title: TODOs
   - html bullet list problem
 - {{ "TODO: bullet lists layout" | log_warning }}
 - {{ "TODO: rss" | log_warning }}
+- {{ "TODO: garbled output when printed in chrome?" | log_warning }}
