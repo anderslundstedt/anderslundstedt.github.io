@@ -88,3 +88,14 @@ h6 {
   font-weight: 400;
   font-style: italic;
 }
+
+/* MEDIA QUERIES */
+@media only print {
+  body, #content {
+    background-color: white;
+    border: none;
+  }
+  nav {
+    display: none;
+  }
+}
