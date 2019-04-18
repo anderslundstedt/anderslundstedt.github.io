@@ -43,6 +43,14 @@ h1, h2, h3, h4, h5, h6, p, ul {
 #content > :last-child {
   margin-bottom: 0.5rem;
 }
+#me {
+  float: right;
+  margin-left: 1ch;
+  border: 3px solid #eee8d5;
+  border-radius: 3px;
+  width: 50%;
+  height: auto;
+}
 
 /* STYLE */
 * {
