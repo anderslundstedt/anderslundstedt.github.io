@@ -3,3 +3,4 @@ defaults:
       path: "research/non_analytic_induction/summary"
     values:
       non_analytic_induction_summary: true
+permalink: /:year-:month-:day-:title:output_ext
