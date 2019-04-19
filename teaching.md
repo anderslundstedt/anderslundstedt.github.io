@@ -8,7 +8,6 @@ particular if you want to discuss ideas related to logic or philosophy of
 mathematics. I might also be a possible supervisor.
 
 ## Upcoming, current and past courses
-
 - Fall 2019:
   - *Logic in Computer Science and Artificial Intelligence*  
     teaching assistant
