@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Necessarily non-analytic induction—summary"
+title: "All versions: Necessarily non-analytic induction—summary"
 ---
 ## {{ page.title }}
 {% assign files = site.static_files | where: "non_analytic_induction_summary", true %}

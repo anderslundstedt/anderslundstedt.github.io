@@ -7,16 +7,16 @@ title: Research
   Collaborating with [Eric Johannesson](https://sites.google.com/view/ericjohannesson).
   - Summary of results
     - version 2019-04-14:
-      [txt](/research/non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190414.txt),
-      [pdf](/research/non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190414.pdf)
-    - [all versions](./research/non_analytic_induction/summary)
+      [pdf](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190414.pdf),
+      [txt](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190414.txt)
+    - [all versions](non_analytic_induction/summary)
   - [JAF 38](https://jaf2019nyc.com) presentation
-    - [abstract (pdf)](/research/non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_20190402.pdf)
+    - [abstract (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_20190402.pdf)
     - {{ "TODO: JAF38 slides" | log_warning }}
   - [Logic Colloqium 2017](https://www.math-stockholm.se/konferenser-och-akti/logic-in-stockholm-2/logic-colloquium-201)
     presentation
-    - [abstract (pdf)](/research/non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_abstract_2017.pdf)
-    - [slides (pdf)](/research/non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_slides_2017.pdf)
+    - [abstract (pdf)](non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_abstract_2017.pdf)
+    - [slides (pdf)](non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_slides_2017.pdf)
 - *Ellipsis usage in mathematics*  
   Collaborating with [Stefan Buijsman](https://www.philosophy.su.se/forskning/v%C3%A5ra-forskare/doktorander/stefan-buijsman-1.203331).
   - {{ "TODO: ellipsis research" | log_warning }}
@@ -32,4 +32,4 @@ title: Research
 - "Euklides princip och oändliga mängders storlek" (2015)  
   [English: "Euclid's principle and the sizes of infinite sets"]  
   BA thesis in philosophy
-  - [pdf](/research/lundstedt_ba_thesis_philosophy_2015.pdf)
+  - [pdf](ba_thesis/lundstedt_ba_thesis_philosophy_2015.pdf)
