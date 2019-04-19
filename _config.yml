@@ -1,0 +1,5 @@
+defaults:
+  - scope:
+      path: "research/non_analytic_induction/summary"
+    values:
+      non_analytic_induction_summary: true

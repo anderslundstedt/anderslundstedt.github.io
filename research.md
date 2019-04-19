@@ -7,17 +7,16 @@ title: Research
   Collaborating with [Eric Johannesson](https://sites.google.com/view/ericjohannesson).
   - Summary of results
     - version 2019-04-14:
-      [txt](/research/non_analytic_induction/lundstedt_non_analytic_induction_summary_20190414.txt),
-      [pdf](/research/non_analytic_induction/lundstedt_non_analytic_induction_summary_20190414.pdf)
-    - [all versions](./research/non_analytic_induction)  
-      {{ "TODO: list old versions" | log_warning }}
+      [txt](/research/non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190414.txt),
+      [pdf](/research/non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190414.pdf)
+    - [all versions](./research/non_analytic_induction/summary)
   - [JAF 38](https://jaf2019nyc.com) presentation
-    - [abstract (pdf)](/research/non_analytic_induction/lundstedt_non_analytic_induction_JAF38_20190402.pdf)
+    - [abstract (pdf)](/research/non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_20190402.pdf)
     - {{ "TODO: JAF38 slides" | log_warning }}
   - [Logic Colloqium 2017](https://www.math-stockholm.se/konferenser-och-akti/logic-in-stockholm-2/logic-colloquium-201)
     presentation
-    - [abstract (pdf)](/research/non_analytic_induction/lundstedt_non_analytic_induction_LC2017_abstract_2017.pdf)
-    - [slides (pdf)](/research/non_analytic_induction/lundstedt_non_analytic_induction_LC2017_slides_2017.pdf)
+    - [abstract (pdf)](/research/non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_abstract_2017.pdf)
+    - [slides (pdf)](/research/non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_slides_2017.pdf)
 - *Ellipsis usage in mathematics*  
   Collaborating with [Stefan Buijsman](https://www.philosophy.su.se/forskning/v%C3%A5ra-forskare/doktorander/stefan-buijsman-1.203331).
   - {{ "TODO: ellipsis research" | log_warning }}
