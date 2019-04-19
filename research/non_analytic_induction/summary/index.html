@@ -2,8 +2,12 @@
 layout: default
 title: "All versions: Necessarily non-analytic induction—summary"
 ---
-## {{ page.title }}
+<h2>{{ page.title }}</h2>
+
 {% assign files = site.static_files | where: "non_analytic_induction_summary", true %}
-{% for file in files %}
-– [{{ file.name }}]({{ file.path }})
-{% endfor %}
+
+<ul>
+  {% for file in files %}
+    <li><a href="{{ file.path }}">{{ file.name }}</a></li>
+  {% endfor %}
+</ul>
