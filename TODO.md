@@ -8,6 +8,6 @@ title: TODOs
     - array creation
     - warning and error logs
   - html bullet list problem
-- {{ "TODO: bullet lists layout" | log_warning }}
+    - https://stackoverflow.com/questions/31677241/how-to-indent-the-text-in-a-custom-unordered-list
 - {{ "TODO: rss" | log_warning }}
 - {{ "TODO: garbled output when printed in chrome?" | log_warning }}

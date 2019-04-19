@@ -34,7 +34,7 @@ td.post_title {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
-h1, h2, h3, h4, h5, h6, p, ul {
+h1, h2, h3, h4, h5, h6, p, ul, li {
   margin-top: 0.33em;
 }
 #content > :first-child {
@@ -95,6 +95,19 @@ h6 {
   font-size: smaller;
   font-weight: 400;
   font-style: italic;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 2.5ch;
+}
+li:before {
+  content: "–";
+  position: absolute;
+  left: -2.5ch;
+}
+li {
+  position: relative;
 }
 
 /* MEDIA QUERIES */
