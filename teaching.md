@@ -3,9 +3,9 @@ layout: default
 title: Teaching
 ---
 ## Theses
-You may contact me to discuss ideas for bachelor's or master's theses, in
-particular ideas related to logic or philosophy of mathematics. I might also be
-a possible supervisor.
+Feel free to contact me to discuss ideas for bachelor's or master's theses, in
+particular if you want to discuss ideas related to logic or philosophy of
+mathematics. I might also be a possible supervisor.
 
 ## Upcoming, current and past courses
 
