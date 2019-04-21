@@ -24,16 +24,16 @@ nav {
 a {
   word-wrap: break-word;
 }
+table a {
+  /* word-wrap: break-word does not work in tables for some reason */
+  word-break: break-word;
+}
 th, td {
   padding-right: 1ch;
   vertical-align: top;
-  word-break: break-word;
 }
 th:last-child, td:last-child {
   padding-right: 0;
-}
-th.unbreakable, td.unbreakable, th.post_date, td.post_date {
-  word-break: normal;
 }
 td.post_date {
   font-variant-numeric: tabular-nums;
