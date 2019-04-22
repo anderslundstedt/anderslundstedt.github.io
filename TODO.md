@@ -12,4 +12,3 @@ title: TODOs
   - word-wrap vs word-break on links in tables
 - {{ "TODO: rss" | log_warning }}
 - {{ "TODO: garbled output when printed in chrome?" | log_warning }}
-- {{ "TODO: make image height a multiple of line-height" | log_warning }}

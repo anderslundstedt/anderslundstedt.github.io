@@ -59,9 +59,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li, table {
 #me {
   float: right;
   margin-top: 0.325em;
-  margin-left: 1ch;
+  margin-left: 2ch;
+  margin-bottom: 0.5ch;
   border: 1px solid;
-  width: 50%;
+  width: 45%;
   height: auto;
 }
 
