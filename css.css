@@ -25,23 +25,29 @@ a {
   word-wrap: break-word;
 }
 table a {
-  /* word-wrap: break-word does not work in tables for some reason */
+  /* word-wrap: break-word does not work in tables since they overflow instead */
   word-break: break-word;
 }
+table {
+  border-spacing: 0;
+}
 th, td {
+  padding: 0;
   padding-right: 1ch;
   vertical-align: top;
+  text-align: left;
 }
 th:last-child, td:last-child {
   padding-right: 0;
 }
 td.post_date {
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
-h1, h2, h3, h4, h5, h6, p, ul, li {
+h1, h2, h3, h4, h5, h6, p, ul, li, table {
   margin-top: 0.33em;
 }
 #content > :first-child {
