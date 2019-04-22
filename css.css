@@ -24,9 +24,10 @@ nav {
 a {
   word-wrap: break-word;
 }
-table a {
+#online_presences a {
   /* word-wrap: break-word does not work in tables since they overflow instead */
-  word-break: break-word;
+  display: inline-block;
+  word-break: break-all;
 }
 table {
   border-spacing: 0;
