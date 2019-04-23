@@ -24,7 +24,7 @@ mathematics. I might also be a possible supervisor.
   - [*Metalogik 1: Fullständighet*](https://www.philosophy.su.se/utbildning/kurser/grundniv%C3%A5/deltidskurser/2.39025)  
     [English: *Metalogic 1: Completeness*]  
     teaching assistant
-  - [*Metalogik 1: Ofullständighet och oavgörbarhet*](https://www.philosophy.su.se/utbildning/kurser/grundniv%C3%A5/deltidskurser/2.39026/metalogik-2-ofullst%C3%A4ndighet-och-oavg%C3%B6rbarhet-7-5-hp-1.218009)  
+  - [*Metalogik 2: Ofullständighet och oavgörbarhet*](https://www.philosophy.su.se/utbildning/kurser/grundniv%C3%A5/deltidskurser/2.39026/metalogik-2-ofullst%C3%A4ndighet-och-oavg%C3%B6rbarhet-7-5-hp-1.218009)  
     [English: *Metalogic 2: Incompleteness and undecidability*]  
     teaching assistant
 - Fall 2016:
