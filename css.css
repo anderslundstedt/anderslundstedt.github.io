@@ -1,4 +1,8 @@
 /* LAYOUT */
+* {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
 body {
   max-width: 55ch;
   padding: 0.5ch;
