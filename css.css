@@ -22,8 +22,10 @@ header, nav, #content, footer {
   line-height: 165%;
 }
 nav {
+  word-spacing: 1.4ch;
+}
+nav a{
   font-size: 1.1em;
-  word-spacing: 1.2ch;
 }
 a {
   word-wrap: break-word;
