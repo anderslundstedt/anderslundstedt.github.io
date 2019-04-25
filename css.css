@@ -1,4 +1,5 @@
-/* LAYOUT */
+/* MAIN LAYOUT */
+
 * {
   text-size-adjust: none;
   -webkit-text-size-adjust: none;
@@ -27,14 +28,22 @@ nav {
 nav a{
   font-size: 1.1em;
 }
-a {
-  word-wrap: break-word;
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
 }
-#online_presences a {
-  /* word-wrap: break-word does not work in tables since they overflow instead */
-  display: inline-block;
-  word-break: break-all;
+h1, h2, h3, h4, h5, h6, p, ul, li, table {
+  margin-top: 0.33em;
 }
+#content > :first-child {
+  margin-top: 0.5rem;
+}
+#content > :last-child {
+  margin-bottom: 0.5rem;
+}
+
+
+/* ADDITIONAL LAYOUT */
+
 table {
   border-spacing: 0;
 }
@@ -51,17 +60,26 @@ td.post_date {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 0;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 2.5ch;
 }
-h1, h2, h3, h4, h5, h6, p, ul, li, table {
-  margin-top: 0.33em;
+li:before {
+  content: "–";
+  position: absolute;
+  left: -2.5ch;
 }
-#content > :first-child {
-  margin-top: 0.5rem;
+li {
+  position: relative;
 }
-#content > :last-child {
-  margin-bottom: 0.5rem;
+a {
+  word-wrap: break-word;
+}
+#online_presences a {
+  /* word-wrap: break-word does not work in tables since they overflow instead */
+  display: inline-block;
+  word-break: break-all;
 }
 #me {
   float: right;
@@ -73,23 +91,12 @@ h1, h2, h3, h4, h5, h6, p, ul, li, table {
   height: auto;
 }
 
-/* STYLE */
+
+/* FONTS */
+
 * {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 400;
-}
-body {
-  background-color: #eee8d5;
-  color: #456;
-}
-#content {
-  background: #fdf6e3;
-}
-a, nav a:visited {
-  color: #28d;
-}
-a:visited {
-  color: #34a;
 }
 h1 {
   font-size: x-large;
@@ -117,21 +124,27 @@ h6 {
   font-weight: 400;
   font-style: italic;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin-left: 2.5ch;
+
+
+/* COLORS */
+
+body {
+  background-color: #eee8d5;
+  color: #456;
 }
-li:before {
-  content: "–";
-  position: absolute;
-  left: -2.5ch;
+#content {
+  background-color: #fdf6e3;
 }
-li {
-  position: relative;
+a, nav a:visited {
+  color: #28d;
+}
+a:visited {
+  color: #34a;
 }
 
+
 /* MEDIA QUERIES */
+
 @media only print {
   body, #content {
     background-color: white;
