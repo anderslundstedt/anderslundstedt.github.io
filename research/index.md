@@ -18,6 +18,8 @@ title: Research
     presentation
     - [abstract (pdf)](non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_abstract_2017.pdf)
     - [slides (pdf)](non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_slides_2017.pdf)
+  - MathOverflow:
+    [When must one strengthen one's induction hypothesis?](https://mathoverflow.net/questions/258761/when-must-one-strengthen-ones-induction-hypothesis)
 - *Ellipsis usage in mathematics*  
   Collaborating with [Stefan Buijsman](https://www.philosophy.su.se/forskning/v%C3%A5ra-forskare/doktorander/stefan-buijsman-1.203331).
   - {{ "TODO: ellipsis research" | log_warning }}
