@@ -1,5 +1,5 @@
 WHEN MUST ONE USE A NON-ANALYTIC INDUCTION HYPOTHESIS?——SUMMARY OF SOME RESULTS
-———————————————————————————————————————————————————————————————————————————————
+────────────────────────────────────────────────────────────────────────────────
 
 version: 2019-03-15
 
@@ -9,9 +9,8 @@ eric.johannesson@philosophy.su.se
 anders.lundstedt@philosophy.su.se
 
 
-
 §1 Introduction
-———————————————
+───────────────
 
 In §2 we give two examples of facts that when proved seem to require "a
 strengthening of the induction hypothesis". The two facts are:
@@ -21,7 +20,7 @@ strengthening of the induction hypothesis". The two facts are:
 
  (F2) For all natural numbers n: 1+1/2²+1/3²+⋅⋅⋅+1/(n+1)² < 2.
 
-                                       **
+                                       ∗∗
 
 Hetzl and Wong (2017) have made precise sense of the notion of "proof by using a
 non-analytic induction hypothesis". (What one might call "proof by a
@@ -29,28 +28,25 @@ strengthening of the induction hypothesis" is a special case of "proof by using
 a non-analytic induction hypothesis".) In §3 we present a slight generalization
 of their formalization.
 
-                                       **
+                                       ∗∗
 
 In §4 we show that, using the definition given in §3, there is a precise sense
 in which (F1) must be proved by "using a non-analytic induction hypothesis".
 
-                                       **
+                                       ∗∗
 
 In §5 we present some preliminary results towards proving (or disproving) that
 (F2), in the sense given by the definition in §3, must be proved by "using a
 non-analytic induction hypothesis".
 
-                                       **
+                                       ∗∗
 
 In §6 we present some ideas for future work.
 
-                                       **
-
-
-
+                                       ∗∗
 
 §2 Two results proved by "a strengthening of the induction hypothesis"
-——————————————————————————————————————————————————————————————————————
+──────────────────────────────────────────────────────────────────────
 
 For our first case, we have that the sum of any initial segment of the odd
 numbers is a perfect square, that is,
@@ -60,7 +56,7 @@ numbers is a perfect square, that is,
 
 or, avoiding ellipsis notation, the following.
 
-                                       **
+                                       ∗∗
 
 DEFINITION. f₁ : ℕ → ℕ is recursively defined by
 
@@ -68,7 +64,7 @@ DEFINITION. f₁ : ℕ → ℕ is recursively defined by
 
       f₁(n+1) := f₁(n)+2n+1.
 
-                                       **
+                                       ∗∗
 
 FACT 1. For all natural numbers n: f₁(n) = k² for some natural number k.
 
@@ -102,7 +98,7 @@ We prove this fact by induction.
                     = n²+2n+1     (by induction hypothesis)
                     = (n+1)²      (by elementary arithmetic).                  □
 
-                                      **
+                                       ∗∗
 
 For our second case, we have
 
@@ -110,7 +106,7 @@ For our second case, we have
 
 or, avoiding ellipsis notation, the following.
 
-                                      **
+                                       ∗∗
 
 DEFINITION. f₂ : ℕ → ℚ is recursively defined by
 
@@ -118,7 +114,7 @@ DEFINITION. f₂ : ℕ → ℚ is recursively defined by
 
       f₂(n+1) := f₂(n)+1/(n+2)².
 
-                                      **
+                                       ∗∗
 
 FACT 2. f₂(n) < 2 for all natural numbers n.
 
@@ -153,20 +149,17 @@ We prove this fact by induction.
                     = 2-1/(n+2)-1/(n+1)(n+2)² (by lots of elementary arithmetic)
                     ≤ 2-1/(n+2)               (by more or less obvious facts). □
 
-                                       **
-
-
-
+                                       ∗∗
 
 §3 Definitions
-——————————————
+──────────────
 
 What follows in this section is a reformulation and slight generalization of
 some of the notions introduced by Hetzl and Wong (2017).
 
-                                       **
+                                       ∗∗
 
-DEFINITION. The *full (first-order) language of arithmetic*, notation ℒ[full],
+DEFINITION. The ∗full (first-order) language of arithmetic∗, notation ℒ[full],
 is the first-order language that for each natural number n has
 
     – a constant symbol n,
@@ -175,45 +168,45 @@ is the first-order language that for each natural number n has
 
     – a relation symbol P of arity n for each relation P ⊆ ℕⁿ.
 
-                                       **
+                                       ∗∗
 
-DEFINITION. The *minimal (first-order) language of arithmetic*, notation ℒ[min],
+DEFINITION. The ∗minimal (first-order) language of arithmetic∗, notation ℒ[min],
 is the ℒ[full]-reduct with signature ⟨0,1,+,⋅,<⟩.
 
-                                       **
+                                       ∗∗
 
-DEFINITION. A first-order language L is a *(first-order) language of arithmetic*
+DEFINITION. A first-order language L is a ∗(first-order) language of arithmetic∗
 if and only if L is an ℒ[min]-expansion and an ℒ[full]-reduct.
 
-                                       **
+                                       ∗∗
 
 Thus a first-order language of arithmetic has as symbols natural numbers and
 operations on natural numbers and relations on natural numbers. This is just a
 convenient "trick" which allows us to easily define the standard model.
 
-                                       **
+                                       ∗∗
 
 DEFINITION. Let L be a language of arithmetic.
 
-    – The *standard L-model* has domain ℕ and each symbol interpreted as itself.
+    – The ∗standard L-model∗ has domain ℕ and each symbol interpreted as itself.
 
-    – The L-theory *true L-arithmetic* is the theory of the standard L-model.
+    – The L-theory ∗true L-arithmetic∗ is the theory of the standard L-model.
 
-    – Any subset of true L-arithmetic is a *theory of L-arithmetic*.
+    – Any subset of true L-arithmetic is a ∗theory of L-arithmetic∗.
 
-                                       **
+                                       ∗∗
 
 DEFINITION. Let L be a language of arithmetic and let φ(x) be an L-formula with
-at most one free variable x. The *induction instance* for φ(x) is the L-sentence
+at most one free variable x. The ∗induction instance∗ for φ(x) is the L-sentence
 
       IND(φ) :≡ φ(0)∧∀x(φ(x)→φ(x+1))→∀x.φ(x).
 
-                                       **
+                                       ∗∗
 
 DEFINITION. Let L be a language of arithmetic and let T be an L-theory. Let φ(x)
-and ψ(x) be L-formulas both with at most one free variable x. Say that *ψ
+and ψ(x) be L-formulas both with at most one free variable x. Say that ∗ψ
 witnesses that T proves ∀x.φ(x) with and only with a non-analytic induction
-hypothesis* if and only if
+hypothesis∗ if and only if
 
   (1) T,IND(φ) ⊬ ∀x.φ(x),
 
@@ -225,7 +218,7 @@ hypothesis* if and only if
 
   (5) T ⊢ ∀x.ψ(x)→∀x.φ(x).
 
-                                       **
+                                       ∗∗
 
 DEFINITION. The ℒ[min]-theory PA⁻ is axiomatized by the following.
 
@@ -279,46 +272,43 @@ DEFINITION. The ℒ[min]-theory PA⁻ is axiomatized by the following.
 
             x < y → ∃z. x+z = y.
 
-                                       **
+                                       ∗∗
 
 FACT. For all ℒ[min]-structures M: M ⊨ PA⁻ if and only if M is the non-negative
 part of a nontrivial discretely ordered commutative ring.
 
-                                       **
+                                       ∗∗
 
 FACT. PA⁻ is a theory of arithmetic.
 
-                                       **
+                                       ∗∗
 
 FACT. PA = PA⁻∪{IND(φ) : φ an ℒ[min]-formula with at most one free variable}
 
-                                       **
-
-
-
+                                       ∗∗
 
 §4 Fact 1 must be proved using a non-analytic induction hypothesis
-——————————————————————————————————————————————————————————————————
+──────────────────────────────────────────────────────────────────
 
 DEFINITION. ℤ[X] := ⟨ℤ[X],0,1,+,⋅,<⟩ is the ordered ring of polynomials with
 coefficients in ℤ.
 
-                                       **
+                                       ∗∗
 
 Elements of ℤ[X] are polynomials
 
       z₀+z₁X+z₂X²+⋅⋅⋅+zₙXⁿ
 
 with z₀,z₁,...,zₙ in ℤ and if n ≠ 0 then zₙ ≠ 0. These can be divided into the
-*constants* polynomials
+∗constants∗ polynomials
 
       z  (z in ℤ)
 
-and the *non-constant* polynomials
+and the ∗non-constant∗ polynomials
 
       z+pX  (p in ℤ[X], z in ℤ).
 
-                                       **
+                                       ∗∗
 
 Addition and multiplication in ℤ[X] are as expected. The order is given by
 
@@ -326,12 +316,12 @@ Addition and multiplication in ℤ[X] are as expected. The order is given by
 
                          p > q  if and only if  p-q > 0.
 
-                                       **
+                                       ∗∗
 
 DEFINITION. ℤ[X]⁺ = ⟨ℤ[X]⁺,0,1,+,⋅,<⟩ is the non-negative part of ℤ[X], that is,
 a polynomial p from ℤ[X] is in ℤ[X]⁺ if and only if p ≥ 0.
 
-                                       **
+                                       ∗∗
 
 Elements of ℤ[X]⁺ are polynomials
 
@@ -346,25 +336,25 @@ and the non-constant polynomials are
 
       z+pX  (p in ℤ[X], z in ℤ, p > 0).
 
-                                       **
+                                       ∗∗
 
 FACT. ℤ[X]⁺ ⊨ PA⁻.
 
 PROOF. ℤ[X]⁺ is the is the non-negative part of the nontrivial discretely
 ordered commutative ring ℤ[X].                                                 □
 
-                                       **
+                                       ∗∗
 
 DEFINITION. The language of arithmetic L₁ is ℒ[min] expanded with the function
 symbol f₁.
 
-                                       **
+                                       ∗∗
 
 DEFINITION. The theory of arithmetic T₁ is defined by
 
       T₁ := PA⁻, f₁(0) = 0, ∀x. f₁(x+1) = f₁(x)+2x+1.
 
-                                       **
+                                       ∗∗
 
 DEFINITION. The L-formulas φ₁(x) and ψ₁(x) are defined by
 
@@ -372,7 +362,7 @@ DEFINITION. The L-formulas φ₁(x) and ψ₁(x) are defined by
 
       ψ₁(x) :≡ f₁(x) = x⋅x.
 
-                                       **
+                                       ∗∗
 
 FACT. ψ₁ witnesses that T₁ proves ∀x.φ₁(x) with and only with a non-analytic
 induction hypothesis.
@@ -428,19 +418,16 @@ PROOF. We need to verify conditions (1)–(5).
 
       By construction we also have M ⊨ T₁ so we are done.                      □
 
-                                       **
-
-
-
+                                       ∗∗
 
 §5 Must Fact 2 be proved using a non-analytic induction hypothesis?
-———————————————————————————————————————————————————————————————————
+───────────────────────────────────────────────────────────────────
 
 Since Fact 2 is a statement involving rationals, a little work is needed to
 phrase it as a natural statement in first-order arithmetic (that is, without
 involving any coding).
 
-                                       **
+                                       ∗∗
 
 DEFINITION. g : ℕ → ℕ and h : ℕ → ℕ are recursively defined by
 
@@ -452,7 +439,7 @@ DEFINITION. g : ℕ → ℕ and h : ℕ → ℕ are recursively defined by
 
       h(n+1) := (n+2)²h(n).
 
-                                       **
+                                       ∗∗
 
 We have
 
@@ -466,19 +453,19 @@ Similarly the inequality f₂(n) ≤ 2-1/(n+1) becomes
 
       (n+1)g(n) ≤ (2n+1)h(n).
 
-                                       **
+                                       ∗∗
 
 All in all, we have the following rephrasings of Fact 2 and its proof attempt
 and proof.
 
-                                       **
+                                       ∗∗
 
 LEMMA. For all natural numbers n, if (n+1)g(n) ≤ (2n+1)h(n) then g(n) < 2h(n).
 
 PROOF. Suppose (n+1)g(n) ≤ (2n+1)h(n). Since (2n+1)h(n) < 2(n+1)h(n) we then
 have (n+1)g(n) < 2(n+1)h(n) so we must have g(n) < 2h(n).                      □
 
-                                       **
+                                       ∗∗
 
 FACT 2'. g(n) < 2h(n) for all n.
 
@@ -546,12 +533,12 @@ We prove this by induction on n.
                        ≤ (n+3)(2n+1)h(n)+2h(n)     (by Lemma and (IH))
                        = (2n²+7n+5)h(n).                                       □
 
-                                       **
+                                       ∗∗
 
 DEFINITION. The language of arithmetic L₂ is ℒ[min] expanded with the function
 symbols g and h.
 
-                                       **
+                                       ∗∗
 
 DEFINITION. The L₂-sentences DEF(g) and DEF(h) and the L₂-formulas φ₂(x) and
 ψ₂(x) are defined by
@@ -564,7 +551,7 @@ DEFINITION. The L₂-sentences DEF(g) and DEF(h) and the L₂-formulas φ₂(x) 
 
        ψ₂(x) :≡ (x+1)⋅g(x)+h(x) ≤ 2⋅(x+1)⋅h(x).
 
-                                       **
+                                       ∗∗
 
 CONJECTURE. There is an L₂-theory of arithmetic T ⊇ PA⁻ such that
 
@@ -575,13 +562,13 @@ CONJECTURE. There is an L₂-theory of arithmetic T ⊇ PA⁻ such that
   (3) ψ₂ witnesses that T proves ∀x.φ₂(x) with and only with a non-analytic
       induction hypothesis.
 
-                                       **
+                                       ∗∗
 
 Adapting the proof of the previous section——cleverly interpreting the new
 function symbols on ℤ[X]⁺——will not work to settle the above conjecture, as the
 following results shows.
 
-                                       **
+                                       ∗∗
 
 LEMMA. Let M be an L₂-expansion of ℤ[X]⁺ such that M ⊨ DEF(h). Let p be a
 non-zero polynomial and let z be an integer. If hᴹ(pX+z) ≠ 0 then hᴹ(pX+z-1) ≠ 0
@@ -594,7 +581,7 @@ PROOF. We have
 since M ⊨ DEF(h) so clearly if hᴹ(pX+z) ≠ 0 then hᴹ(pX+z-1) ≠ 0 and
 degree(hᴹ(pX+z)) > degree(hᴹ(pX+z-1)).                                         □
 
-                                       **
+                                       ∗∗
 
 FACT. Let M be an L₂-expansion of ℤ[X]⁺. If M ⊨ DEF(h) then h(p) = 0 for all
 non-constant polynomials p.
@@ -608,23 +595,20 @@ chain
                        > degree(hᴹ(pX+z-3))
                        ⋮                                                       □
 
-                                       **
+                                       ∗∗
 
 Note that the above results should generalize to any polynomial ring R[X].
 Perhaps one could settle the conjecture by considering some ring R[X,X⁻¹] of
 Laurent polynomials.
 
-                                       **
-
-
-
+                                       ∗∗
 
 §5 Future work
-——————————————
+──────────────
 
 One line of future work would of course be to settle the conjecture in §4.
 
-                                       **
+                                       ∗∗
 
 In §3 we expanded ℤ[X]⁺ to a L₁-model in order to show that T₁ proves ∀x.φ₁(x)
 with and only with a non-analytic induction hypothesis. For each sentence σ of
@@ -635,44 +619,41 @@ is "all numbers are odd or even", that is
 
       σ₁ :≡ ∀x∃y, x = y+y ∨ x = y+y+1.
 
-                                       **
+                                       ∗∗
 
 CONJECTURE. ψ₁ witnesses that T₁∪{σ₁} proves ∀x.φ₁(x) with and only with a
 non-analytic induction hypothesis.
 
-                                       **
+                                       ∗∗
 
 To more systematically settling conjectures like the one above one could attempt
 to establish more general results——instead of hand-crafting countermodels for
 each particular case. We hope that the literature on first-order arithmetic
 already contains lots of applicable results.
 
-                                       **
+                                       ∗∗
 
 Veryfing provability in weak fragments of arithmetic is hard. It is easy to
 rely on something true that is not provable in the fragment one works with. Thus
 it would be worthwhile to verify the provability statements in §3 with a theorem
 prover.
 
-                                       **
+                                       ∗∗
 
 An interesting future line of work would be to consider other settings than
 arithmetic. For example, in computer science, basic facts of operations on
 inductive structures often seem to require a non-analytic induction hypothesis.
 
-                                       **
+                                       ∗∗
 
 One might also approach the problem of non-analytic induction proofs from the
 more proof-theoretical side, for example by studying derivations in natural
 deduction. Dag Prawitz's (2018) recent work may be useful.
 
-                                       **
-
-
-
+                                       ∗∗
 
 REFERENCES
-——————————
+──────────
 
 Hetzl, Stefan and Tin Lok Wong (2017): "Some observations on the logical
 foundations of inductive theorem proving", Logical Methods in Computer Science
