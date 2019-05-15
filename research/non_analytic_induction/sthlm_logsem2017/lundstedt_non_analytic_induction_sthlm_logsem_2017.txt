@@ -1,0 +1,811 @@
+WHEN MUST ONE STRENGTHEN ONE'S INDUCTION HYPOTHESIS?
+────────────────────────────────────────────────────
+
+Anders Lundstedt (joint work with Eric Johannesson)
+
+Extended version of a manuscript for a talk at the Stockholm logic seminar on
+Nov 29, 2017
+
+
+I should start by mentioning very recent research (published this month) which
+is very much related to what I will present:
+
+    Hetzl and Wong (2017): "Some observations on the logical foundations of
+    inductive theorem proving".
+
+Eric and I have independently from Hetzl and Wong arrived at considerations
+similar to the considerations in their paper. Hetzl and Wong look at the problem
+from an automated theorem proving perspective. Our perspective is more
+philosophical, in the sense that we are mainly interested in how well we can
+make precise sense of the imprecise notion of "proof by a strengthening of the
+induction hypothesis" and of the imprecise thoughts (entertained in mathematical
+practice) that this or that fact "must be proved, or is most easily proved, by
+strengthening the induction hypothesis". Thus I do not think that Hetzl and
+Wong's paper made our research superfluous. At least we do have some results not
+present in their paper.
+
+                                       ∗∗
+
+Let us start by looking at two proofs that one could intuitively call "proofs by
+a strengthening of the induction hypothesis".
+
+                                       ∗∗
+
+We have
+
+    1+1/2²+1/3²+⋅⋅⋅+1/(n+1)² < 2 for all natural numbers n,
+
+or, avoiding ellipsis notation, the following.
+
+                                       ∗∗
+
+DEFINITION. f₁ : ℕ → ℚ is recursively defined by
+
+      f₁(0) := 1,
+
+    f₁(n+1) := f₁(n)+1/(n+2)².
+
+                                       ∗∗
+
+FACT 1. f₁(n) < 2 for all natural numbers n.
+
+                                       ∗∗
+
+PROOF ATTEMPT. "Straightforward" induction:
+
+  – Base case: f₁(0) < 2 ≡ 1 < 2 (by definition).
+
+  – Induction step:
+
+        f₁(n+1) = f₁(n)+1/(n+2)²  (by definition)
+                < 2+1/(n+2)²      (by induction hypothesis).
+
+    But 2+1/(n+2)² ≮ 2 for any natural number n so how do we proceed from here?
+
+                                       ∗∗
+
+Let us abort this proof attempt and instead prove Fact 1 by proving a "stronger"
+fact, like follows.
+                                       ∗∗
+
+ACTUAL PROOF. It clearly suffices to prove the "stronger" fact
+
+    f₁(n) ≤ 2-1/(n+1) for all natural numbers n.
+
+(In what sense is this fact stronger than Fact 1? It is at least stronger in the
+sense that for all f : ℕ → ℚ,
+
+      f(n) ≤ 2-1/(n+1) for all n
+
+implies
+
+      f(n) < 2 for all n,
+
+while the converse implication does not hold for all f : ℕ → ℚ.)
+
+We prove this fact by induction.
+
+  – Base case: f₁(0) ≤ 2-1/(0+1) ≡ 1 ≤ 1 (by definitions).
+
+  – Induction step:
+
+        f₁(n+1) = f₁(n)+1/(n+2)²           (by definition)
+                ≤ 2-1/(n+1)+1/(n+2)²       (by induction hypothesis)
+                = 2-1/(n+2)-1/(n+1)(n+2)²  (by lots of elementary arithmetic)
+                ≤ 2-1/(n+2)                (by more or less obvious facts).    □
+
+                                       ∗∗
+
+It seems that the induction hypothesis was "not strong enough" when we tried to
+prove the induction step in the aborted proof attempt. In the actual proof, we
+proved, by induction, a fact which was "stronger", in some intuitive sense, than
+the fact we wanted to prove. In particular, in the actual proof, the induction
+hypothesis turned out to be "strong enough" in the proof of the induction step.
+Thus, the common practice of calling this proof for something like "a proof by a
+strengthening of the induction hypothesis" seems well motivated.
+
+                                       ∗∗
+
+Let us look at another example of "a proof by a strengthening of the induction
+hypothesis". We have that the sum of any initial segment of the odd numbers is a
+perfect square, that is,
+
+    for all natural numbers n: 1+3+5+⋅⋅⋅+(2n-1) = k² for some natural number k,
+
+or, avoiding ellipsis notation, the following.
+
+                                       ∗∗
+
+DEFINITION. f₂ : ℕ → ℕ is recursively defined by
+
+      f₂(0) := 0,
+
+    f₂(n+1) := f₂(n)+2n+1.
+
+                                       ∗∗
+
+FACT 2. For all natural numbers n: f₂(n) = k² for some natural number k.
+
+                                       ∗∗
+
+PROOF ATTEMPT. "Straightforward induction":
+
+  – Base case: f₂(0) = 0 = 0² (by definitions) so f₂(0) = k² for k = 0.
+
+  – Induction step:
+
+        f₂(n+1) = f₂(n)+2n+1  (by definition)
+                = k²+2n+1     (for some k, by induction hypothesis).
+
+    But k²+2n+1 is not a perfect square for all natural numbers k and n so how
+    do we proceed from here?
+
+                                       ∗∗
+
+Let us abort our proof. We instead prove Fact 2 by again proving a fact that is
+in some sense "stronger" than the fact we want to prove.
+
+                                       ∗∗
+
+ACTUAL PROOF. It suffices to prove the following "stronger" fact, of which
+Fact 2 is a logical consequence.
+
+    f₂(n) = n² for all natural numbers n.
+
+(This fact is not a logical consequence of Fact 2, so it is stronger than Fact 2
+in at least that sense.)
+
+We prove this fact by induction.
+
+  – Base case: f₂(0) = 0² ≡ 0 = 0 (by definitions).
+
+  – Induction step:
+
+        f₂(n+1) = f₂(n)+2n+1  (by definition)
+                = n²+2n+1     (by induction hypothesis)
+                = (n+1)²      (by elementary arithmetic).                      □
+
+                                       ∗∗
+
+Again, it seems well motivated to call this proof for something like "a proof by
+a strengthening of the induction hypothesis".
+
+                                       ∗∗
+
+For each of Facts 1 and 2, one might wonder if the aborted proof attempt "could
+have worked", or if it was in fact necessary to "strengthen the induction
+hypothesis", that is:
+
+ (Q1) Must Fact 1 be proved by strengthening the induction hypothesis?
+
+ (Q2) Must Fact 2 be proved by strengthening the induction hypothesis?
+
+These questions are not mathematically precise. To make precise sense of them we
+have come up with a precise, but perhaps not fully satisfactory, answer to the
+question which is the title of this talk:
+
+  (Q) When must one strengthen one's induction hypothesis?
+
+Allowing myself to suppress details, our precise answer to (Q) is a definition
+of a ternary relation, parameterized by first-order languages L "of arithmetic",
+between L-theories T and L-formulas φ(x) and ψ(x):
+
+    "ψ(x) witnesses that T proves ∀x.φ(x) with and only with strengthened
+    induction hypothesis".
+
+(It should be noted that our definition, though independently arrived at, is
+more or less the same definition as the one provided by Hetzl and Wong.)
+Using this relation, we get a precise version of (Q1) for each first-order
+theory in a language of arithmetic "suitable" for expressing Fact 1 and its
+proof. Similarly we get multiple precise versions of (Q2). We have some
+preliminary results toward answers to some precise versions of (Q1). We have
+positive precise answers to some versions of (Q2). We think one of these precise
+positive answers to (Q2) should be interpreted as showing that, under certain
+(quite natural) circumstances, Fact 2 must indeed be proved using a strengthened
+induction hypothesis.
+
+                                       ∗∗
+
+Before going into further details, I want to pause to give some reasons for why
+we think it is interesting to make precise sense of (Q) and for why we think it
+is interesting to answer and make precise sense of (Q1) and (Q2):
+
+  – Making precise sense of (Q) allows us to make precise sense of (Q1), (Q2)
+    and similar imprecise questions. We claim that mathematicians do entertain
+    such imprecise questions, even sometimes answering them. (These answers
+    cannot then be based on proof; more likely such answers are based on
+    intuition and experience.) Some examples in support of this:
+
+      – Textbooks teach the proof technique of "strengthening one's induction
+        hypothesis", presumably assuming something like "some (natural) facts
+        must be proved, or are more easily proved, by strengthening the
+        induction hypothesis".
+
+      – When teaching, mathematicans will recognize an assignment problem as
+        more difficult when it seems to "require, or be more easily proved by, a
+        proof by a strengthening of the induction hypothesis".
+
+      – Work in automated inductive theorem proving routinely talks about "proof
+        by strengthened induction hypothesis" and about the problem of "finding
+        the right induction hypothesis". Furthermore, some of these works
+        routinely claim that this or that fact must be proved "using a
+        strengthened induction hypothesis".
+
+    Thus we think that making precise sense of (Q) is interesting, since it is
+    a case of making precise sense of imprecise things commonly said or thought
+    in mathematical practice, which we think is of general interest.
+
+  – Questions (Q1) and (Q2) are of the imprecise form
+
+      (F) Must one prove a fact from the class of facts Y in order to prove fact
+          X?
+
+    Here are two more, quite natural, examples of imprecise questions of the
+    form (F):
+
+     (F1) Must one prove that terms of first-order logic have equally many left
+          and right parentheses in order to prove that formulas of first-order
+          logic have equally many left and right parentheses? (Intuitively:
+          Yes.)
+
+     (F2) To show Γ ⊬ φ, must one exhibit a countermodel M ⊭ φ? (Intuitively:
+          No. Consider for example Gentzen's proof of PA ⊬ ⊥.)
+
+    Here is a slight variation on (F), which we we also find interesting:
+
+      (G) Must one use method M to prove fact X?
+
+    Some imprecise questions of the form (G) have received considerable
+    attention at MathOverflow (see for example https://mathoverflow.net/q/158823
+    and https://mathoverflow.net/q/46970):
+
+     (G1) Must Cantor's theorem be proved using a diagonal argument? (Our
+          intuition: None.)
+
+     (G2) Must the uncountability of the reals be proved using a diagonal
+          argument? (Our intuition: None.)
+
+     (G3) Must Gödel's incompleteness theorems be proved using a diagonal
+          argument? (Our intuition: None.)
+
+    We do not know of any general method for making precise sense of questions
+    of the form (F) nor do we know of a general method for making precise sense
+    of questions of the form (G). We do not even have a clue how to make precise
+    sense of the specific instances (F2) and (G1)–(G3). (For answering and
+    making precise sense of (F1) we have a simple idea, but I will not discuss
+    that here.) These looks to us like very hard problems. Thus we find it
+    interesting to make precise sense of (Q1) and (Q2) and to precisely answer
+    them, since that would at least show that questions of the form (F) are not
+    always impossible to make precise sense of nor are they always impossible to
+    answer precisely.
+
+  – One could also give some practical motivations. As mentioned, work in
+    automated theorem proving routinely and imprecisely talks about things like
+    "proofs by a strengthening of the induction hypothesis", even sometimes
+    imprecisely claiming that this or that fact "must be proved by strengthening
+    the induction hypothesis". Thus we have the following motivations for why it
+    is interesting to make sense of (Q):
+
+    – Verify that some imprecise talk in research on automated theorem proving
+      makes sense.
+
+    – Check, or at least make it possible (in principle) to check, whether some
+      of the imprecise claims in research on automated theorem proving are true
+      (once made precise).
+
+    – Provide new insight into problems in automated theoring proving.
+
+    We think that if one is primarily guided by these more practical motivations
+    then the work of Hetzl and Wong should be more relevant than our work.
+
+                                       ∗∗
+
+Our goal then is to make precise sense of when one must strengthen one's
+induction hypothesis. The "when" quantifies over situations the working
+mathematician can be in when trying to prove some fact. With regard to our
+question, what is relevant about such a situation is which self-evident or
+previously established facts the mathematician has at its disposal and what fact
+the mathematician is trying to prove. We can make this precise by formulating
+these facts in some logical langauge, so we will have something like this:
+
+    some logical language L,
+
+    T = set of L-sentences corresponding to self-evident or previously
+        established facts,
+
+    φ = L-sentence corresponding to the fact to prove.
+
+Given this, the question now is: Must a proof of φ from T be a "proof by
+strengthened induction hypothesis"? To make this precise we would now want a
+precise notion of "proof". Here the situation is not as simple. For most choices
+of L we will indeed have several deductive systems to choose from. But many of
+these are not accurate models of proof, but rather models of (restricted)
+provability; for example a cut-free first-order deductive system does definitely
+not provide an accurate model of the proofs found in mathematical practice.
+
+                                       ∗∗
+
+Some variants of natural deduction are perhaps the most accurate models of
+proof that we have. But even these system have obvious shortcomings:
+
+  – Natural deduction for some variant of first-order arithmetic cannot model
+    higher-order reasoning. It is true that some (but not all) higher-order
+    reasoning is achievable via encodings, but mathematical proofs do not use
+    such encodings.
+
+  – I believe that a natural deduction system for dependent type theory might be
+    the most accurate model we have of actual proofs. Still, there are proof
+    methods not natively available in such systems, for example proof using
+    diagrams or proofs using ellipsis terms.
+
+                                       ∗∗
+
+Empirically, proofs by "straightforward induction" are of the form
+
+      ⋅            ⋅
+      ⋅            ⋅
+      ⋅            ⋅
+     φ(0)   ∀x,φ(x)→φ(x+1)
+    ───────────────────────
+            ∀x.φ(x)        .
+
+                                       ∗∗
+
+Empirically, proofs by "induction with strengthened induction hypothesis" are of
+the form
+
+      ⋅            ⋅
+      ⋅            ⋅
+      ⋅            ⋅
+     ψ(0)   ∀x,ψ(x)→ψ(x+1)
+    ───────────────────────
+            ∀x.ψ(x)
+               ⋅
+               ⋅
+               ⋅
+            ∀x.φ(x)        .
+
+                                       ∗∗
+
+If we do not impose any additional constraints on the forms of different types
+of proofs by induction, then any proof of ∀x.φ(x), in particular proofs of the
+"proof by strengthened induction" form, can be used to build a proof of ∀x.φ(x)
+of the "proof by straightforward induction" form:
+
+                       ⋅
+                       ⋅
+                       ⋅
+        ⋅           ∀x.φ(x)
+        ⋅          ─────────
+        ⋅              ⋅
+     ∀x.φ(x)           ⋅
+    ─────────          ⋅
+      φ(0)      ∀x,φ(x)→φ(x+1)
+    ───────────────────────────
+              ∀x.φ(x)          .
+
+                                       ∗∗
+
+We have so far not investigated further from the point of view of syntactic
+forms of proofs.
+
+                                       ∗∗
+
+DEFINITION. The ∗full (first-order) language of arithmetic∗, notation ℒ[full],
+is the first-order language that for each natural number n has
+
+  – a constant symbol n,
+
+  – a function symbol f of arity n+1 for each function f : ℕⁿ⁺¹ → ℕ,
+
+  – a relation symbol P of arity n for each relation P ⊆ Nⁿ.
+
+                                       ∗∗
+
+DEFINITION. The ∗minimal (first-order) language of arithmetic∗, notation ℒ[min],
+is the ℒ[full]-reduct with signature ⟨0, 1, +, ⋅, <⟩.
+
+                                       ∗∗
+
+DEFINITION. A first-order language L is a ∗(first-order) language of arithmetic∗
+if and only if L is an ℒ[min]-expansion and an ℒ[full]-reduct.
+
+                                       ∗∗
+
+Thus a first-order language of arithmetic has as symbols natural numbers and
+functions and relations on natural numbers. This is just a convenient "trick"
+which allows us to easily define the standard model.
+
+                                       ∗∗
+
+DEFINITION. Let L be a language of arithmetic.
+
+  – The ∗standard L-model∗ has domain ℕ and each symbol interpreted as itself.
+
+  – The L-theory ∗true L-arithmetic∗ is the theory of the standard L-model.
+
+  – Any subset of true L-arithmetic is a ∗theory of L-arithmetic∗.
+
+                                       ∗∗
+
+DEFINITION. Let L be a language of arithmetic and let φ(x) be an L-formula with
+at most one free variable x. The ∗induction instance∗ for φ(x) is the L-sentence
+
+  IND(φ) :≡ φ(0)∧∀x(φ(x)→φ(x+1))→∀x.φ(x).
+
+                                       ∗∗
+
+Why do we consider such a large class of languages? In some sense it would
+probably suffice to consider only the minimal language of arithmetic, since most
+proofs we want to study can be stated in one way or another in that language.
+But in stating a proof with ℒ[min], we would have to introduce codings and
+representations for any functions and relations not in the language. This would
+not only be inconvenient, but it could also allow for the situation where it is
+no longer very clear if the proof (formalized using ℒ[min]) we study is the most
+accurate characterization of the informal mathematical proof we want to study.
+The working mathematician freely introduces new symbols via definitions, as for
+example we did when stating and proving Facts 1 and 2. Thus we will allow very
+rich langauges, in order to make it more straightforward to model informal
+proofs and to make it easier to convince oneself whether a formalization is an
+accurate characterization of an informal proof.
+
+                                       ∗∗
+
+We are now ready for our characterization of "proofs by strengthened induction
+hypothesis". Again, it should be remarked that the following definition is more
+or less the same as the one given by Hetzl and Wong.
+
+                                       ∗∗
+
+DEFINITION. Let L be a language of arithmetic and let T be an L-theory. Let φ(x)
+and ψ(x) be L-formulas both with at most one free variable x. Say that ∗ψ
+witnesses that T proves ∀x.φ(x) with and only with strengthened induction
+hypothesis∗ if and only if
+
+(1) T,IND(φ) ⊬ ∀x.φ(x),
+
+(2) T ⊢ φ(0),
+
+(3) T ⊢ ψ(0),
+
+(4) T ⊢ ∀x,ψ(x)→ψ(x+1),
+
+(5) T ⊢ ∀x.ψ(x)→∀x.φ(x).
+
+                                       ∗∗
+
+Let me try to motivate this definition.
+
+  – We are interested in proofs in arithmetic. Thus we consider proofs in a
+    language L of arithmetic.
+
+  – A proof is allowed to use previously proved results and self-evident facts.
+    We model these previously proved results and self-evident facts as an
+    L-theory T. When modeling an actual proof we would of course have that T is
+    a theory of arithmetic, but we can just as well make this definition more
+    general by not requiring it.
+
+  – As illustrated before, when proving ∀x.φ(x) by "strengthened induction
+    hypothesis" we first prove a "stronger" statement ∀x.ψ(x), from which we
+    then derive ∀x.φ(x). To model this we let φ(x) and ψ(x) be L-formulas with
+    at most one free variable x.
+
+  – (1) together with (2) capture the failure of being able to prove, using
+    previously established results and self-evident facts, the inductive step
+    corresponding to the "weaker" statement.
+
+  – (2) says that we are being able to prove the base case for the "weaker"
+    statement, so that (1) does correspond to a failure of being able to prove
+    the inductive step for the "weaker" statement.
+
+  – (3) simply says that we can prove the base case for the "stronger"
+    statement.
+
+  – (4) says that for the "stronger" statement, we can indeed prove the
+    induction step.
+
+  – (5) says that we can indeed prove our "weaker" statement by proving our
+    "stronger" statement. In particular, (3)–(5) implies T,IND(ψ) ⊢ ∀x.φ(x).
+    which may be seen as saying that a proof by a strengthened induction
+    hypothesis does work to prove our "weaker" statement.
+
+                                       ∗∗
+
+Some possible shortcomings of the definition:
+
+  – We do not capture higher-order reasoning, since we talk about first-order
+    provability. This could be fixed by moving to a higher-order logical system.
+
+  – We restrict ourselves to formulas in one variable. This could easily be
+    fixed.
+
+  – We cannot account for "nested" induction proofs. This could possibly be
+    fixed by generalizing the definition to allow for sets of induction
+    instances.
+
+To keep things simple, we have so far accepted these shortcomings.
+
+                                       ∗∗
+
+DEFINITION. The ℒ[min]-theory PA⁻ is axiomatized by the following.
+
+  – 0 and 1 are distinct:
+
+        0≠1.
+
+  – Associativity of addition and multiplication:
+
+        (x+y)+z=x+(y+z),
+
+        (x⋅y)⋅z=x⋅(y⋅z).
+
+  – Commutativity of addition and multiplication:
+
+        x+y=y+x,
+
+        x⋅y=y⋅x.
+
+  – Distributivity of addition over multiplication:
+
+        x⋅(y+z)=x⋅y+x⋅z.
+
+  – 0 is an additive identity and a multiplicative zero:
+
+        x⋅0=0.
+
+  – The order is irreflexive:
+
+        x≮x.
+
+  – The order is transitive:
+
+        x<y∧y<z→x<z.
+
+  – The order is total:
+
+        x<y∨x=y∨y<x.
+
+  – The order is discrete:
+
+        x=0∨x=1∨1<x.
+
+  – Addition and multiplication respect the order:
+
+        x<y→x+z<y+z,
+
+        x<y∧0≠z→x⋅z<y⋅z.
+
+  – Smaller elements can be subtracted from larger:
+
+        x<y→∃z.x+z=y.
+
+                                       ∗∗
+
+FACT. For all ℒ[min]-structures M: M ⊨ PA⁻ if and only if M is the non-negative
+part of a nontrivial discretely ordered commutative ring.
+
+                                       ∗∗
+
+FACT. PA⁻ is a theory of arithmetic.
+
+                                       ∗∗
+
+FACT. PA ≡ PA⁻∪{IND(φ) : φ an ℒ[min]-formula with at most one free variable}
+
+                                       ∗∗
+
+DEFINITION. ℤ[X] := ⟨ℤ[X], 0, 1, +, ⋅, <⟩ is the ordered ring of polynomials
+with coefficients in ℤ.
+
+                                       ∗∗
+
+Elements of ℤ[X] are polynomials
+
+    z₀+z₁X+z₂X²+⋅⋅⋅+zₙXⁿ
+
+with z₀,z₁,...,zₙ in ℤ and if n ≠ 0 then zₙ ≠ 0. These can be divided into the
+∗constants∗ polynomials
+
+    z  (z in ℤ)
+
+and the ∗non-constant∗ polynomials
+
+    z+pX  (p in ℤ[X], z in ℤ).
+
+                                       ∗∗
+
+Addition, multiplication and subtraction are as expected. The order is given by
+
+    z₀+z₁X+z₂X²+⋅⋅⋅+zₙXⁿ > 0  if and only if   zₙ > 0,
+
+                       p > q  if and only if  p-q > 0.
+
+                                       ∗∗
+
+DEFINITION. ℤ[X]⁺ = ⟨ℤ[X]⁺, 0, 1, +, ⋅, <⟩ is the non-negative part of ℤ[X]⁺,
+that is, a polynomial p from ℤ[X] is in ℤ[X]⁺ if and only if p ≥ 0.
+
+                                       ∗∗
+
+Elements of ℤ[X]⁺ are polynomials
+
+    z₀+z₁X+z₂X²+⋅⋅⋅+zₙXⁿ
+
+with z₀,z₁,...,zₙ in ℤ and zₙ ≥ 0 and if n ≠ 0 then zₙ ≠ 0. The constant
+polynomials are
+
+    n  (n in ℕ)
+
+and the non-constant polynomials are
+
+    z+pX  (p in ℤ[X], z in ℤ, p > 0).
+
+                                       ∗∗
+
+FACT. ℤ[X]⁺ ⊨ PA⁻.
+
+                                       ∗∗
+
+DEFINITION. The language of arithmetic L₂ is ℒ[min] expanded with the function
+symbol f₂.
+
+                                       ∗∗
+
+DEFINITION. The theory of arithmetic T₂ is defined by
+
+    T₂ := PA⁻∪{f₂(0)=0, ∀x.f₂(x+1)=f₂(x)+2x+1}.
+
+                                       ∗∗
+
+DEFINITION. The L-formulas φ₂(x) and ψ₂(x) are defined by
+
+    φ₂(x) :≡ ∃y.f₂(x)=y⋅y,
+
+    ψ₂(x) :≡ f₂(x)=x⋅x.
+
+                                       ∗∗
+
+FACT. ψ₂ witnesses that T₂ proves ∀x.φ₂(x) with and only with strengthened
+induction hypothesis.
+
+PROOF. We need to verify conditions (1)–(5).
+
+(2) Trivial.
+
+(3) Trivial.
+
+(4) The proof of Fact 2 given earlier can be straightforwardly formalized
+    in PA⁻.
+
+(5) Trivial.
+
+(1) We exhibit an L₂-model satisfying T₂ and IND(φ₂) but not ∀x.φ₂(x). Let M be
+    the L₂-expansion of ℤ[X]⁺ with f₂ interpreted as follows.
+
+                      f₂ᴹ(0) := 0,
+
+                    f₂ᴹ(n+1) := f₂ᴹ(n)+2n+1,
+
+                   f₂ᴹ(pX-1) := pX²
+
+             f₂ᴹ(pX-1+(n+1)) := f₂ᴹ(pX-1+n)+2(pX-1+n)+1,
+
+             f₂ᴹ(pX-1-(n+1)) := f₂ᴹ(pX-1-n)-2(pX-1-n)+1.
+
+    The right hand side of the last equation does indeed define a polynomial of
+    ℤ[X]⁺ since by construction the degree of f₂(pX) is larger than the degree
+    of pX for all p in ℤ[X]⁺. (We get the last equation by solving
+
+        f₂(pX-1-n) = f₂(pX-1-(n+1)+1) = f₂(pX-1-(n+1))+2(pX-1-(n+1))+1
+
+    for f₂(pX-1-(n+1)).)
+
+    We have
+
+        f₂ᴹ(X-1) = X²
+
+    which is a perfect square in M and we have
+
+        f₂ᴹ(X) = f₂ᴹ(X-1)+2(X-1)+1
+               = X²+2X-1
+
+    which is not a perfect square in M. Thus:
+
+        – M ⊭ ∀x.φ₂(x) since M ⊭ φ₂(X).
+
+        – M ⊨ IND(φ₂) since M ⊭ ∀x,φ₂(x)→φ₂(x+1) since M ⊨ φ₂(X) but
+          M ⊭ φ₂(X+1).
+
+    By construction we also have M ⊨ T₂ so we are done.                        □
+
+                                       ∗∗
+
+DEFINITION. g : ℕ → ℕ and h : ℕ → ℕ are recursively defined by
+
+      g(0) := 1,
+
+    g(n+1) := (n+2)²g(n)+h(n),
+
+      h(0) := 1,
+
+    h(n+1) := (n+2)²h(n).
+
+                                       ∗∗
+
+We have
+
+    f₁(n) = g(n)/h(n)
+
+so the inequality f₁(n) < 2 can be rewritten as
+
+    g(n) < 2h(n).
+
+Similarly the inequality f₁(n) ≤ 2-1/(n+1) becomes
+
+    (n+1)⋅g(n) ≤ (2⋅n+1)⋅h(n).
+
+                                       ∗∗
+
+DEFINITION. The language of arithmetic L₁ is ℒ[min] expanded with the function
+symbols g and h.
+
+                                       ∗∗
+
+DEFINITION. The L₁-sentences DEF(g) and DEF(h) and the L₁-formulas φ₁(x) and
+ψ₁(x) are defined by
+
+    DEF(g) :≡ g(0)=1∧∀x.g(x+1)=(x+2)²g(x)+h(x)
+
+    DEF(h) :≡ h(0)=1∧∀x.h(x+1)=(x+2)²h(x),
+
+     φ₁(x) :≡ g(x)<2h(x),
+
+     ψ₁(x) :≡ (x+1)g(x)+h(x)≤2(x+1)h(x).
+
+                                       ∗∗
+
+CONJECTURE. There is an L₁-theory of arithmetic T such that
+
+    (1) T ⊢ DEF(g),
+
+    (2) T ⊢ DEF(h),
+
+    (3) ψ₁ witnesses that T proves ∀x.φ₁(x) with and only with strengthened
+        induction hypothesis.
+
+                                       ∗∗
+
+For future work, we would of course like to settle this conjecture. Adapting the
+previous proof——cleverly interpreting function symbols on ℤ[X]⁺——will not work
+to settle this conjecture, as the unique L₁-expansion M of ℤ[X]⁺ that satisfies
+DEF(g) and DEF(h) has gᴹ(p) = hᴹ(p) = 0 for all non-constant polynomials p. In
+fact, if M ⊨ DEF(h) is the non-negative part of a discretely ordered commutative
+polynomial ring R[X] then hᴹ(p) = 0 for all non-constant polynomials——for if
+hᴹ(p) ≠ 0 for some non-constant polynomial p then the degrees of hᴹ(p), hᴹ(p-1),
+hᴹ(p-2), ... would form an infinitely descending chain of natural numbers. It
+does not help if M instead is the non-negative part of a discretely ordered
+commutative ring R[X,X⁻¹] of Laurent polynomials——in that case if hᴹ(p) ≠ 0 for
+some non-constant polynomial p then there is a natural number n such that the
+degree of hᴹ(p-n) is less than its order.
+
+                                       ∗∗
+
+We expanded ℤ[X]⁺ to an L₂-model M in order to show that T₂ proves ∀x.φ₂(x) by
+necessarily non-analytic induction. For each sentence σ of true L₂-arithmetic
+false in M it is natural to ask whether adding σ to T₂ lets us prove ∀x.φ₂(x)
+with an analytic induction proof. One simple sentence of true L₂-arithmetic that
+is false in M is "all numbers are odd or even", that is
+
+      σ₂ :≡ ∀x∃y: x = y+y ∨ x = y+y+1.
+
+                                       ∗∗
+
+CONJECTURE. ψ₂ witnesses that T₂∪{σ₂} proves ∀x.φ₂(x) with and only with
+strengthened induction hypothesis.
+
+                                       ∗∗
+
+To more systematically settle conjectures like the one above one could attempt
+to establish more general results——instead of hand-crafting countermodels for
+each particular case. We hope that the literature on first-order arithmetic
+already contains lots of applicable results.

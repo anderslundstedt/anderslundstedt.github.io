@@ -13,7 +13,9 @@ title: Research
   - [JAF 38](https://jaf2019nyc.com) presentation
     - [abstract (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_20190402.pdf)
     - {{ "TODO: JAF38 slides" | log_warning }}
-  - {{ "TODO: logsem presentation" | log_warning }}
+  - [Stockholm Logic Seminar](http://logic.math.su.se/seminar) presentation:
+    [pdf](./non_analytic_induction/sthlm_logsem2017/lundstedt_non_analytic_induction_sthlm_logsem_2017.pdf),
+    [txt](./non_analytic_induction/sthlm_logsem2017/lundstedt_non_analytic_induction_sthlm_logsem_2017.txt)
   - [Logic Colloqium 2017](https://www.math-stockholm.se/konferenser-och-akti/logic-in-stockholm-2/logic-colloquium-201)
     presentation
     - [abstract (pdf)](non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_abstract_2017.pdf)
