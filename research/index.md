@@ -6,17 +6,17 @@ title: Research
 - *Necessarily non-analytic induction proofs*  
   Collaborating with [Eric Johannesson](https://sites.google.com/view/ericjohannesson).  
   For technical results see the summary. For more conceptual discussion see the
-  the Stockholm Logic Seminar presentation.
+  Stockholm Logic Seminar presentation.
   - Summary of results
     - version 2019-05-14:
       [pdf](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190514.pdf),
       [txt](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190514.txt)
     - [all versions](non_analytic_induction/summary/)
-  - [JAF 38](https://jaf2019nyc.com) presentation
+  - [JAF 38](https://jaf2019nyc.com) presentation (2019)
     - [abstract (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_20190402.pdf)
     - slides: forthcoming
   - [Stockholm Logic Seminar](http://logic.math.su.se/seminar)
-    presentation Nov 30, 2017  
+    presentation (2017)
     - extended manuscript:
       [pdf](non_analytic_induction/sthlm_logsem2017/lundstedt_non_analytic_induction_sthlm_logsem_2017.pdf),
       [txt](non_analytic_induction/sthlm_logsem2017/lundstedt_non_analytic_induction_sthlm_logsem_2017.txt)
@@ -26,6 +26,7 @@ title: Research
     - [slides (pdf)](non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_slides_2017.pdf)
   - MathOverflow:
     [When must one strengthen one's induction hypothesis?](https://mathoverflow.net/questions/258761/when-must-one-strengthen-ones-induction-hypothesis)
+    (2017)
 - *Ellipsis usage in mathematics*  
   Collaborating with [Stefan Buijsman](https://www.philosophy.su.se/forskning/v%C3%A5ra-forskare/doktorander/stefan-buijsman-1.203331).
   - {{ "TODO: ellipsis research" | log_warning }}
