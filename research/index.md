@@ -4,16 +4,20 @@ title: Research
 ---
 ## Current research
 - *Necessarily non-analytic induction proofs*  
-  Collaborating with [Eric Johannesson](https://sites.google.com/view/ericjohannesson).
+  Collaborating with [Eric Johannesson](https://sites.google.com/view/ericjohannesson).  
+  For technical results see the summary. For more conceptual discussion see the
+  extended manuscript for the Stockholm Logic Seminar presentation.
   - Summary of results
-    - version 2019-04-14:
-      [pdf](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190414.pdf),
-      [txt](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190414.txt)
+    - version 2019-05-14:
+      [pdf](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190514.pdf),
+      [txt](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190514.txt)
     - [all versions](non_analytic_induction/summary/)
   - [JAF 38](https://jaf2019nyc.com) presentation
     - [abstract (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_20190402.pdf)
     - slides: forthcoming
-  - [Stockholm Logic Seminar](http://logic.math.su.se/seminar) presentation:
+  - [Stockholm Logic Seminar](http://logic.math.su.se/seminar)
+    presentation on Nov 30, 2017  
+    Extended manuscript:
     [pdf](./non_analytic_induction/sthlm_logsem2017/lundstedt_non_analytic_induction_sthlm_logsem_2017.pdf),
     [txt](./non_analytic_induction/sthlm_logsem2017/lundstedt_non_analytic_induction_sthlm_logsem_2017.txt)
   - [Logic Colloqium 2017](https://www.math-stockholm.se/konferenser-och-akti/logic-in-stockholm-2/logic-colloquium-201)
