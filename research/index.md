@@ -37,7 +37,9 @@ title: Research
     MSc thesis in mathematics
     - [official repository](https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-174109)
     - [pdf](https://kth.diva-portal.org/smash/get/diva2:858615/FULLTEXT01.pdf)
-  - {{ "TODO: note on first-order logic formulation" | log_warning }}
+  - "A way to handle substitutions in first-order logic" (2016)  
+    A note describing and motivating the formulation of first-order logic used
+    - [pdf](./pcas_and_realizability/lundstedt_pcas_and_realizability_first_order_syntax_2016.pdf)
 - "Euklides princip och oändliga mängders storlek" (2015)  
   [English: "Euclid's principle and the sizes of infinite sets"]  
   BA thesis in philosophy
