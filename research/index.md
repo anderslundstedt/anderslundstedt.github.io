@@ -15,6 +15,9 @@ title: Research
   - [JAF 38](https://jaf2019nyc.com) presentation (2019)
     - [abstract (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_20190402.pdf)
     - slides: forthcoming
+  - [The FLoV Logic Seminar](https://flov.gu.se/english/research/seminars/logic)
+    presentation (2019)
+    - slides: forthcoming
   - [Stockholm Logic Seminar](http://logic.math.su.se/seminar)
     presentation (2017)
     - extended manuscript:
