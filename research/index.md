@@ -32,7 +32,7 @@ title: Research
     (2017)
 - *Ellipsis usage in mathematics*  
   Collaborating with [Stefan Buijsman](https://www.philosophy.su.se/forskning/v%C3%A5ra-forskare/doktorander/stefan-buijsman-1.203331).
-  - {{ "TODO: ellipsis research" | log_warning }}
+  - material forthcoming
 
 ## Past research
 - *A Coq formalization of partial combinatory algebras and realizability*

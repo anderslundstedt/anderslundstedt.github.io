@@ -6,10 +6,18 @@ title: TODOs
   - jekyll review
     - comment syntax
     - array creation
-    - warning and error logs
+    - exceptions, warning and error logs
   - html bullet list problem
     - https://stackoverflow.com/questions/31677241/how-to-indent-the-text-in-a-custom-unordered-list
-  - word-wrap vs word-break on links in tables
-- {{ "TODO: rss" | log_warning }}
+- {{ "TODO: category feeds" | log_warning }}
 - {{ "TODO: garbled output when printed in chrome?" | log_warning }}
 - {{ "TODO: validate published page" | log_warning }}
+- {{ "TODO: last modified" | log_warning }}
+- {{ "TODO: LiCSAI 2019 link" | log_warning }}
+- {{ "TODO: latest blog posts on start page" | log_warning }}
+- {{ "TODO: SEO" | log_warning }}
+- {{ "TODO: validate tags/categories" | log_warning }}
+- {{ "TODO: ellipsis research" | log_warning }}
+- {{ "TODO: gbg slides" | log_warning }}
+- {{ "TODO: nyc slides" | log_warning }}
+- {{ "TODO: add feed link to blog page" | log_warning }}
