@@ -15,7 +15,6 @@ title: TODOs
 - {{ "TODO: last modified" | log_warning }}
 - {{ "TODO: LiCSAI 2019 link" | log_warning }}
 - {{ "TODO: latest blog posts on start page" | log_warning }}
-- {{ "TODO: SEO" | log_warning }}
 - {{ "TODO: validate tags/categories" | log_warning }}
 - {{ "TODO: ellipsis research" | log_warning }}
 - {{ "TODO: gbg slides" | log_warning }}
