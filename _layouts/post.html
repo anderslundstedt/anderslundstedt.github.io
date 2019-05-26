@@ -3,7 +3,7 @@ layout: default
 ---
 <h2>{{ page.title }}</h2>
 <p>
-    {{ page.date | date_to_string }}
+    {{ page.date | date: "%Y-%m-%d" }}
     {% if page.tags %} <br> {% endif %}
     {% for tag in page.tags %}
         [{{tag}}]
