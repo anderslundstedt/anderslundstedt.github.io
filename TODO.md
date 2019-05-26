@@ -12,6 +12,7 @@ title: TODOs
 - {{ "TODO: category feeds" | log_warning }}
 - {{ "TODO: garbled output when printed in chrome?" | log_warning }}
 - {{ "TODO: validate published page" | log_warning }}
+- {{ "TODO: check validation test---duplicate title tag not detected for example" | log_warning }}
 - {{ "TODO: last modified" | log_warning }}
 - {{ "TODO: LiCSAI 2019 link" | log_warning }}
 - {{ "TODO: latest blog posts on start page" | log_warning }}
