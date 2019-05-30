@@ -6,7 +6,9 @@ title: Research
 - *Necessarily non-analytic induction proofs*  
   Collaborating with [Eric Johannesson](https://sites.google.com/view/ericjohannesson).  
   For technical results see the summary. For more conceptual discussion see the
-  Stockholm Logic Seminar presentation.
+  Stockholm Logic Seminar presentation. For slides, the JAF 38 presentation is
+  more or less a condensed version of the FLoV Logic Seminar presentation (also,
+  the linked blog post adresses some problems in the slides).
   - Summary of results
     - version 2019-05-14:
       [pdf](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190514.pdf),
