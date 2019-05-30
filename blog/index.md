@@ -11,6 +11,9 @@ title: Blog
       </td>
       <td class="post_title">
         <a href="{{ post.url }}">{{ post.title }}</a>
+        {% if post.tags %}
+          <br>
+        {% endif %}
         {% for tag in post.tags %}
           [{{ tag }}]
         {% endfor %}
