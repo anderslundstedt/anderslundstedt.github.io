@@ -33,6 +33,7 @@ title: Research
     [When must one strengthen one's induction hypothesis?](https://mathoverflow.net/questions/258761/when-must-one-strengthen-ones-induction-hypothesis)
     (2017)
   - [old material](non_analytic_induction/old_material.html)
+  - [all files](non_analytic_induction/all_files.html)
 - *Ellipsis usage in mathematics*  
   Collaborating with [Stefan Buijsman](https://www.philosophy.su.se/forskning/v%C3%A5ra-forskare/doktorander/stefan-buijsman-1.203331).
   - material forthcoming

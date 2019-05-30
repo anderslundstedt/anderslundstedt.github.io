@@ -1,0 +1,13 @@
+---
+layout: default
+title: "All files: Necessarily non-analytic induction"
+---
+<h2>{{ page.title }}</h2>
+
+{% assign files = site.static_files | where: "non_analytic_induction", true %}
+
+<ul>
+  {% for file in files %}
+    <li><a href="{{ file.path }}">{{ file.name }}</a></li>
+  {% endfor %}
+</ul>

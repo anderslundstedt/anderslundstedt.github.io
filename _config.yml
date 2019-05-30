@@ -3,6 +3,10 @@ defaults:
       path: "research/non_analytic_induction/summary"
     values:
       non_analytic_induction_summary: true
+  - scope:
+      path: "research/non_analytic_induction"
+    values:
+      non_analytic_induction: true
 permalink: /blog/:year-:month-:day-:title:output_ext
 title: "Anders Lundstedt" # for feeds
 plugins:
