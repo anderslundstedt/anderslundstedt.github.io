@@ -13,7 +13,7 @@ title: Research
       [txt](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190514.txt)
     - [all versions](non_analytic_induction/summary/)
   - [JAF 38](https://jaf2019nyc.com) presentation (2019)
-    - [extended abstract (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_abstract_2019.pdf)
+    - [extended abstract (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_extended_abstract_2019.pdf)
     - [slides (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_slides_2019.pdf)
     - [blog post]({% post_url 2019-05-30-Slides-Necessarily-non-analytic-induction-proofs %})
       adressing some feedback
