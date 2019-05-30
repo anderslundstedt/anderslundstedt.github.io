@@ -13,23 +13,24 @@ title: Research
       [txt](non_analytic_induction/summary/lundstedt_non_analytic_induction_summary_20190514.txt)
     - [all versions](non_analytic_induction/summary/)
   - [JAF 38](https://jaf2019nyc.com) presentation (2019)
-    - [abstract (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_abstract_2019.pdf)
-    - slides: forthcoming
+    - [extended abstract (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_abstract_2019.pdf)
+    - [slides (pdf)](non_analytic_induction/JAF38/lundstedt_non_analytic_induction_JAF38_slides_2019.pdf)
+    - [blog post]({% post_url 2019-05-30-Slides-Necessarily-non-analytic-induction-proofs %})
+      adressing some feedback
   - [The FLoV Logic Seminar](https://flov.gu.se/english/research/seminars/logic)
     presentation (2019)
-    - slides: forthcoming
+    - [slides (pdf)](non_analytic_induction/FLoV_logsem_2019/lundstedt_non_analytic_induction_FLoV_logsem_2019.pdf)
+    - [blog post]({% post_url 2019-05-30-Slides-Necessarily-non-analytic-induction-proofs %})
+      adressing some feedback
   - [Stockholm Logic Seminar](http://logic.math.su.se/seminar)
     presentation (2017)
     - extended manuscript:
       [pdf](non_analytic_induction/sthlm_logsem2017/lundstedt_non_analytic_induction_sthlm_logsem_2017.pdf),
       [txt](non_analytic_induction/sthlm_logsem2017/lundstedt_non_analytic_induction_sthlm_logsem_2017.txt)
-  - [Logic Colloqium 2017](https://www.math-stockholm.se/konferenser-och-akti/logic-in-stockholm-2/logic-colloquium-201)
-    presentation
-    - [abstract (pdf)](non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_abstract_2017.pdf)
-    - [slides (pdf)](non_analytic_induction/LC2017/lundstedt_non_analytic_induction_LC2017_slides_2017.pdf)
   - MathOverflow:
     [When must one strengthen one's induction hypothesis?](https://mathoverflow.net/questions/258761/when-must-one-strengthen-ones-induction-hypothesis)
     (2017)
+  - [old material](non_analytic_induction/old_material.html)
 - *Ellipsis usage in mathematics*  
   Collaborating with [Stefan Buijsman](https://www.philosophy.su.se/forskning/v%C3%A5ra-forskare/doktorander/stefan-buijsman-1.203331).
   - material forthcoming
