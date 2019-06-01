@@ -1,10 +1,10 @@
 defaults:
   - scope:
-      path: "research/non_analytic_induction/summary"
+      path: "research/non-analytic-induction/summary"
     values:
       non_analytic_induction_summary: true
   - scope:
-      path: "research/non_analytic_induction"
+      path: "research/non-analytic-induction"
     values:
       non_analytic_induction: true
 permalink: /blog/:year-:month-:day-:title:output_ext

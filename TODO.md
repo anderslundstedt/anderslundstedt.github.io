@@ -21,4 +21,3 @@ title: TODOs
 - {{ "TODO: gbg slides" | log_warning }}
 - {{ "TODO: nyc slides" | log_warning }}
 - {{ "TODO: add feed link to blog page" | log_warning }}
-- {{ "TODO: dashes instead of underscores" | log_warning }}
