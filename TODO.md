@@ -7,6 +7,7 @@ title: TODOs
     - comment syntax
     - array creation
     - exceptions, warning and error logs
+  - my mac os keyboard config
   - html bullet list problem
     - https://stackoverflow.com/questions/31677241/how-to-indent-the-text-in-a-custom-unordered-list
 - {{ "TODO: category feeds" | log_warning }}
@@ -18,6 +19,5 @@ title: TODOs
 - {{ "TODO: latest blog posts on start page" | log_warning }}
 - {{ "TODO: validate tags/categories" | log_warning }}
 - {{ "TODO: ellipsis research" | log_warning }}
-- {{ "TODO: gbg slides" | log_warning }}
-- {{ "TODO: nyc slides" | log_warning }}
 - {{ "TODO: add feed link to blog page" | log_warning }}
+- {{ "TODO: redirect changed links" | log_warning }}
