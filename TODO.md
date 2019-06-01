@@ -19,5 +19,4 @@ title: TODOs
 - {{ "TODO: latest blog posts on start page" | log_warning }}
 - {{ "TODO: validate tags/categories" | log_warning }}
 - {{ "TODO: ellipsis research" | log_warning }}
-- {{ "TODO: add feed link to blog page" | log_warning }}
 - {{ "TODO: redirect changed links" | log_warning }}

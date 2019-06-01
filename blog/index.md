@@ -2,7 +2,10 @@
 layout: default
 title: Blog
 ---
-<h2>Posts</h2>
+<div id="blog_header">
+  <h2>Posts</h2>
+  <span id="feed_link"><a class="nav_link" href="/feed.xml">feed</a></span>
+</div>
 <table>
   {% for post in site.posts %}
     <tr>

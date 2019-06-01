@@ -90,6 +90,17 @@ a {
   width: 45%;
   height: auto;
 }
+#blog_header {
+  display: table;
+  width: 100%;
+}
+#blog_header h2 {
+  display: table-cell;
+}
+#feed_link {
+  display: table-cell;
+  text-align: right;
+}
 
 
 /* FONTS */
@@ -135,7 +146,7 @@ body {
 #content {
   background-color: #fdf6e3;
 }
-a, nav a:visited {
+a, nav a:visited, .nav_link:visited {
   color: #28d;
 }
 a:visited {
