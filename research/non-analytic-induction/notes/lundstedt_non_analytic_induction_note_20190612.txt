@@ -1,0 +1,462 @@
+A NOTE ON NECESSARILY NON-ANALYTIC INDUCTION PROOFS
+───────────────────────────────────────────────────
+
+Anders Lundstedt (anders.lundstedt@philosophy.su.se)
+
+2019–06–12
+
+
+§0 Preliminaries
+────────────────
+
+DEFINITIONS.
+
+    – L₀ is the first-order language with signature ⟨0,1,+⟩.
+
+    – Any first-order language that is an expansion of L₀ is a ∗(first-order)
+      language of arithmetic∗.
+
+    – L₁ is the ∗(first-order) language of ordered rings∗──signature
+      ⟨0,1,+,⋅,<⟩.
+
+    – The ∗standard model of arithmetic∗ is the L₁-model with domain ℕ and the
+      expected interpretation of each symbol.
+
+    – An L₁-model is ∗non-standard∗ if and only if it is not isomorphic to the
+      standard model.
+
+    – Let L be a language of arithmetic and let M be an L-model.
+
+          – The ∗standard natural numbers∗ of M are the denotations of all terms
+            of the form
+
+                  0+1+⋅⋅⋅+1 (0 or more 1's).
+
+          – An element of M is a ∗non-standard natural number∗ if and only if
+            it is not a standard natural number.
+
+    – The L₁-theory ∗true L₁-arithmetic∗, notation T₁, is the theory of the
+      standard model of arithmetic.
+
+    – Let L be a language of arithmetic and let φ(x) be an L-formula in the free
+      variable x. The ∗induction instance∗ for φ(x) is the L-sentence
+
+            IND(φ) :≡ φ(0)∧∀x(φ(x)→φ(x+1))→∀x.φ(x).
+
+    – Let L be a language of arithmetic and let T be an L-theory. Let φ(x) be an
+      L-formula in the free variable x. ∗T proves ∀x.φ(x) by necessarily
+      non-analytic induction∗ if and only if there is an L-formula ψ(x) in the
+      free variable x such that
+
+        (1) T,IND(φ) ⊬ ∀x.φ(x),
+
+        (2) T ⊢ φ(0),
+
+        (3) T ⊢ ψ(0),
+
+        (4) T ⊢ ∀x: ψ(x)→ψ(x+1),
+
+        (5) T ⊢ ∀x.ψ(x)→∀x.φ(x).
+
+      Under conditions (1)–(5) we also say that ∗ψ(x) witnesses that T proves
+      ∀x.φ(x) by necessarily non-analytic induction∗.
+
+                                       ∗∗
+
+§1 Introduction
+───────────────
+
+The purpose of this note is to show that the following two facts must be proved
+by non-analytic induction in a rather strong sense.
+
+                                       ∗∗
+
+FACT 1.1. Define f : ℕ → ℕ recursively by
+
+        f(0) := 0,
+
+      f(n+1) := f(n)+2n+1.
+
+Then f(n) is a perfect square for all natural numbers n.
+
+                                       ∗∗
+
+FACT 1.2. Define f : ℕ → ℕ recursively by
+
+        f(0) := 1,
+
+      f(n+1) := (n+1)f(n+1).
+
+Define g : ℕ×ℕ → ℕ recursively by
+
+        g(0,m) := m,
+
+      g(n+1,m) := g(n,(n+1)m).
+
+Then f(n) = g(n,1) for all natural numbers n.
+
+                                       ∗∗
+
+Even if we assume all of T₁ (that is, true arithmetic in the language
+⟨0,1,+,⋅,<⟩), both these facts——if formulated by suitably expanding L₁ with
+function symbols——must be proved by non-analytic induction. This might seem
+counterintuitive: The involved functions are definable in T₁ and formulated
+using defining formulas, both facts are indeed theorems of T₁. But if we expand
+the language and add the defining equations for each function, then T₁ cannot
+prove that equations using the new function symbols are equivalent to their
+corresponding formulations using their defining formulas, since T₁ does not
+contain any induction axioms containing the new function symbols.
+
+                                       ∗∗
+
+The results can in fact be strengthened a bit further: Take any language L
+extending L₁ and consider the L-theory T of true arithmetic (suitably defined
+for that language). Then as long as we formulate the facts using fresh (that is,
+not in L) function symbols then T proves both facts by necessarily non-analytic
+induction. To avoid having to deal with how to define "true arithmetic" for
+arbitrary languages I will not prove these strengthenings.
+
+                                       ∗∗
+
+§2 The sum of any initial segment of the odd natural numbers is a perfect square
+────────────────────────────────────────────────────────────────────────────────
+
+DEFINITIONS.
+
+    – The first-order language L₂ is L₁ expanded with the unary function symbol
+      'f₂'.
+
+    – φ₂(x) :≡ ∃y: f₂(x) = y².
+
+    – ψ₂(x) :≡ f₂(x) = x².
+
+    – The first-order theory T₂ is the L₂-theory consisting of T₁ together with
+      the ∗the defining equations for f₂∗
+
+            f₂(0) = 0,
+
+            ∀x: f₂(x+1) = f₂(x)+2⋅x+1.
+
+                                       ∗∗
+
+FACT 2.1. ψ₂(x) witnesses that T₂ proves ∀x.φ₂(x) by necessarily non-analytic
+induction.
+
+PROOF. We need to show (1)–(5) of the definition. (2)–(5) are easy. To show (1),
+that is
+
+      T₂,IND(φ₂) ⊭ ∀x.φ₂(x),
+
+we will exhibit an L₂-model M ⊨ T₂ with an element a such that M ⊨ φ₂(a) and
+M ⊭ φ₂(a+1). The following construction is due to Matt Kaufmann.
+
+Let M₀ ⊨ T₁ be a non-standard model and let a be any non-standard natural number
+in M₀. We expand M₀ to an L₂-model M by defining the interpretation
+f₂ᴹ : M₀ → M₀ as follows.
+
+      f₂ᴹ(n) := n²-9a²  if n = 5a+z for some integer z,
+
+      f₂ᴹ(n) := n²      otherwise.
+
+We need to verify that this definition is well-formed; that is, that n²-9a² is
+never negative when n = 5a+z for some integer z. We have
+
+      f₂ᴹ(5a+z) = (5a+z)²-9a²
+                = 25a²+10za+z²-9a²
+                = 16a²+10za+z²
+                = a(16a+10z)+z²
+
+which is positive since
+
+            a > 0  (since a is non-standard),
+
+      16a+10z > 0  (since a is non-standard and z is not),
+
+           z² ≥ 0  (since z² is a square).
+
+With f₂ᴹ so defined it is easy to verify that M ⊨ T₂. We have M ⊨ φ₂(5a) since
+
+      φ₂(5a) = (5a)²-16a²
+             = 25a²-16a²
+             = 9a²
+             = (3a)².
+
+It remains to show M ⊭ φ₂(5a+1). We have
+
+      φ₂(5a+1) = (5a+1)²-16a²
+               = 25a²+10a+1-16a²
+               = 9a²+10a+1.
+
+This is not a perfect square in M since
+
+      ∀x∀y: x > 0 → 9x²+10x+1 ≠ y²
+
+is a theorem of T₁. Thus we have M ⊭ φ₂(5a+1).                                 □
+
+                                       ∗∗
+
+§3 A tail-recursive factorial is equivalent to the standard factorial
+─────────────────────────────────────────────────────────────────────
+
+DEFINITIONS.
+
+    – The first-order language L₃ is L₁ expanded with the unary function symbols
+      'f₃' and 'g₃'.
+
+    – φ₃(x) :≡ f₃(x) = g₃(x,1).
+
+    – ψ₃(x) :≡ ∀y: y⋅f₃(x) = g₃(x,y).
+
+    – The first-order theory T₃ is the L₃-theory consisting of T₁ together with
+      the ∗the defining equations for f₃∗
+
+            f₃(0) = 1,
+
+            ∀x: f₃(x+1) = (x+1)⋅f₃(x)
+
+      and ∗the defining equations for g₃∗
+
+            ∀y: g₃(0,y) = y,
+
+            ∀x∀y: g₃(x+1,y) = g₃(x,(x+1)⋅y).
+
+                                       ∗∗
+
+FACT 3.1. ψ₃(x) witnesses that T₃ proves ∀x.φ₃(x) by necessarily non-analytic
+induction.
+
+                                       ∗∗
+
+To prove Fact 3.1 we will proceed as in the previous section. Conditions (2)–(5)
+of the definition are straightforward. To prove (1) we take any non-standard
+model M₀ ⊨ T₁ and expand it to an L₃-model M, interpreting f₃ and g₃ such that
+we get M ⊨ T₃ and a non-standard a such that M ⊨ φ₃(a) and M ⊭ φ₃(a+1).
+
+                                       ∗∗
+
+ASSUMPTIONS.
+
+    – Let M₀ ⊨ T₁ be a non-standard model.
+
+    – Let a be a non-standard number in M₀.
+
+                                       ∗∗
+
+We will expand M₀ to an L₃-model M ⊨ T₃ such that M ⊨ φ₃(a-1) and M ⊭ φ₃(a). The
+defining equations for f₃ fix its interpretation on the standard natural
+numbers. For non-standard numbers c we will simply put f₃ᴹ(c) := 0 (which does
+satisfy the defining equations). The defining equations for g₃ fix all its
+interpretations g₃ᴹ(n,m) where n is standard. For non-standard n we have quite
+some leeway. To achieve M ⊨ φ₃(a-1) and M ⊭ φ₃(a) we will put
+
+      g₃ᴹ(a-1,1) := 0
+
+and
+
+      g₃ᴹ(a,1) := 1.
+
+These together with the second defining equation for g₃ gives
+
+      0 = g₃ᴹ(a-1,1)
+        = g₃ᴹ(a-2,a-1)
+        = g₃ᴹ(a-3,(a-1)(a-2))
+        = g₃ᴹ(a-4,(a-1)(a-2)(a-3))
+        ⋮
+
+respectively
+
+      1 = g₃ᴹ(a,1)
+        = g₃ᴹ(a-1,a)
+        = g₃ᴹ(a-2,a(a-1)),
+        = g₃ᴹ(a-3,a(a-1)(a-2))
+        ⋮
+
+The defining equations impose no further restrictions so we can put
+g₃ᴹ(c,d) := 0 for all yet to be defined cases.
+
+                                       ∗∗
+
+I will now make the construction in the preceding paragraph more precise.
+
+                                       ∗∗
+
+DEFINITION. f₃ᴹ : M₀ → M₀ is defined by
+
+        f₃ᴹ(0) := 1,
+
+      f₃ᴹ(n+1) := (n+1)f₃ᴹ(n)  if n is standard,
+
+         f₃(c) := 0            if c is non-standard.
+
+                                       ∗∗
+
+DEFINITIONS.
+
+    – The set A ⊆ M₀×M₀ is defined by
+
+            A := {(n,m) : n,m∈M and n is standard},
+
+    – The set B ⊆ M₀×M₀ is defined inductively by
+
+                                (n+1,m) is in B
+            ───────────────   ────────────────────
+             (a,1) is in B     (n,(n+1)m) is in B .
+
+    – The set C ⊆ M₀×M₀ is defined by
+
+            C := M₀×M₀ - (A∪B).
+
+                                       ∗∗
+
+REMARK. The elements of B are thus
+
+    (a,1),
+
+    (a-1,a),
+
+    (a-2,a(a-1)),
+
+    (a-3,a(a-1)(a-2)),
+
+    ⋮
+
+                                       ∗∗
+
+LEMMA 3.2. A, B and C partitions M₀×M₀.
+
+PROOF. Clearly:
+
+    – A∪B∪C = M₀×M₀.
+
+    – C is disjoint from A and from B.
+
+It thus remains to show that A and B are disjoint. If (n,m) is in A then n is
+standard but if (n,m) is in B then n is non-standard. Thus A and B have no
+common elements and thus they are disjoint.                                    □
+
+                                       ∗∗
+
+By Lemma 3.2 the following definition is well-formed.
+
+                                       ∗∗
+
+DEFINITION. g₃ᴹ : M₀×M₀ → M₀ is defined by
+
+        g₃ᴹ(0,c) := c,
+
+      g₃ᴹ(n+1,c) := g₃ᴹ(n,(n+1)c)  if n is standard,
+
+        g₃ᴹ(b,c) := 1              if (b,c) is in B,
+
+        g₃ᴹ(b,c) := 0              if (b,c) is in C.
+
+                                       ∗∗
+
+LEMMA 3.3. Let X be A, B or C. For all n and m in X, (n+1,m) is in X if and only
+if (n,(n+1)m) is.
+
+PROOF. It suffices to show this for X = A and X = B (since then it must hold for
+C, by definition of C).
+
+    – Case X = A:
+
+            (n+1,m) is in A  iff  n+1 is standard
+                             iff  n is standard
+                             iff  (n,(n+1)m) is in A.
+
+    – Case X = B: The 'only if' direction holds by definition. For the 'if'
+      direction, suppose (n,(n+1)m) is in B. Case splitting on the
+      inductive definition of B gives the following.
+
+          – Case (n,(n+1)m) = (a,1): Then n = a and (n+1)m = 1, so
+            (a+1)m = 1 so a+1 = m = 1, so a = 0. Since a is non-standard this is
+            a contradiction so this case is not possible.
+
+          – Case (n,(n+1)m) = (n',(n'+1)m') for some n' and m' in M₀ such
+            that (n'+1,m') is in B: Trivial.                                   □
+
+                                       ∗∗
+
+LEMMA 3.4.
+
+  (1) M ⊨ T₃.
+
+  (2) M ⊨ φ₃(a-1).
+
+  (3) M ⊭ φ₃(a).
+
+PROOF.
+
+  (1) We need to show:
+
+        (a) M ⊨ T₁,
+
+        (b) M ⊨ f₃(0) = 1,
+
+        (c) M ⊨ ∀x: f₃(x+1) = (x+1)⋅f₃(x)
+
+        (d) M ⊨ ∀y: g₃(0,y) = y,
+
+        (e) M ⊨ ∀x∀y: g₃(x+1,y) = g₃(x,(x+1)⋅y).
+
+      (a) holds since M is an M₀-expansion. (b) and (d) holds by definition of
+      f₃ᴹ and g₃ᴹ, respectively. It remains to show (c) and (e).
+
+        (c) Suppose n is in M. We want to show
+
+                  f₃ᴹ(n+1) = (n+1)f₃ᴹ(n).
+
+            If n is standard then this holds by definition. If n is non-standard
+            then, by definition, both sides of the equation are 0 and thus
+            equal.
+
+        (e) Suppose n and m is in M₀. We need to show
+
+              (∗) g₃ᴹ(n+1,m) = g₃ᴹ(n,(n+1)m).
+
+            By Lemma 3.2 it suffices to consider the following cases.
+
+                – Case (n+1,m) is in A: (∗) holds by definition of g₃ᴹ.
+
+                – Case (n+1,m) is in B: Then, by Lemma 3.3, (n,(n+1)m) is in B
+                  as well so, by definition of g₃ᴹ, both sides of (∗) are 1 and
+                  thus (∗) holds.
+
+                – Case (n+1,m) is in C: Similar to the previous case.
+
+  (2) We need to show
+
+        (∗) f₃ᴹ(a-1) = g₃ᴹ(a-1,1).
+
+      We have f₃ᴹ(a-1) = 0 by definition. We have that (a-1,1) is in C, so
+      g₃ᴹ(a-1) = 0 by definition. Thus (∗) holds.
+
+  (3) We need to show
+
+        (∗) f₃ᴹ(a) ≠ g₃ᴹ(a,1).
+
+      Again, we have f₃ᴹ(a) = 0 by definition. We have that (a,1) is in B, so
+      g₃ᴹ(a,1) = 1 by definition. Thus (∗) holds.                              □
+
+                                       ∗∗
+
+PROOF OF FACT 3.1. We need to show (1)–(5) of the definition. (1) follows from
+Lemma 3.4. (2)–(5) are easy to verify.                                         □
+
+                                       ∗∗
+
+§4 Conclusion
+─────────────
+
+These results are improvements of previous results, where in Facts 2.1 and 3.1
+we had PA⁻ instead of T₁ (PA⁻ is "the theory of the non-negative parts of
+nontrivial discretely ordered commutative rings"). Naturally, one might wonder
+if it is always the case that such results can be strengthened by replacing PA⁻
+with T₁. This is not the case for trivial reasons: If we formulate Facts 1.1
+and 1.2 in L₁——that is, using defining formulas and not fresh function
+symbols——then both formulations are of course theorems of T₁. Requiring use of
+an expanded language would of course not suffice either, since we could just add
+some validity in the expanded language to our formulas. But perhaps there is
+some criterion for when it is indeed the case that PA⁻ can be replaced with T₁.
+That would be a really interesting result and is something I think is worth
+looking into.

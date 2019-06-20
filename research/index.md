@@ -14,6 +14,10 @@ title: Research
       [pdf](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20190514.pdf),
       [txt](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20190514.txt)
     - [all versions](non-analytic-induction/summary/)
+  - A self-contained note with some results not yet in the summary
+    - version 2019-06-12:
+      [pdf](non-analytic-induction/notes/lundstedt_non_analytic_induction_note_20190612.pdf),
+      [txt](non-analytic-induction/notes/lundstedt_non_analytic_induction_note_20190612.txt)
   - [JAF 38](https://jaf2019nyc.com) presentation (2019)
     - [extended abstract (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_extended_abstract_2019.pdf)
     - [slides (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_slides_2019.pdf)
