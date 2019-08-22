@@ -3,6 +3,10 @@ layout: default
 title: TODOs
 ---
 - blog posts
+  - github pages and ssl for both apex and www subdomains
+    - DNS settings
+    - temporarily change URL trick:
+      https://github.community/t5/GitHub-Pages/Does-GitHub-Pages-Support-HTTPS-for-www-and-subdomains/td-p/7116/page/3
   - jekyll review
     - comment syntax
     - array creation
