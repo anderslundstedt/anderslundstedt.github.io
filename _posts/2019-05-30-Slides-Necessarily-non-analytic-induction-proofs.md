@@ -15,6 +15,8 @@ At both talks I received useful feedback. Some feedback pointed out some
 problems with our definitions. Instead of modifying the slides I will address
 those problems here.
 
+**UPDATE 2019-08-29:** *In the latest summary that I have uploaded to the
+research page, the following problem has been addressed.*
 At the FLoV talk,
 [Mattias Granberg Olsson](https://flov.gu.se/english/about/linguistics--logic-and-theory-of-science-unit/linguistics--logic-and-theory-of-science-unit?languageId=100001&userId=xgranb)
 pointed out a problem with our definition of first-order languages of arithmetic

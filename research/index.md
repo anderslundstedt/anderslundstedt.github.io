@@ -5,19 +5,16 @@ title: Research
 ## Current research
 - *Necessarily non-analytic induction proofs*  
   Collaborating with [Eric Johannesson](https://sites.google.com/view/ericjohannesson).  
-  For technical results see the summary. For more conceptual discussion see the
-  Stockholm Logic Seminar presentation. For slides, the JAF 38 presentation is
-  more or less a condensed version of the FLoV Logic Seminar presentation (also,
-  the linked blog post adresses some problems in the slides).
+  For the latest technical results see the summary. For a more conceptual
+  discussion see the Stockholm Logic Seminar presentation. For slides, the
+  JAF 38 presentation is more or less a condensed version of the FLoV Logic
+  Seminar presentation (also, the linked blog post adresses some problems in the
+  slides).
   - Summary of results
-    - version 2019-05-14:
-      [pdf](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20190514.pdf),
-      [txt](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20190514.txt)
+    - version 2019-08-29:
+      [pdf](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20190829.pdf),
+      [txt](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20190829.txt)
     - [all versions](non-analytic-induction/summary/)
-  - A self-contained note with some results not yet in the summary
-    - version 2019-06-12:
-      [pdf](non-analytic-induction/notes/lundstedt_non_analytic_induction_note_20190612.pdf),
-      [txt](non-analytic-induction/notes/lundstedt_non_analytic_induction_note_20190612.txt)
   - [JAF 38](https://jaf2019nyc.com) presentation (2019)
     - [extended abstract (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_extended_abstract_2019.pdf)
     - [slides (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_slides_2019.pdf)
