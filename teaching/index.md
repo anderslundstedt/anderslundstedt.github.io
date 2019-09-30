@@ -11,6 +11,7 @@ mathematics. I might also be a possible supervisor.
 - Fall 2019:
   - [*Logic in Computer Science and Artificial Intelligence*](https://www2.philosophy.su.se/goranko/Courses2019/LiCSAI-2019.html)  
     teaching assistant
+    - [Introduction to Prolog (slides)](LiCSAI-2019/lundstedt_introduction_to_prolog_2019.pdf)
   - [*Logik II*](https://www.philosophy.su.se/utbildning/kurser/grundnivå/deltidskurser/logik-ii-7-5-hp-1.431933)  
     [English: *Logic II*]  
     teaching assistant
