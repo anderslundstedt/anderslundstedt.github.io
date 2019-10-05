@@ -76,11 +76,6 @@ li {
 a {
   word-wrap: break-word;
 }
-#online_presences a {
-  /* word-wrap: break-word does not work in tables since they overflow instead */
-  display: inline-block;
-  word-break: break-all;
-}
 #me {
   float: right;
   margin-top: 0.325em;
