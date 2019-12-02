@@ -37,7 +37,12 @@ title: Research
   - [all files](non-analytic-induction/all-files.html)
 - *Ellipsis usage in mathematics*  
   Collaborating with [Stefan Buijsman](https://www.philosophy.su.se/forskning/v%C3%A5ra-forskare/doktorander/stefan-buijsman-1.203331).
-  - material forthcoming
+  - [Stockholm PhD seminar in theoretical philosophy](https://www.philosophy.su.se/om-oss/evenemang/seminarier/doktorandseminarium/phd-seminar-in-theoretical-philosophy-1.246387)
+    presentation (2018)
+    - manuscript:
+      [pdf](ellipsis/STHLM-PhD-seminar-2018/lundstedt_ellipsis_STHLM_PhD_seminar_2018.pdf),
+      [txt](ellipsis/STHLM-PhD-seminar-2018/lundstedt_ellipsis_STHLM_PhD_seminar_2018.txt)
+  - more material forthcoming
 
 ## Past research
 - *A Coq formalization of partial combinatory algebras and realizability*

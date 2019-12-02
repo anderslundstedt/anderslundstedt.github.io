@@ -1,0 +1,1082 @@
+PROOFS AND DEFINITIONS USING ELLIPSIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Notes for a talk at the Stockholm PhD student seminar in theoretical philosophy
+
+June 4, 2018
+
+Anders Lundstedt
+anders.lundstedt@philosophy.su.se
+
+
+§0 Preliminaries
+────────────────
+
+    ─ ℕ = the natural numbers = {0,1,2,...}.
+
+    ─ ℕ⁺ = the positive natural numbers = {1,2,3,...}.
+
+    ─ "x", "y" and "z" will denote natural numbers and "i", "j", "k", "m", "n"
+      will denote positive natural numbers, when the context does not dictate
+      otherwise.
+
+    ─ [n,m] = {i in ℕ : n ≤ i ≤ m} = {n,n+1,...,m-1,m}.
+
+    ─ Binary operators associate to the left, unless otherwise noted.
+
+    ─ If f : A → B and A' ⊆ A then f↓A' is the restriction of f to A', that is,
+      f↓A' : A' → B is given by
+
+            f↓A'(a) := f(a).
+
+    ─ For functions f : A→B' and g : B→C with B' ⊆ B their composition A→C is
+      denoted "gf":
+
+            f        g      gf
+          A → B' ⊆ B → C = A → C.
+
+      Composition associates to the right:
+
+          hgf = h(gf).
+
+                                       ∗∗
+
+§1 Introduction
+───────────────
+
+To get things going, let us look at two definitions of exponentiation and for
+each definition a corresponding proof of the identity xⁿxᵐ = xⁿ⁺ᵐ. The first
+definition uses ellipsis (three dots──"...") while the second definition is by
+recursion. For simplicity we define xⁿ only for x in ℕ and n in ℕ⁺, thus
+avoiding a separate case for x⁰ in the first definition, which would introduce
+unnecessary complications.
+
+                                       ∗∗
+
+Definition 1.1.
+
+      –⁻ :  ℕ×ℕ⁺→ℕ,
+
+      xⁿ := x⋅x⋅⋅⋅x  (n factors).
+
+                                       ∗∗
+
+Definition 1.2.
+
+        –⁻ :  ℕ×ℕ⁺→ℕ,
+
+        x¹ := x,
+
+      xⁿ⁺¹ := xⁿ⋅x.
+
+                                       ∗∗
+
+Examples.
+
+    ─ Computing 2³ using Definition 1.1:
+
+            2³ = 2⋅2⋅2  (by Definition 1.1).
+
+    ─ Computing 2³ using Definition 1.2:
+
+            2³ = 2²⁺¹
+
+               = 2²⋅2    (by Definition 1.2)
+
+               = 2¹⁺¹⋅2
+
+               = 2¹⋅2⋅2  (by Definition 1.2)
+
+               = 2⋅2⋅2   (by Definition 1.2).
+
+                                       ∗∗
+
+Fact 1.3. Definition 1.1 and Definition 1.2 define the same function.
+
+Proof. See Appendix A.                                                         □
+
+                                       ∗∗
+
+Fact 1.4.
+
+      xⁿ⋅xᵐ = xⁿ⁺ᵐ.
+
+Proof 1.4.1. Using Definition 1.1:
+
+      xⁿ⋅xᵐ = (x⋅x⋅⋅⋅x)⋅(x⋅x⋅⋅⋅x)     (by Definition 1.1)
+              n factors m factors
+
+            = x⋅x⋅⋅⋅x  (n+m factors)
+
+            = xⁿ⁺ᵐ                    (by Definition 1.1).                     □
+
+Proof 1.4.2. Using Definition 1.2 and induction on m:
+
+    ─ Base case: We want to prove xⁿx¹ = xⁿ⁺¹. This is easy:
+
+            xⁿ⋅x¹ = xⁿ⋅x  (by Definition 1.2)
+
+                  = xⁿ⁺¹  (by Definition 1.2).
+
+    ─ Induction step: The induction hypothesis is
+
+       (IH) xⁿ⋅xᵐ = xⁿ⁺ᵐ
+
+      and we want to prove
+
+            xⁿ⋅xᵐ⁺¹ = xⁿ⁺ᵐ⁺¹.
+
+      We have
+
+            xⁿ⋅xᵐ⁺¹ = xⁿ⋅xᵐ⋅x  (by Definition 1.2)
+
+                    = xⁿ⁺ᵐ⋅x   (by (IH))
+
+                    = xⁿ⁺ᵐ⁺¹   (by Definition 1.2).                            □
+
+                                       ∗∗
+
+Here are some points regarding Definitions 1.1 and 1.2 and regarding
+Proofs 1.4.1 and 1.4.2:
+
+    ─ Definition 1.1, which is formulated using ellipsis, is easier to
+      understand than Definition 1.2, which is formulated by recursion. One does
+      not have to understand recursion to understand Definition 1.1. Indeed,
+      Definition 1.1 (possibly amended with a separate treatment of the special
+      case x⁰) is the definition found in schoolbooks and school children are
+      expected to understand it before they get to learn about recursion.
+      Definition 1.1 is also the one currently found in the Wikipedia article on
+      exponentiation.
+
+    ─ Proof 1.4.1, which uses the ellipsis-formulated Definition 1.1, is easier
+      to understand than Proof 1.4.2, which is an induction proof using the
+      recursion-formulated Definition 1.2. One does not have to understand the
+      principle of mathematical induction to understand Proof 1.4.1. Indeed,
+      Proof 1.4.1 is the proof found in schoolbooks and school children are
+      expected to understand it before they get to learn about mathematical
+      induction.
+
+    ─ Proof 1.4.2 presupposes that we know what we want to prove. This is not
+      the case for Proof 1.4.1, which would work just as well to answer the
+      question "What is another useful expression for xⁿ⋅xᵐ?"
+
+    ─ The above points often generalize. It is very common that ellipsis
+      formulations are simpler to understand and simpler to reason about and
+      with.
+
+                                       ∗∗
+
+Given the above it seems that we would prefer definitions and proofs formulated
+using ellipsis instead of recursion and induction. This is indeed the case in
+non-formalized mathematics, where ellipsis usage is widespread in both
+definitions and proofs. This is the case even in logic, consider e.g. common
+formulations such as
+
+      φ(x₁,...,xₙ),
+
+      ∀x₁⋅⋅⋅∀xₙ.φ(x₁,...,xₙ).
+
+                                       ∗∗
+
+Compared to non-formalized mathematics, ellipsis is not at all as common in
+formalized mathematics. Definition by recursion and proof by induction are often
+used instead. For example, if one wants to use first-order arithmetic to reason
+about exponentiation, the straightforward way to go is to add a function symbol
+and the defining recursive equations. For another example, the standard library
+of the popular proof assistant Coq defines exponentiation recursively. The
+corresponding proof of xⁿ⋅xᵐ = xⁿ⁺ᵐ is a proof by induction that, at least on
+the surface, does not resemble Proof 1.4.1.
+
+                                       ∗∗
+
+It might not be too surprising that ellipsis is less common in popular
+formalisms, such as first-order logic and type theory, since these have no
+obvious syntactic counterpart to the ellipsis. This is in sharp contrast with
+recursively defined functions──these can be almost literally translated to both
+first-order logic and to type theory (for example, in the first-order logic case
+just add needed function symbols to the language and their defining equations as
+axioms).
+
+                                       ∗∗
+
+My starting point then is the question
+
+      How should ellipsis be formalized?
+
+There are good reasons for trying to answer this question:
+
+    ─ It is not obvious how ellipsis should be formalized.
+
+    ─ A formalization of ellipsis would make it easier to formalize
+      non-formalized mathematics where ellipsis is used.
+
+    ─ A formalization of ellipsis would dispense with the possible worry that
+      there is something fishy with ellipsis usage in mathematics. One might
+      have the worry that some ellipsis usages are non-formalizable, or even
+      that some ellipsis usages do not even produce valid definitions and
+      proofs.
+
+    ─ A formalization of ellipis would allow us to study ellipsis mathematics
+      metamathematically. In particular, we would be able to make precise
+      comparisons of induction proofs and ellipsis proofs. I would expect this
+      to lead to some novel and surprising insights.
+
+                                       ∗∗
+
+I do not aim to give a definitive answer to how ellipsis should be formalized.
+I only want to show that at least some common usages of ellipsis are indeed
+formalizable. I will do this by providing formalization-friendly definitions and
+proofs that do capture the spirit of corresponding definitions and proofs that
+are formulated using ellipsis.
+
+                                       ∗∗
+
+I do not claim any novelty in my formalization-friendly reformulations (nor do I
+claim that there is nothing novel). I will use a "fold" function and in computer
+science, the relation between "fold" functions and ellipsis definitions is
+already well known.
+
+                                       ∗∗
+
+The structure of these notes are as follows.
+
+    ─ In §2 I will look at proofs of the result
+
+            (xⁿ)ᵐ = xⁿᵐ.
+
+    ─ In §3 I will consider the function σ : ℕ⁺→ℕ such that σ(n) is the sum of
+      the first n positive integers. I will look at definitions of σ and proofs
+      of the result that
+
+            2⋅σ(n) = n⋅(n+1).
+
+    ─ In §4 I will provide another definition of σ and another proof of the
+      above result. I think this definition and this proof should be seen as
+      formalization-friendly reformulations of the corresponding ellipsis
+      versions in §3.
+
+    ─ In §5 I dispense with some of the worries we might have that there is
+      something fishy about ellipsis usage in mathematics. I do this by
+      showing how the formalizing-friendly formulations in §4 are close in
+      spirit to the ellipsis formulations in §3.
+
+                                       ∗∗
+
+§2 More exponentiation
+──────────────────────
+
+Fact 2.1.
+
+      (xⁿ)ᵐ = xⁿᵐ.
+
+Proof 2.1.1. Using Definition 1.1:
+
+      (xⁿ)ᵐ = xⁿ⋅xⁿ⋅xⁿ  (m factors)            (by Definition 1.1)
+
+            = (x⋅x⋅⋅⋅x)⋅(x⋅x⋅⋅⋅x)⋅⋅⋅(x⋅x⋅⋅⋅x)  (by Definition 1.1)
+              n factors n factors   n factors
+                        m factors
+
+            = x⋅x⋅⋅⋅x  (n⋅m factors)
+
+            = xⁿᵐ                              (by Definition 1.1).            □
+
+Proof 2.1.2. Using Definition 1.2 and induction on m:
+
+    ─ Base case: We want to prove (xⁿ)¹ = x¹ⁿ. This is immediate from
+      Definition 1.2.
+
+    ─ Induction step: The induction hypothesis is
+
+       (IH) (xⁿ)ᵐ = xⁿᵐ
+
+      and we want to prove
+
+            (xⁿ)ᵐ⁺¹ = xⁿ⁽ᵐ⁺¹⁾.
+
+      We have
+
+            (xⁿ)ᵐ⁺¹ = (xⁿ)ᵐ⋅xⁿ  (by Definition 1.2)
+
+                    = xⁿᵐ⋅xⁿ    (by (IH))
+
+                    = xⁿᵐ⁺ⁿ     (by Fact 1.4)
+
+                    = xⁿ⁽ᵐ⁺¹⁾.                                                 □
+
+                                       ∗∗
+
+§3 The sum of initial segments of the positive integers
+───────────────────────────────────────────────────────
+
+Let σ : ℕ⁺→ℕ be the function such that σ(n) is the sum of the first n positive
+integers. Here are a definition of σ formulated using ellipsis and a definition
+of σ formulated using recursion.
+
+                                       ∗∗
+
+Definition 3.1.
+
+         σ :  ℕ⁺ → ℕ
+
+      σ(n) := 1+2+⋅⋅⋅+n.
+
+                                       ∗∗
+
+Definition 3.2.
+
+           σ :  ℕ⁺ → ℕ
+
+        σ(1) := 1,
+
+      σ(n+1) := σ(n)+n+1.
+
+                                       ∗∗
+
+Examples.
+
+    ─ Computing σ(3) using Definition 3.1:
+
+            σ(3) = 1+2+3  (by Definition 3.1)
+
+                 = 6.
+
+    ─ Computing σ(3) using Definition 3.2:
+
+            σ(3) = σ(2+1)
+
+                 = σ(2)+2+1      (by Definition 3.2)
+
+                 = σ(1+1)+3
+
+                 = σ(1)+1+1+3    (by Definition 3.2)
+
+                 = σ(1)+2+3
+
+                 = 1+2+3         (by Definition 3.2)
+
+                 = 6.
+                                       ∗∗
+
+Fact 3.3. Definitions 3.1 and 3.2 define the same function.
+
+Proof. See Appendix A.                                                         □
+
+                                       ∗∗
+
+Fact 3.4.
+
+      2⋅σ(n) = n⋅(n+1).
+
+Proof 3.4.1. Using Definition 3.1 we have
+
+  (1)   σ(n) =   1   +     2     + ⋅⋅⋅ +   (n-1)   +   n    (by Definition 3.1),
+
+  (2)   σ(n) =   n   +   (n-1)   + ⋅⋅⋅ +     2     +   1    (by reversing the
+                                                             order in (1)),
+
+  (3) 2⋅σ(n) = (1+n) + (2+(n-1)) + ⋅⋅⋅ + ((n-1)+2) + (n+1)  (by summing
+                                                             same-column terms
+                                                             from (1) and (2))
+             = (n+1)+(n+1)+⋅⋅⋅+(n+1)  (n terms)
+
+             = n⋅(n+1).                                                        □
+
+Proof 3.4.2. Using Definition 3.2 and induction on n:
+
+    ─ Base case: We want to prove 2⋅σ(1) = 1⋅(1+1). This is easy:
+
+            2⋅σ(1) = 2⋅1      (by Definition 3.2)
+
+                   = 1⋅(1+1).
+
+    ─ Induction step: The induction hypothesis is
+
+       (IH) 2⋅σ(n) = n⋅(n+1)
+
+      and we want to prove
+
+            2⋅σ(n+1) = (n+1)⋅(n+2).
+
+      We have
+
+            2⋅σ(n+1) = 2⋅(σ(n)+n+1)     (by Definition 3.2)
+
+                     = 2⋅σ(n)+2⋅(n+1)
+
+                     = n⋅(n+1)+2⋅(n+1)  (by (IH))
+
+                     = (n+1)⋅(n+2).                                            □
+
+                                       ∗∗
+
+§4 Using tuples to capture ellipsis reasoning
+─────────────────────────────────────────────
+
+In the following I will limit myself to tuples of natural numbers, but the
+definitions and facts not mentioning tuples and functions specific to the
+natural numbers should immediately generalize.
+
+                                       ∗∗
+
+Using ellipsis notation we can write
+
+      "⟨x₁,...,xₙ⟩"
+
+to denote a tuple of length n whose element at position i is xᵢ. Several
+definitions without ellipsis are possible. I will use the following.
+
+                                       ∗∗
+
+Definition 4.1. The set ℕⁿ of ∗tuples (of natural numbers) of length n∗ is the
+set of functions [1,n]→ℕ.
+
+                                       ∗∗
+
+Notation. "tᵢ" and "t[i]" will mean "t(i)" when t is a tuple.
+
+                                       ∗∗
+
+Definition 4.1 relates to the ellipsis notation of tuples by
+
+      for all tuples t of length n: t = ⟨t₁,...,tₙ⟩.
+
+Since the point of this section is to avoid ellipsis I will not rely on ellipsis
+notation in definitions and proofs. (I will still use ellipsis notation for some
+purely illustrative purposes.)
+
+                                       ∗∗
+
+Examples.
+
+    ─ The identity function on [1,n] is in ℕⁿ. (Ellipsis notation: ⟨1,...,n⟩.)
+
+    ─ The [1,3]→ℕ function i↦4-i is in ℕ³. (Alternative notation: ⟨3,2,1⟩.)
+
+    ─ For any x in ℕ, the constant [1,n] function –↦x is in ℕⁿ. (Ellipsis
+      notation: ⟨x,...,x⟩.)
+
+    ─ For any t in ℕⁿ⁺¹ and any m in [1,n], t↓[1,m] is in ℕₘ. (Ellipsis
+      notation: ⟨t₁,...,tₘ⟩.)
+
+    ─ For any f : ℕ⁺→ℕ, f↓[1,n] is in ℕⁿ. (Ellipsis notation: ⟨f(1),...,f(n)⟩.)
+
+    ─ For any f : [1,n]→[1,n] and any t in ℕⁿ, tf is in ℕⁿ. (Ellipsis notation:
+      ⟨t[f(1)],...,t[f(n)]⟩.)
+
+                                       ∗∗
+
+Definition 4.2.
+
+    ─ ιₙ is the identity function on [1,n].
+
+    ─ The ℕⁿ×ℕ→ℕⁿ⁺¹ function t,x↦t::x is defined by
+
+              t::x(i) := t(i) if i ≤ n,
+
+            t::x(n+1) := x.
+
+                                       ∗∗
+
+Remark. In ellipsis notation, Definition 4.2 would become
+
+    ─ ιₙ = ⟨1,...,n⟩,
+
+    ─ ⟨x₁,...,xₙ⟩::xₙ₊₁ = ⟨x₁,...,xₙ,xₙ₊₁⟩.
+
+                                       ∗∗
+
+Notation.
+
+    ─ "⟨x⟩", for x in ℕ, abbreviates the tuple –↦x in ℕ¹.
+
+    ─ "f(u,v)", for f : ℕ×ℕ→ℕ and u and v in ℕⁿ, abbreviates the tuple
+      i↦f(u(i),v(i)) in ℕⁿ.
+
+                                       ∗∗
+
+Remark. In ellipsis notation, the last notation above becomes
+
+      f(⟨u₁,...,uₙ⟩,⟨v₁,...,vₙ⟩) = ⟨f(u₁,v₁),...,f(uₙ,vₙ)⟩.
+
+                                       ∗∗
+
+Fact 4.3. For all t in ℕⁿ⁺¹:
+
+      t = t↓[1,n]::tₙ₊₁.
+
+Proof. See Appendix A.                                                         □
+
+                                       ∗∗
+
+By Fact 4.3, every tuple u in ℕⁿ⁺¹ is of the form v::x. This allows us to define
+functions on ℕⁿ by recursion on n, as the following definition illustrates.
+
+                                       ∗∗
+
+Definition 4.4. The functions lfₙ : (ℕ×ℕ→ℕ)×ℕⁿ→ℕ are defined by
+
+         lf₁(∗,⟨x⟩) := x,
+
+      lfₙ₊₁(∗,t::x) := lfₙ(∗,t)∗x.
+
+                                       ∗∗
+
+Remark. With ellipsis notation and using parentheses to emphasize the
+associativity, Definition 4.4 becomes
+
+      lfₙ(∗,⟨x₁,x₂,x₃,...,xₙ⟩) := ((x₁∗x₂)∗x₃)∗⋅⋅⋅∗xₙ.
+
+                                       ∗∗
+
+Remark. "lf" is short for "left fold", which is the common computer science name
+for this function. The operation ∗ associates to the left in the ellipsis
+version of the left fold definition. There is also the "right fold", in the
+ellipsis definition of which the operation ∗ associates to the right.
+
+                                       ∗∗
+
+Example. Computing lf₃(+,ι₃):
+
+      lf₃(+,ι₃)  = lf₃(+,ι₃↓[1,2]::ι₃[3])    (by Fact 4.3)
+
+                 = lf₃(+,ι₂::3)
+
+                 = lf₂(+,ι₂)+3               (by Definition 4.4)
+
+                 = lf₂(+,ι₂↓[1,1]::ι₂[2])+3  (by Fact 4.3)
+
+                 = lf₂(+,ι₁::2)+3
+
+                 = lf₁(+,ι₁)+2+3             (by Definition 4.4)
+
+                 = lf₁(+,⟨1⟩)+2+3
+
+                 = 1+2+3                     (by Definition 4.4)
+
+                 = 6.
+
+                                       ∗∗
+
+Fact 4.5. For all associative and commutative ∗:
+
+      lfₙ(∗,u)∗lfₙ(∗,v) = lfₙ(∗,u∗v).
+
+Proof. See Appendix A.                                                         □
+
+                                       ∗∗
+
+Remark. In ellipsis notation, the equation in Fact 4.5 becomes
+
+      (u₁∗⋅⋅⋅∗uₙ)∗(v₁∗⋅⋅⋅∗vₙ) = (u₁∗v₁)∗⋅⋅⋅∗(uₙ∗vₙ).
+
+                                       ∗∗
+
+Fact 4.6. For all commutative and associative ∗ and all bijections
+b : [1,n]→[1,n]:
+
+      lfₙ(∗,tb) = lfₙ(∗,t).
+
+Proof. See Appendix A.                                                         □
+
+                                       ∗∗
+
+Remark. In ellipsis notation, the equation in Fact 4.6 becomes
+
+      t₁∗⋅⋅⋅∗tₙ = tb(1)∗⋅⋅⋅∗tb(n).
+
+                                       ∗∗
+
+Definition 4.7.
+
+      σ(n) := lfₙ(+,ιₙ).
+
+                                       ∗∗
+
+Remark. In ellipsis notation, Definition 4.7 becomes
+
+      σ(n) := ιₙ[1]+⋅⋅⋅+ιₙ[n],
+
+which unfolds to
+
+      σ(n) = 1+⋅⋅⋅+n.
+
+                                       ∗∗
+
+Fact 4.8. Definition 4.7 defines the same function as Definitions 3.1 and 3.2.
+
+Proof. See Appendix A.                                                         □
+
+                                       ∗∗
+
+Fact 4.9.
+
+      lfₙ(+,–↦x) = n⋅x.
+
+Proof. The proof depends on how we define multiplication. One way is to simply
+define multiplication on ℕ⁺×ℕ by the above equation.                           □
+
+                                       ∗∗
+
+Fact 4.10.
+
+      2⋅σ(n) = n⋅(n+1).
+
+Proof. Let revₙ be the "reverse order" bijection [1,n]→[1,n], that is, revₙ is
+defined by
+
+      revₙ(i) := n+1-i,
+
+by which revₙ is a bijection. For all i in [1,n] we have
+
+      (ιₙ+ιₙrevₙ)(i) = ιₙ(i)+ιₙrevₙ(i)
+
+                     = ιₙ(i)+ιₙ(n+1-i)
+
+                     = i+n+1-i
+
+                     = n+1.
+
+Thus
+
+  (∗) ιₙ+ιₙrevₙ = –↦n+1.
+
+Then
+
+      2⋅σ(n) = 2⋅lfₙ(+,ιₙ)              (by Definition 4.7)
+
+             = lfₙ(+,ιₙ)+lfₙ(+,ιₙ)
+
+             = lfₙ(+,ιₙ)+lfₙ(+,ιₙrevₙ)  (by Fact 4.6)
+
+             = lfₙ(+,ιₙ+ιₙrevₙ)         (by Fact 4.5)
+
+             = lfₙ(+,–↦n+1)             (by (∗))
+
+             = n⋅(n+1)                  (by Fact 4.9).                         □
+
+                                       ∗∗
+
+§5 Conclusion
+─────────────
+
+Let us compare the proof of Fact 4.10 with Proof 3.4.1. First, let us just
+simply slightly reorganize Proof 3.4.1 (the reader may want to verify that the
+structure of the proof remains the same):
+
+    2⋅σ(n) = σ(n) + σ(n)
+
+           =   1   +     2     + ⋅⋅⋅ +   (n-1)   +   n
+             + 1   +     2     + ⋅⋅⋅ +   (n-1)   +   n    (by Definition 3.1)
+
+           =   1   +     2     + ⋅⋅⋅ +   (n-1)   +   n    (by reversing the
+             + n   +   (n-1)   + ⋅⋅⋅ +     2     +   1     lower sum)
+
+           = (1+n) + (2+(n-1)) + ⋅⋅⋅ + ((n-1)+2) + (n+1)  (by summing terms in
+                                                           same column)
+           = (n+1)+(n+1)+⋅⋅⋅+(n+1)  (n terms)
+
+           = n⋅(n+1).
+
+                                       ∗∗
+
+Now let us look at how closely Proof 3.4.1 is mirrored in the proof of
+Fact 4.10:
+
+    ─ The equation
+
+               1   +     2     + ⋅⋅⋅ +   (n-1)   +   n
+             + 1   +     2     + ⋅⋅⋅ +   (n-1)   +   n
+
+           =   1   +     2     + ⋅⋅⋅ +   (n-1)   +   n    (by reversing the
+             + n   +   (n-1)   + ⋅⋅⋅ +     2     +   1     lower sum)
+
+      corresponds to
+
+            lfₙ(+,ιₙ)+lfₙ(+,ιₙ) = lfₙ(+,ιₙ)+lfₙ(+,ιₙrevₙ)  (by Fact 4.6).
+
+    ─ The equation
+
+               1   +     2     + ⋅⋅⋅ +   (n-1)   +   n
+             + n   +   (n-1)   + ⋅⋅⋅ +     2     +   1
+
+           = (1+n) + (2+(n-1)) + ⋅⋅⋅ + ((n-1)+2) + (n+1)  (by summing
+                                                           same-column terms)
+
+      corresponds to
+
+            lfₙ(+,ιₙ)+lfₙ(+,ιₙrevₙ) = lfₙ(+,ιₙ+ιₙrevₙ)  (by Fact 4.5).
+
+    ─ The equation
+
+            (1+n) + (2+(n-1)) + ⋅⋅⋅ + ((n-1)+2) + (n+1)
+
+          = (n+1)+(n+1)+⋅⋅⋅+(n+1)  (n terms)
+
+      corresponds to
+
+            lfₙ(+,ιₙ+ιₙrevₙ) = lfₙ(+,–↦n+1)  (by (∗)).
+
+    ─ The equation
+
+            (n+1)+⋅⋅⋅+(n+1) = n⋅(n+1)
+                n terms
+
+      corresponds to
+
+            lfₙ(+,–↦n+1) = n⋅(n+1)  (by Fact 4.9).
+
+                                       ∗∗
+
+Given the above, I think it should be clear that §4 provides a
+formalization-friendly version of the ellipsis formulations in §3. In
+particular, we have a proof that do not use any ellipsis but still closely
+mirrors the ellipsis proof in §3.
+
+                                       ∗∗
+
+I claim that, using similar techniques, Definition 1.1 and Proofs 1.4.1 and
+2.1.1 can be reformulated in a formalization-friendly way. This is something I
+leave for future work.
+
+                                       ∗∗
+
+To show that the formulation in §4 really is formalization-friendly, one could
+construct an actual formalization of it. I think proof assistants based on
+dependent type theory, for example Coq or Agda, would be a suitable choice for
+this. For now, I leave this for future work.
+
+                                       ∗∗
+
+Appendix A: Some proofs
+───────────────────────
+
+Fact 1.3. Definition 1.1 and Definition 1.2 define the same function.
+
+Proof. Let us denote exp according to Definition 1.1 by exp₁ and let us denote
+exp according to Definition 1.2 by exp₂. We need to prove
+
+      for all x in ℕ and all n in ℕ⁺: exp₁(x,n) = exp₂(x,n).
+
+We prove this by induction on n.
+
+    ─ Base case: We want to prove exp₁(x,1) = exp₂(x,1). This follows directly
+      from the definitions:
+
+            exp₁(x,1) = x          (by Definition 1.1)
+
+                      = exp₂(x,1)  (by Definition 1.2).
+
+    ─ Induction step: The induction hypothesis is
+
+       (IH) exp₁(x,n) = exp₂(x,n)
+
+      and we want to prove
+
+            exp₁(x,n+1) = exp₂(x,n+1).
+
+      We have
+
+            exp₁(x,n+1) = x⋅x⋅⋅⋅x      (by Definition 1.1)
+                        n+1 factors
+
+                        = (x⋅x⋅⋅⋅x)⋅x
+                          n factors
+
+                        = exp₁(x,n)⋅x  (by Definition 1.1)
+
+                        = exp₂(x,n)⋅x  (by (IH))
+
+                        = exp₂(x,n+1)  (by Definition 1.2).
+
+                                       ∗∗
+
+Fact 3.3. Definitions 3.1 and 3.2 define the same function.
+
+Proof. Let us denote σ according to Definition 3.1 by σ₁ and let us denote σ
+according to Definition 3.2 by σ₂. We need to prove
+
+      for all n in ℕ⁺: σ₁(n) = σ₂(n).
+
+We prove this by induction on n.
+
+    ─ Base case: We want to prove σ₁(1) = σ₂(1). This follows directly from the
+      definitions:
+
+            σ₁(1) = 1      (by Definition 3.1)
+
+                  = σ₂(1)  (by Definition 3.2).
+
+    ─ Induction step: The induction hypothesis is
+
+       (IH) σ₁(n) = σ₂(n)
+
+      and we want to prove
+
+            σ₁(n+1) = σ₂(n+1).
+
+      We have
+
+            σ₁(n+1) = 1+2+⋅⋅⋅+n+n+1  (by Definition 2.1)
+
+                    = σ₁(n)+n+1      (by Definition 2.1)
+
+                    = σ₂(n)+n+1      (by (IH))
+
+                    = σ₂(n+1)        (by Definition 2.2).                      □
+
+                                       ∗∗
+
+Fact 4.3. For all t in ℕⁿ⁺¹:
+
+      t = t↓[1,n]::tₙ₊₁.
+
+Proof.
+
+      t = i ↦ t(i)
+
+        = i ↦ (t↓[1,n](i) if i ≤ n otherwise tₙ₊₁)
+
+        = t↓[1,n]::tₙ₊₁                             (by Definition 4.2).       □
+
+                                       ∗∗
+
+Fact 4.5. For all associative and commutative ∗:
+
+      lfₙ(∗,u)∗lfₙ(∗,v) = lfₙ(∗,u∗v).
+
+Proof. Induction on n.
+
+    ─ Base case: We want to prove
+
+            for all u and v in ℕ¹: lf₁(∗,u)∗lf₁(∗,v) = lf₁(∗,u∗v).
+
+      We have
+
+            lf₁(∗,u)∗lf₁(∗,v) = lf₁(∗,⟨u₁⟩)∗lf₁(∗,⟨v₁⟩)
+
+                              = u₁∗v₁                    (by Definition 4.4)
+
+                              = lf₁(∗,⟨u₁∗v₁⟩)           (by Definition 4.4)
+
+                              = lf₁(∗,u∗v).
+
+    ─ Induction step: The induction hypothesis is
+
+       (IH) for all u and v in ℕⁿ: lfₙ(∗,u)∗lfₙ(∗,v) = lfₙ(∗,u∗v)
+
+      and we want to prove
+
+            for all u and v in ℕⁿ⁺¹: lfₙ₊₁(∗,u)∗lfₙ₊₁(∗,v) = lfₙ₊₁(∗,u∗v).
+
+      We have
+
+            lfₙ₊₁(∗,u)∗lfₙ₊₁(∗,v) = (lfₙ(∗,u↓[1,n])∗uₙ₊₁)∗(lfₙ(∗,v↓[1,n])∗vₙ₊₁)
+                                    (by Fact 4.3 and Definition 4.4)
+
+                                  = (lfₙ(∗,u↓[1,n])∗lfₙ(∗,v↓[1,n]))∗(uₙ₊₁∗vₙ₊₁)
+                                    (by associativity and commutativity)
+
+                                  = (lfₙ(∗,u↓[1,n]∗v↓[1,n])∗(uₙ₊₁∗vₙ₊₁)
+                                    (by (IH))
+
+                                  = (lfₙ(∗,(u∗v)↓[1,n])∗(u∗v)ₙ₊₁
+
+                                  = lfₙ₊₁(∗,u∗v)
+                                    (by Fact 4.3 and Definition 4.4).          □
+
+                                       ∗∗
+
+Fact 4.6. For all commutative and associative ∗ and all bijections
+b : [1,n]→[1,n]:
+
+      lfₙ(∗,tb) = lfₙ(∗,t).
+
+Proof. Induction on n using n = 1 and n = 2 as base cases.
+
+    ─ Base case n = 1: Trivial since the bijection i↦i is the unique function
+      [1,1]→[1,1].
+
+    ─ Base case n = 2: We want to prove
+
+          for all bijections b : [1,2]→[1,2] and all t in ℕ²:
+          lf₂(∗,tb) = lf₂(∗,t).
+
+      There are two different bijections b : [1,2]→[1,2].
+
+          ─ Case b = i↦i: Trivial.
+
+          ─ Case b = i↦3-i: We have
+
+                  lf₂(∗,tb)
+
+                    = lf₂(∗,(tb)↓[1,1])∗tb(2)  (by Fact 4.3 and Definition 4.4)
+
+                    = lf₂(∗,⟨t₂⟩)∗t₁
+
+                    = t₂∗t₁                    (by Definition 4.4)
+
+                    = t₁∗t₂                    (by commutativity)
+
+                    = lf₂(∗,⟨t₁⟩)∗t₂           (by Definition 4.4)
+
+                    = lf₂(∗,t↓[1:1])∗t₂
+
+                    = lf₂(∗,t)                 (by Fact 4.3 and Definition 4.4).
+
+    ─ Induction step n = m+2: The induction hypothesis is
+
+       (IH) for all bijections b : [1,m+1]→[1,m+1] and all t in ℕᵐ⁺¹:
+            lfₘ₊₁(∗,tb) = lfₘ₊₁(∗,t).
+
+      We want to prove
+
+            for all bijections b : [1,m+2]→[1,m+2] and all t in ℕᵐ⁺²:
+            lfₘ₊₂(∗,tb) = lfₘ₊₂(∗,t).
+
+          ─ Case b(m+2) = m+2: Then b↓[1,m+1] is a bijection [1,m+1]→[1,m+1] and
+
+              (∗) (tb)↓[1,m+1] = t↓[1,m+1]b↓[1,m+1].
+
+            Thus
+
+                  lfₘ₊₂(∗,tb)
+
+                    = lfₘ₊₁(∗,(tb)↓[1,m+1])∗tb(m+2)        (by Fact 4.3 and
+                                                            Definition 4.4)
+
+                    = lfₘ₊₁(∗,t↓[1,m+1]b↓[1,m+1])∗tb(m+2)  (by (∗))
+
+                    = lfₘ₊₁(∗,t↓[1,m+1])∗tb(m+2)           (by (IH))
+
+                    = lfₘ₊₁(∗,t↓[1,m+1])∗tₘ₊₂
+
+                    = lfₘ₊₂(∗,t)                           (by Fact 4.3 and
+                                                            Definition 4.4).
+
+          ─ Case b(m+2) ≠ m+2: Let i be the unique number in [1,m+1] such that
+            b(i) = m+2. Using ellipsis, for illustrative purposes, we then have
+
+                  lfₘ₊₂(∗,tb)
+
+                    = lfₘ₊₂(∗,⟨tb(1),...,tb(i),...,tb(m+1),tb(m+2)⟩)
+
+                    = lfₘ₊₁(∗,⟨tb(1),...,tb(i),...,tb(m+1)⟩)∗tb(m+2)
+
+                    = lfₘ₊₁(∗,⟨tb(1),...,tb(m+1),...,tb(i)⟩)∗tb(m+2)
+                      (by (IH))
+
+                    = lfₘ(∗,⟨tb(1),...,tb(m+1),...,tb(m)⟩)∗tb(i)∗tb(m+2)
+
+                    = lfₘ(∗,⟨tb(1),...,tb(m+1),...,tb(m)⟩)∗tb(m+2)∗tb(i)
+                      (by associativity and commutativity)
+
+                    = lfₘ₊₁(∗,⟨tb(1),...,tb(m+1),...,tb(m),tb(m+2)⟩)∗tb(i)
+
+                    = lfₘ₊₁(∗,⟨t₁,...,tₘ₊₁⟩)∗tb(i)
+                      (by (IH))
+
+                    = lfₘ₊₁(∗,⟨t₁,...,tₘ₊₁⟩)∗tₘ₊₂
+
+                    = lfₘ₊₂(∗,⟨t₁,...,tₘ₊₂⟩)
+
+                    = lfₘ₊₂(∗,t).
+
+            We formulate the above without ellipsis as follows. Define
+            b' : [1,m+1]→[1,m+1] by
+
+                    b'(j) := j if j ≠ i and j ≠ m+1,
+
+                    b'(i) := m+1,
+
+                  b'(m+1) := i.
+
+            Define b'' : [1,m+1]→[1,m+1] by
+
+                    b''(j) := bb'(j) if j ≠ m+1,
+
+                  b''(m+1) := b(m+2).
+
+            Then b' and b'' are bijections [1,m+1]→[1,m+1]. We have
+
+                  lfₘ₊₂(∗,tb)
+
+                    = lfₘ₊₁(∗,(tb)↓[1,m+1])∗tb(m+2)
+                      (by Fact 4.3 and Definition 4.4)
+
+                    = lfₘ₊₁(∗,(tb)↓[1,m+1]b')∗tb(m+2)
+                      (by (IH))
+
+                    = lfₘ₊₁(∗,tbb')∗tb(m+2)
+
+                    = lfₘ(∗,(tbb')↓[1,m])∗tbb'(m+1)∗tb(m+2)
+                      (by Fact 4.3 and Definition 4.4)
+
+                    = lfₘ(∗,(tbb')↓[1,m])∗tb(m+2)∗tbb'(m+1)
+                      (by associativity and commutativity)
+
+                    = lfₘ(∗,(tb'')↓[1,m])∗tb''(m+1)∗tbb'(m+1)
+                      (by definition of b'')
+
+                    = lfₘ₊₁(∗,(tb'')↓[1,m+1])∗tbb'(m+1)
+                      (by Fact 4.3 and Definition 4.4)
+
+                    = lfₘ₊₁(∗,t↓[1,m+1]b'')∗tbb'(m+1)
+
+                    = lfₘ₊₁(∗,t↓[1,m+1])∗tbb'(m+1)
+                      (by (IH))
+
+                    = lfₘ₊₁(∗,t↓[1,m+1])∗tb(i)
+
+                    = lfₘ₊₁(∗,t↓[1,m+1])∗tₘ₊₂
+
+                    = lfₘ₊₂(∗,t)
+                      (by Fact 4.3 and Definition 4.4).                        □
+
+                                       ∗∗
+
+Fact 4.8. Definition 4.7 defines the same function as Definitions 3.1 and 3.2.
+
+Proof. We have already shown that Definitions 3.1 and 3.2 define the same
+function so it suffices to show that Definitions 3.2 and 4.7 define the same
+function. Let us denote σ according to Definition 3.2 by σ₂ and let us denote σ
+according to Definition 4.7 by σ₃. We want to prove
+
+      for all n in ℕ⁺: σ₂(n) = σ₃(n).
+
+We prove this by induction on n.
+
+    ─ Base case: We want to prove σ₂(1) = σ₃(1). This follows directly from
+      definitions:
+
+            σ₂(1) = 1            (by Definition 3.2)
+
+                  = lf₁(+, ⟨1⟩)  (by Definition 4.4)
+
+                  = lf₁(+, ι₁)   (by Definition 4.2)
+
+                  = σ₃(1)        (by Definition 4.7).
+
+    ─ Induction step: The induction hypothesis is
+
+       (IH) σ₂(n) = σ₃(n)
+
+      and we want to prove
+
+            σ₂(n+1) = σ₃(n+1).
+
+      We have
+
+            σ₂(n+1) = σ₂(n)+n+1            (by Definition 3.2)
+
+                    = σ₃(n)+n+1            (by (IH))
+
+                    = lfₙ(+, ιₙ)+n+1       (by Definition 4.7)
+
+                    = lfₙ₊₁(+, ιₙ::(n+1))  (by Definition 4.4)
+
+                    = lfₙ₊₁(+, ιₙ₊₁)       (by Definition 4.2)
+
+                    = σ₃(n+1)              (by Definition 4.7).                □
+
+                                       ∗∗
