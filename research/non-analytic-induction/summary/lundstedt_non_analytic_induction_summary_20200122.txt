@@ -1,0 +1,2193 @@
+NECESSARILY NON-ANALYTIC INDUCTION PROOFS──SUMMARY OF SOME RESULTS
+══════════════════════════════════════════════════════════════════
+
+version: 2020-01-22
+
+Anders Lundstedt
+
+anders.lundstedt@philosophy.su.se
+
+
+Contents
+────────
+
+§1 Introduction
+
+§2 Two results proved by non-analytic induction
+
+§3 Tail-recursion
+
+§4 Definitions
+
+§5 Fact 2.2 must be proved by non-analytic induction
+
+§6 Fact 2.4 must be proved by non-analytic induction
+
+§7 Fact 3.2c must be proved by non-analytic induction
+
+§8 Facts 3.2a, 3.2b and 3.6 must be proved by non-analytic induction
+
+§9 Discussion and future work
+
+§A Some definitions and results
+
+§B Proofs of Lemmas 5.7 and 5.8
+
+§C Proofs of Lemmas 6.10, 6.11 and 6.13
+
+References
+
+
+§1 Introduction
+───────────────
+
+Some mathematical facts seem to not lend themselves to a "straightforward"
+induction proof──the proof attempt gets "stuck" at the induction step──but
+instead a "straightforward" induction proof of a "stronger" fact succeeds. The
+fact we originally wanted to prove then follows from this "stronger" fact. This
+proof method is usually called something like "strengthening of the induction
+hypothesis". However, there need not always be a precise sense in which the
+"stronger" fact is, in fact, stronger. Thus, following Hetzl and Wong (2017), I
+use the more general terminology "non-analytic induction proofs" for such
+proofs. Consequently, I will use "analytic induction proofs" to refer to
+ordinary "straightforward" induction proofs.
+
+                                       ∗∗
+
+Faced with a non-analytic induction proof, a natural question is whether the
+non-analyticity is necessary──that is, could we have proved what we wanted to
+prove by analytic induction, without the "detour" proving some other fact? Hetzl
+and Wong have made precise sense of such questions in the setting of first-order
+arithmetic.
+
+                                       ∗∗
+
+In §2 we look at two examples of non-analytic induction proofs, proving the two
+facts:
+
+ (F1) For all natural numbers n: 1+3+5+⋅⋅⋅+(2n-1) = k² for some natural number
+      k.
+
+ (F2) For all natural numbers n: 1+2⁻²+3⁻²+⋅⋅⋅+(n+1)⁻² < 2.
+
+                                       ∗∗
+
+In §3 we look at more examples of non-analytic induction proofs: correctness
+proofs for "tail-recursive" definitions of multiplication, of exponentiation,
+and of the factorial.
+
+                                       ∗∗
+
+In §4 I present a slight generalization and reformulation of some of the notions
+introduced by Hetzl and Wong.
+
+                                       ∗∗
+
+Using the notions introduced in §4 I show that there are precise senses in which
+the example facts may only be proved by non-analytic induction.
+
+    ─ In §5 I show that (F1) may only be proved by non-analytic induction.
+
+    ─ In §6 I show that (F2) may only be proved by non-analytic induction.
+
+    ─ In §7 and §8 I show that the correctness properties from §3 may only be
+      proved by non-analytic induction.
+
+                                       ∗∗
+
+In §9 I discuss the results and present some ideas for future work.
+
+                                       ∗∗
+
+The lazy, or busy, reader may wish to skip §§6–8, as the core ideas of §§6–8 are
+present in simpler form in §5. Then §3 may be skipped as well since it is a
+prerequisite only for §7 and §8.
+
+                                       ∗∗
+
+§2 Two results proved by non-analytic induction
+───────────────────────────────────────────────
+
+For our first case, we have that the sum of any initial segment of the odd
+natural numbers is a perfect square, that is,
+
+      for all natural numbers n: 1+3+5+⋅⋅⋅+(2n-1) = k² for some natural number
+      k,
+
+or, avoiding ellipsis notation, the following.
+
+                                       ∗∗
+
+DEFINITION 2.1. f₂ : ℕ → ℕ is defined recursively by
+
+        f₂(0) := 0,
+
+      f₂(n+1) := f₂(n)+2n+1.
+
+                                       ∗∗
+
+FACT 2.2. For all natural numbers n: f₂(n) = k² for some natural number k.
+
+PROOF ATTEMPT. "Straightforward" induction:
+
+    ─ Base case: We have
+
+            f₂(0) = 0  (by Definition 2.1)
+
+                  = 0²
+
+      so f₂(0) = k² for k = 0.
+
+    ─ Induction step:
+
+            f₂(n+1) = f₂(n)+2n+1  (by Definition 2.1)
+
+                    = k²+2n+1     (for some k, by induction hypothesis).
+
+      But k²+2n+1 is not a perfect square for all natural numbers k and n so how
+      do we proceed from here?
+
+ACTUAL PROOF. It suffices to prove the following stronger fact, of which
+Fact 2.2 is a logical consequence.
+
+      f₂(n) = n² for all natural numbers n.
+
+(This fact is not a logical consequence of Fact 2.2, so it is stronger than
+Fact 2.2 in at least that sense.)
+
+We prove this fact by induction.
+
+    ─ Base case:
+
+            f₂(0) = 0  (by Definition 2.1)
+
+                  = 0².
+
+    ─ Induction step:
+
+            f₂(n+1) = f₂(n)+2n+1  (by Definition 2.1)
+
+                    = n²+2n+1     (by induction hypothesis)
+
+                    = (n+1)².                                                  □
+
+                                       ∗∗
+
+For our second case, we have
+
+      1+2⁻²+3⁻²+⋅⋅⋅+(n+1)⁻² < 2 for all natural numbers n,
+
+or, avoiding ellipsis notation, the following.
+
+                                       ∗∗
+
+DEFINITION 2.3. g₂ : ℕ → ℚ is defined recursively by
+
+        g₂(0) := 1,
+
+      g₂(n+1) := g₂(n)+(n+2)⁻².
+
+                                       ∗∗
+
+FACT 2.4. g₂(n) < 2 for all natural numbers n.
+
+PROOF ATTEMPT. "Straightforward" induction:
+
+    ─ Base case:
+
+            g₂(0) = 1  (by Definition 2.3)
+
+                  < 2.
+
+    ─ Induction step:
+
+            g₂(n+1) = g₂(n)+(n+2)⁻²  (by Definition 2.3)
+
+                    < 2+(n+2)⁻²      (by induction hypothesis).
+
+      But 2+(n+2)⁻² ≮ 2 for any natural number n so how do we proceed from here?
+
+ACTUAL PROOF. It clearly suffices to prove the stronger fact
+
+      g₂(n) ≤ 2-(n+1)⁻¹ for all natural numbers n.
+
+(In what sense is this fact stronger than Fact 2.4? It is at least stronger in
+the sense that for all g : ℕ → ℚ,
+
+      g(n) ≤ 2-(n+1)⁻¹ for all n
+
+implies
+
+      g(n) < 2 for all n,
+
+while the converse implication does not hold for all g : ℕ → ℚ.)
+
+We prove this fact by induction.
+
+    ─ Base case:
+
+            g₂(0) = 1          (by Definition 2.3)
+
+                  ≤ 1
+
+                  = 2-(0+1)⁻¹.
+
+    ─ Induction step:
+
+            g₂(n+1) = g₂(n)+(n+2)⁻²             (by Definition 2.3)
+
+                    ≤ 2-(n+1)⁻¹+(n+2)⁻²         (by induction hypothesis)
+
+                    = 2-(n+2)⁻¹-(n+1)⁻¹(n+2)⁻²  (by elementary arithmetic)
+
+                    ≤ 2-(n+2)⁻¹
+
+                    = 2-((n+1)+1)⁻¹.                                           □
+
+                                       ∗∗
+
+§3 Tail-recursion
+─────────────────
+
+For practical reasons one might want to implement recursive functions such that
+they are "tail-recursive". I am not overly familiar with "tail-recursion" but
+for present purposes what matters is that we have non-standard "tail-recursive"
+definitions of common functions. We will consider tail-recursive definitions of
+multiplication, of exponentiation, and of the factorial. For each definition one
+naturally desires a correctness proof. It turns out that such correctness proofs
+seem to require non-analytic induction.
+
+                                       ∗∗
+
+The technique we will use to convert the standard recursive definitions to
+tail-recursive definitions is to introduce an extra "accumulator" argument.
+
+                                       ∗∗
+
+DEFINITION 3.1.
+
+  (a) Multiplication × : ℕ² → ℕ is defined recursively by
+
+                n×0 := 0,
+
+            n×(m+1) := n×m+n.
+
+  (b) Exponentiation –⁻ : ℕ² → ℕ is defined recursively by
+
+              n⁰ := 1,
+
+            nᵐ⁺¹ := nᵐ×n.
+
+  (c) The factorial ! : ℕ → ℕ is defined recursively by
+
+                0! := 1,
+
+            (n+1)! := (n+1)×n!.
+
+  (d) The function m-acc : ℕ³ → ℕ is defined recursively by
+
+              m-acc(a,n,0) := a,
+
+            m-acc(a,n,m+1) := m-acc(a+n,n,m),
+
+  (e) The function e-acc : ℕ³ → ℕ is defined recursively by
+
+              e-acc(a,n,0) := a,
+
+            e-acc(a,n,m+1) := e-acc(a×n,n,m),
+
+  (e) The function f-acc : ℕ² → ℕ is defined recursively by
+
+              f-acc(a,0) := a,
+
+            f-acc(a,m+1) := f-acc(a×(m+1),m).
+
+                                       ∗∗
+
+EXAMPLE.
+
+      m-acc(0,5,3) = m-acc(0,5,2+1)
+
+                   = m-acc(0+5,5,2)      (by Definition 3.1d)
+
+                   = m-acc(0+5,5,1+1)
+
+                   = m-acc(0+5+5,5,1)    (by Definition 3.1d)
+
+                   = m-acc(0+5+5,5,0+1)
+
+                   = m-acc(0+5+5+5,5,0)  (by Definition 3.1d)
+
+                   = 0+5+5+5             (by Definition 3.1d)
+
+                   = 5×3.
+
+                                       ∗∗
+
+FACT 3.2. For all natural numbers n and m:
+
+  (a) n×m = m-acc(0,n,m),
+
+  (b) nᵐ = e-acc(1,n,m),
+
+  (c) n! = f-acc(1,n).
+
+PROOF ATTEMPT. We try to prove (a) by induction on m. The base case is
+immediate. For the induction step we have
+
+      n×(m+1) = n×m+n           (by Definition 3.1a)
+
+              = m-acc(0,n,m)+n  (by induction hypothesis)
+
+and
+
+      m-acc(0,n,m+1) = m-acc(0+n,n,m)  (by Definition 3.1d)
+
+                     = n-acc(n,n,m).
+
+It seems we cannot get any further and that we are "stuck". Similarly one gets
+"stuck" when attempting "straightforward" induction proofs of (b) and (c).
+
+ACTUAL PROOF. (a)–(c) are immediate consequences of the following stronger
+facts. For all natural numbers a, n and m:
+
+ (a') m-acc(a,n,m) = a+n×m,
+
+ (b') e-acc(a,n,m) = a×nᵐ,
+
+ (c') f-acc(a,n) = a×n!.
+
+We prove (a'). The proof of (c') is similar and the proof of (b') is exactly the
+same up to substitution of function symbols and constants. For (a'), induction
+on m gives the following.
+
+    ─ Base case:
+
+            m-acc(a,n,0) = a      (by Definition 3.1d)
+
+                         = a+0
+
+                         = a+n×0  (by Definition 3.1a).
+
+    ─ Induction step:
+
+            m-acc(a,n,m+1) = m-acc(a+n,n,m) (by Definition 3.1d)
+
+                           = (a+n)+n×m      (by induction hypothesis)
+
+                           = a+(n×m+n)      (by associativity and commutativity)
+
+                           = a+n×(m+1)      (by Definition 3.1a).              □
+
+                                       ∗∗
+
+The above proof uses additive identity of 0 and associativity and commutativity
+of addition. These properties are in fact not necessary. We state and prove a
+more general fact as follows.
+
+                                       ∗∗
+
+ASSUMPTION 3.3.
+
+    ─ Let A be any set.
+
+    ─ Let a₀ be an element in A.
+
+    ─ Let ∙ : A² → A.
+
+                                       ∗∗
+
+DEFINITION 3.4.
+
+    (a) The function ∙∙ : A×ℕ → A is defined recursively by
+
+                  a∙∙0 := a₀,
+
+              a∙∙(n+1) := (a∙∙n)∙a.
+
+    (b) The function acc : A²×ℕ → A is defined recursively by
+
+                acc(a,b,0) := a,
+
+              acc(a,b,n+1) := acc(a∙b,b,n).
+
+                                       ∗∗
+
+LEMMA 3.5. For all a and b in A and for all natural numbers n:
+
+      acc(a,b,n)∙b = acc(a∙b,b,n).
+
+PROOF. Induction on n.
+
+    ─ Base case:
+
+            acc(a,b,0)∙b = a∙b           (by Definition 3.4b)
+
+                         = acc(a∙b,b,0)  (by Definition 3.4b).
+
+    ─ Induction step:
+
+            acc(a,b,n+1)∙b = acc(a∙b,b,n)∙b    (by Definition 3.4b)
+
+                           = acc((a∙b)∙b,b,n)  (by induction hypothesis)
+
+                           = acc(a∙b,b,n+1)    (by Definition 3.4b).           □
+
+                                       ∗∗
+
+FACT 3.6. For all a in A and all natural numbers n:
+
+      a∙∙n = acc(a₀,a,n).
+
+PROOF. With Lemma 3.5 at our disposal, "straightforward" induction on n will
+work.
+
+    ─ Base case:
+
+            a∙∙0 = a₀           (by Definition 3.4a)
+
+                 = acc(a₀,a,0)  (by Definition 3.4b).
+
+    ─ Induction step:
+
+            a∙∙(n+1) = (a∙∙n)∙a       (by Definition 3.4a)
+
+                     = acc(a₀,a,n)∙a  (by induction hypothesis)
+
+                     = acc(a₀∙a,a,n)  (by Lemma 3.5)
+
+                     = acc(a₀,a,n+1)  (by Definition 3.4b).                    □
+
+                                       ∗∗
+
+REMARK. The above proof is an analytic induction proof. However, as is shown in
+§8, without first proving, by induction, something like Lemma 3.5, an analytic
+induction proof is not possible.
+
+                                       ∗∗
+
+§4 Definitions
+──────────────
+
+This section presents a reformulation and slight generalization of some of the
+notions introduced by Hetzl and Wong (2017). I choose to introduce some
+non-conventional machinery, allowing for rich languages in order to be able to
+conveniently and transparently represent mathematical facts and proofs.
+
+                                       ∗∗
+
+DEFINITION 4.1.
+
+    ─ The ∗full (first-order) language of arithmetic∗, notation ℒ[full], is the
+      first-order language with the following vocabulary. For each natural
+      number n:
+
+          ─ n is a constant symbol,
+
+          ─ for each function f : ℕⁿ⁺¹ → ℕ: f is a function symbol of arity n+1,
+
+          ─ for each relation P ⊆ ℕⁿ⁺¹: P is a relation symbol of arity n+1.
+
+    ─ The ∗minimal (first-order) language of arithmetic∗, notation ℒ[min], is
+      the ℒ[full]-reduct with signature ⟨0,1,+⟩.
+
+    ─ The ∗standard (first-order) language of arithmetic∗, notation ℒ₀, is the
+      ℒ[full]-reduct with signature ⟨0,1,+,×,<⟩.
+
+    ─ A first-order language is a ∗(first-order) language of arithmetic∗ if and
+      only if it is an ℒ[min]-expansion.
+
+    ─ Let L be a language of arithmetic.
+
+          ─ If L is an ℒ[full]-reduct then L is ∗pure∗; otherwise L is ∗impure∗.
+
+          ─ pure(L) := L∩ℒ[full] is the ∗pure part∗ of L.
+
+          ─ impure(L) := L-ℒ[full] is the ∗impure part∗ of L.
+
+                                       ∗∗
+
+Thus any pure language of arithmetic has as symbols natural numbers and
+operations and relations on natural numbers. This is just a convenient "trick"
+which allows us to easily define the standard model for these languages.
+
+                                       ∗∗
+
+DEFINITION 4.2.
+
+    ─ Let L be a pure language of arithmetic.
+
+          ─ The ∗standard L-model∗ has domain ℕ and each symbol interpreted as
+            itself.
+
+          ─ Let M be an L-model. If M is isomorphic to the standard L-model then
+            M is ∗standard∗; otherwise M is ∗non-standard∗.
+
+          ─ The L-theory ∗true L-arithmetic∗ is the theory of the standard
+            L-model.
+
+          ─ Any subset of true L-arithmetic is a ∗theory of L-arithmetic∗.
+
+    ─ Let L be an impure language of arithmetic, let M be an L-model and let T
+      be an L-theory.
+
+          ─ M is ∗standard∗ if its pure(L)-reduct is; otherwise M is
+            ∗non-standard∗.
+
+          ─ T is a ∗theory of L-arithmetic∗ if and only if T is true in some
+            standard L-model.
+
+                                       ∗∗
+
+REMARKS. Let L be an impure language.
+
+    ─ There are infinitely many non-isomorphic standard L-models──one for each
+      way of expanding the standard pure(L)-model to L. (Similarly, there are
+      infinitely many standard L-models that are not elementary equivalent. Thus
+      there are also infinitely many non-compatible theories of L-arithmetic.)
+
+    ─ For an L-theory T there may be none, one, or many non-isomorphic standard
+      models of T (and T is a theory of L-arithmetic if and only if there is at
+      least one such standard model).
+
+                                       ∗∗
+
+NOTATIONS.
+
+    ─ ℕ₀ is the standard ℒ₀-model.
+
+    ─ ℕ[min] is the standard ℒ[min]-model.
+
+    ─ ℕ[full] is the standard ℒ[full]-model.
+
+    ─ T₀ is true ℒ₀-arithmetic.
+
+    ─ T[min] is true ℒ[min]-arithmetic.
+
+    ─ T[full] is true ℒ[full]-arithmetic.
+
+                                       ∗∗
+
+DEFINITION 4.3. Let L be a language of arithmetic and let φ(x) be an L-formula
+in the free variable x. The ∗induction instance∗ for φ(x) is the L-sentence
+
+      IND(φ) :≡ φ(0)∧∀x(φ(x)→φ(x+1))→∀x.φ(x).
+
+                                       ∗∗
+
+DEFINITION 4.4. Let L be a language of arithmetic and let T be an L-theory. Let
+φ(x) be an L-formula in the free variable x. Say that ∗T proves ∀x.φ(x) by
+necessarily non-analytic induction∗ if and only if there is an L-formula ψ(x) in
+the free variable x such that
+
+  (1) T,IND(φ) ⊬ ∀x.φ(x),
+
+  (2) T ⊢ φ(0),
+
+  (3) T ⊢ ψ(0),
+
+  (4) T ⊢ ∀x: ψ(x)→ψ(x+1),
+
+  (5) T ⊢ ∀x.ψ(x)→∀x.φ(x).
+
+Under conditions (1)–(5) we also say that ∗ψ(x) witnesses that T proves ∀x.φ(x)
+by necessarily non-analytic induction∗.
+
+                                       ∗∗
+
+REMARKS.
+
+    ─ The above definition does not require T to be a theory of arithmetic (that
+      is, T could contain sentences that are false in all standard L-models). I
+      will of course require T to be a theory of arithmetic when using this
+      definition to make precise sense of the necessary non-analyticity of
+      non-analytic induction proofs (of arithmetic) found in the wild. But I do
+      not rule out that there might be interesting uses of the above definition
+      with T not a theory of arithmetic.
+
+    – As we saw when proving Fact 3.6, an analytic induction proof may be
+      possible once an appropriate lemma has been proved (by induction). Such
+      cases could qualify as necessarily non-analytic induction proofs under
+      Definition 4.4 (and indeed, the proof of Fact 3.6 does, as shown in §8).
+      This is because for any two induction axioms there is always an induction
+      axiom logically equivalent to their conjunction. Thus any proof along the
+      lines of "induction proof of a lemma followed by an analytic induction
+      proof" could be rewritten as a single non-analytic induction proof (but
+      that proof would probably not look very "natural"). In light of this,
+      perhaps I should rethink the terminology, since it might seem a bit
+      inappropriate to call proofs such as the proof of Fact 3.6 for
+      "non-analytic induction proofs".
+
+                                       ∗∗
+
+An alternative way of phrasing condition (1), provided by the following lemma,
+might be more intuitive.
+
+                                       ∗∗
+
+LEMMA 4.5. (1) and (2) are equivalent to (2) and
+
+ (1') T ⊬ ∀x: φ(x)→φ(x+1).
+
+PROOF. The direction from left (that is, from (1) and (2)) to right (that is, to
+(1') and (2)) is immediate. The direction from right to left is an easy (but
+non-trivial) exercise in propositional logic.                                  □
+
+                                       ∗∗
+
+REMARK. I chose (1) instead of (1') in the definition precisely because the
+direction (1) ⇒ (1') is immediate (given (2)) while the direction (1') ⇒ (1)
+(given (2)) is not.
+
+                                       ∗∗
+
+When trying to prove that typical T and φ(x) satisfy the above definition, the
+hardest part will be──as far as I can tell at least──to show condition (1) (or
+condition (1')). Therefore it makes sense to break out a lemma that captures the
+idea of using non-standard models to establish (1).
+
+                                       ∗∗
+
+LEMMA 4.6.
+
+    ─ Let L be a language of arithmetic.
+
+    ─ Let T be an L-theory.
+
+    ─ Let φ(x) be an L-formula in the free variable x.
+
+    ─ Suppose T ⊢ φ(n) for all numerals n.
+
+The following are then equivalent.
+
+    ─ T,IND(φ) ⊬ ∀x.φ(x).
+
+    ─ There is a non-standard L-model M ⊨ T and a non-standard number c in M
+      such that M ⊨ φ(c) and M ⊭ φ(c+1).
+
+PROOF. Since T ⊢ φ(0), Lemma 4.5 gives that
+
+      T,IND(φ) ⊬ ∀x.φ(x)
+
+is equivalent to
+
+      T ⊬ ∀x: φ(x)→φ(x+1),
+
+which by soundness and completeness is equivalent to
+
+      there is M ⊨ T and c in M such that M ⊨ φ(c) and M ⊭ φ(c+1)
+
+which, since T ⊢ φ(n) for all numerals n, is equivalent to
+
+      there is nonstandard M ⊨ T and a non-standard number c in M such that
+      M ⊨ φ(c) and M ⊭ φ(c+1).                                                 □
+
+                                       ∗∗
+
+REMARK. The direction from the existence of a non-standard "countermodel" to
+T,IND(φ) ⊬ ∀x.φ(x) holds even if we drop the requirement
+
+  (∗) T ⊢ φ(n) for all numerals n.
+
+This direction is the one we will use so we need not worry about (∗) when
+applying the lemma (but nevertheless, (∗) will hold every time we apply the
+lemma).
+
+                                       ∗∗
+
+§5 Fact 2.2 must be proved by non-analytic induction
+────────────────────────────────────────────────────
+
+DEFINITION 5.1. The language L₅ of arithmetic is ℒ[full] expanded with the unary
+function symbol 'f'.
+
+                                       ∗∗
+
+REMARK. L₅ is thus an impure language, with impure(L₅) = {f} (and with
+pure(L₅) = ℒ[full]).
+
+                                       ∗∗
+
+DEFINITION 5.2.
+
+    ─ The L₅-sentences DEF₀(f) and DEF₊(f) are defined by
+
+            DEF₀(f) :≡ f(0) = 0.
+
+            DEF₊(f) :≡ ∀x. f(x+1) = f(x)+2x+1.
+
+    ─ The theory T₅ of L₅-arithmetic is defined by
+
+            T₅ :≡ T[full],DEF₀(f),DEF₊(f).
+
+    ─ The L₅-formulas φ₅(x) and ψ₅(x) are defined by
+
+            φ₅(x) :≡ ∃y. f(x) = y²,
+
+            ψ₅(x) :≡ f(x) = x².
+
+                                       ∗∗
+
+The reader who finds the following fact puzzling or even contradictory might
+want to jump ahead to the remark after the proof.
+
+                                       ∗∗
+
+FACT 5.3. ψ₅(x) witnesses that T₅ proves ∀x.φ₅(x) by necessarily non-analytic
+induction.
+
+PROOF. We need to show (1)–(5) of Definition 4.4. (2)–(5) are easy. To show (1)
+we appeal to Lemma 4.6 and exhibit a non-standard L₅-model M ⊨ T₅ with an
+element c such that M ⊨ φ₅(c) and M ⊭ φ₅(c+1). The following construction is due
+to Matt Kaufmann (private communication).
+
+Let M₀ ⊨ T[full] be a non-standard ℒ[full]-model and let c be any non-standard
+number in M₀. We expand M₀ to an L₅-model M by defining the interpretation
+fᴹ : M₀ → M₀ as follows.
+
+      fᴹ(n) := n²-9c²  if n = 5c+z for some integer z,
+
+      fᴹ(n) := n²      otherwise.
+
+We need to verify that this definition is well-formed──that is, we need to
+verify that n²-9c² is never negative when n = 5c+z for some integer z. We have
+
+      fᴹ(5c+z) = (5c+z)²-9c²
+
+               = 25c²+10zc+z²-9c²
+
+               = 16c²+10zc+z²
+
+               = c(16c+10z)+z²
+
+which is positive since
+
+            c > 0  (since c is non-standard),
+
+      16c+10z > 0  (since c is non-standard and z is not),
+
+           z² ≥ 0  (since z² is c square).
+
+With fᴹ so defined it is easy to verify that M ⊨ T₅. We have M ⊨ φ₅(5c) since
+
+      φ₅(5c) = (5c)²-16c²
+
+             = 25c²-16c²
+
+             = 9c²
+
+             = (3c)².
+
+It remains to show M ⊭ φ₅(5c+1). We have
+
+      φ₅(5c+1) = (5c+1)²-16c²
+
+               = 25c²+10c+1-16c²
+
+               = 9c²+10c+1.
+
+This is not a perfect square in M since
+
+      ∀x∀y: x > 0 → 9x²+10x+1 ≠ y²
+
+is a theorem of T[full]. Thus we have M ⊭ φ₅(5c+1).                            □
+
+                                       ∗∗
+
+REMARK. Fact 5.3 might seem contradictory. After all, there is a unique standard
+L₅-model, namely ℕ[full] with f interpreted by f₂ (from §2), and in this model
+∀x.φ₅(x) is of course true. The catch is that T₅ is weaker than the theory of
+this standard model, since T₅ does not contain any induction axioms involving
+the symbol f. In particular, T₅ does not prove that f is equal to f₂ (which,
+being a function ℕ → ℕ, is a symbol of ℒ[full] and thus also of L₅). For more
+discussion of this phenomenon see §9.
+
+                                       ∗∗
+
+The following alternative proof of Fact 5.3 might be useful for the reader,
+since it demonstrates the proof idea used in §6, but in a simpler setting. The
+alternative proof is roughly the following. Suppose we have a non-standard model
+M ⊨ T₅-DEF₀(f) with a non-standard c such that M ⊨ φ₅(c) and M ⊭ φ₅(c+1).
+Whether M ⊨ DEF₀(f) holds depends only on the values fᴹ takes on the standard
+numbers. Furthermore, whether DEF₊(f) holds on the non-standard numbers does not
+depend on the values fᴹ takes on the standard numbers. Thus, by reinterpreting
+(if necessary) f only on the standard numbers of M, we can turn M into a model
+M' ⊨ T₅. Since fᴹ and fᴹ' will then agree on the non-standard numbers, we will
+have M' ⊨ φ₅(c) and M' ⊭ φ₅(c+1). Thus, appealing to Lemma 4.6 (and the fact
+that conditions (2)–(5) of Definition 4.4 are easy), we are done. Thus to prove
+Fact 5.3 it suffices to construct such a non-standard model M, which can be done
+by applying the compactness theorem in the usual way. In more detail, we do as
+follows.
+
+                                       ∗∗
+
+DEFINITION 5.4.
+
+    ─ L₅' is L₅ expanded with the constant symbol 'c'.
+
+    ─ The L₅'-theories T₅' and T₅'' are defined by
+
+             T₅' :≡ T₅,φ₅(c),¬φ₅(c+1),c>0,c>1,c>2,...
+
+            T₅'' :≡ T₅'-DEF₀(f).
+
+                                       ∗∗
+
+LEMMA 5.5. If T₅'' has a model then so does T₅'.
+
+PROOF. Suppose M ⊨ T₅''. We construct an L₅'-model N from M by reinterpreting f:
+
+        fᴺ(0) := 0,
+
+      fᴺ(n+1) := fᴺ(n)+2n+1  if n is standard,
+
+        fᴺ(n) := fᴹ(n)       if n is non-standard.
+
+Then we have N ⊨ T₅', as the reader can easily verify.                         □
+
+                                       ∗∗
+
+To construct the model required to apply Lemma 5.5 we will use the compactness
+theorem. For each natural number m we will provide an L₅'-expansion N(m) ⊨ T₅''
+of ℕ[full] with cᴺ⁽ᵐ⁾ = m. This shows that any finite fragment of T₅'' has a
+model (namely, N(m) for a large enough m). Thus the whole of T₅'' has a model,
+by the compactness theorem. A key to the construction of the models N(m) is that
+since DEF₀(f) is omitted from T₅'', we need not set fᴺ⁽ᵐ⁾(0) := 0. It turns out
+that setting fᴺ⁽ᵐ⁾(0) := 2m+1 (while obeying DEF₊(f)) we get that fᴺ⁽ᵐ⁾(m) is a
+perfect square while fᴺ⁽ᵐ⁾(m+1) is not.
+
+                                       ∗∗
+
+DEFINITION 5.6. For each natural number m, the function βₘ : ℕ → ℕ is
+defined recursively by
+
+        βₘ(0) := 2m+1,
+
+      βₘ(n+1) := βₘ(n)+2n+1.
+
+                                       ∗∗
+
+LEMMA 5.7. For all natural numbers m:
+
+      βₘ(m) = (m+1)².
+
+PROOF. See §B.                                                                 □
+
+                                       ∗∗
+
+LEMMA 5.8. For all natural numbers m:
+
+      βₘ(m+1) is not a perfect square.
+
+PROOF. See §B.                                                                 □
+
+                                       ∗∗
+
+DEFINITION 5.9. For any natural number m, N(m) is the L₅'-expansion of ℕ[full]
+defined by
+
+      fᴺ⁽ᵐ⁾ := βₘ,
+
+      cᴺ⁽ᵐ⁾ := m.
+
+                                       ∗∗
+
+LEMMA 5.10. For all natural numbers m:
+
+  (1) N(m) ⊨ T[full],
+
+  (2) N(m) ⊨ DEF₊(f),
+
+  (3) N(m) ⊨ φ(c),
+
+  (4) N(m) ⊨ ¬φ(c+1).
+
+PROOF. We have (1) since N(m) is an ℕ[full]-expansion. We have (2) immediately
+from definitions (Definitions 5.2, 5.4, 5.6 and 5.9). We have (3) and (4) by
+Lemmas 5.7 and 5.8, respectively.                                              □
+
+                                       ∗∗
+
+ALTERNATIVE PROOF OF FACT 5.3. By Lemmas 4.6 and 5.5 (and since (2)–(5) of
+Definition 4.4 are easy) it suffices to exhibit a model of T₅''. Let T be a
+finite fragment of T₅''. Then we have N(m) ⊨ T for m sufficiently large, by
+Lemma 5.10 (and Definitions 5.2, 5.4 and 5.9). Thus any finite fragment of T''
+has a model and thus, by compactness, so does T₅.                              □
+
+                                       ∗∗
+
+§6 Fact 2.4 must be proved by non-analytic induction
+────────────────────────────────────────────────────
+
+Since Fact 2.4 is a statement involving rationals, a little work is needed to
+phrase it as a natural statement in first-order arithmetic (that is, without
+involving any coding).
+
+                                       ∗∗
+
+DEFINITION 6.1. g₆ : ℕ → ℕ and h₆ : ℕ → ℕ are defined recursively by
+
+        g₆(0) := 1,
+
+      g₆(n+1) := (n+2)²g₆(n)+h₆(n),
+
+        h₆(0) := 1,
+
+      h₆(n+1) := (n+2)²h₆(n).
+
+                                       ∗∗
+
+By induction, we have
+
+      g₂(n) = g₆(n)/h₆(n)
+
+so the inequality g₂(n) < 2 can be rewritten as
+
+      g₆(n) < 2h₆(n).
+
+Similarly, the inequality g₂(n) ≤ 2-(n+1)⁻¹ becomes
+
+      (n+1)g₆(n) ≤ (2n+1)h₆(n).
+
+                                       ∗∗
+
+All in all, we have the following rephrasings of Fact 2.4 and its proof attempt
+and proof.
+
+                                       ∗∗
+
+LEMMA 6.2. For all natural numbers n, if (n+1)g₆(n) ≤ (2n+1)h₆(n) then
+g₆(n) < 2h₆(n).
+
+PROOF. Suppose (n+1)g₆(n) ≤ (2n+1)h₆(n). Since (2n+1)h₆(n) < 2(n+1)h₆(n) we then
+have (n+1)g₆(n) < 2(n+1)h₆(n) so we must have g₆(n) < 2h₆(n).                  □
+
+                                       ∗∗
+
+FACT 6.3. g₆(n) < 2h₆(n) for all n.
+
+PROOF ATTEMPT. Induction on n.
+
+    ─ Base case:
+
+            g₆(0) = 1        (by Definition 6.1)
+
+                  < 2
+
+                  = 2×1
+
+                  = 2h₆(0)   (by Definition 6.1).
+
+    ─ Induction step:
+
+            g₆(n+1) = (n+2)²g₆(n)+h₆(n)    (by Definition 6.1)
+
+                    < (n+2)²×2h₆(n)+h₆(n)  (by induction hypothesis)
+
+      But for any n we have (n+2)²×2h₆(n)+h₆(n) ≮ 2h₆(n+1) = 2(n+2)²h₆(n). Thus
+      we are "stuck".
+
+ACTUAL PROOF. By Lemma 6.2, it suffices to prove
+
+      (n+1)g₆(n) ≤ (2n+1)h₆(n) for all n.
+
+We prove this by induction on n.
+
+    ─ Base case:
+
+            (0+1)g₆(0) = (0+1)×1       (by Definition 6.1)
+
+                       = 1
+
+                       ≤ 1
+
+                       = (2×0+1)×1
+
+                       = (2×0+1)h₆(0)  (by Definition 6.1).
+
+    ─ Induction step: Our induction hypothesis is
+
+       (IH) (n+1)g₆(n) ≤ (2n+1)h₆(n)
+
+      and we must show
+
+      (GOAL) (n+2)g₆(n+1) ≤ (2n+3)h₆(n+1).
+
+      We have
+
+            (n+2)g₆(n+1) = (n+2)((n+2)²g₆(n)+h₆(n))  (by Definition 6.1)
+
+                         = (n+2)³g₆(n)+(n+2)h₆(n)
+
+      and
+
+            (2n+3)h₆(n+1) = (2n+3)(n+2)²h₆(n)                (by Definition 6.1)
+
+                          = (2n+3)(n+2)(n+2)h₆(n)
+
+                          = (2n²+7n+6)(n+2)h₆(n)
+
+                          = (2n²+7n+5)(n+2)h₆(n)+(n+2)h₆(n)
+
+      so (GOAL) is equivalent to
+
+            (n+2)³g₆(n) ≤ (2n²+7n+5)(n+2)h₆(n),
+
+      which is equivalent to
+
+            (n+2)²g₆(n) ≤ (2n²+7n+5)h₆(n),
+
+      which we have by
+
+            (n+2)²g₆(n) = ((n+1)+1)²g₆(n)
+
+                        = ((n+1)²+2(n+1)+1)g₆(n)
+
+                        = ((n+1)²+2(n+1))g₆(n)+g₆(n)
+
+                        = (n+3)(n+1)g₆(n)+g₆(n)
+
+                        ≤ (n+3)(2n+1)h₆(n)+g₆(n)      (by (IH))
+
+                        ≤ (n+3)(2n+1)h₆(n)+2h₆(n)     (by Lemma 6.2 and (IH))
+
+                        = (2n²+7n+5)h₆(n).                                     □
+
+                                       ∗∗
+
+REMARK. I find it a bit curious that the proof of Fact 2.4 uses only one
+application of the induction hypothesis, while the above proof of Fact 6.3 uses
+two applications. Is there a proof of Fact 6.3 which, in some sensible precise
+sense, uses only one application of the induction hypothesis?
+
+                                       ∗∗
+
+DEFINITION 6.4.
+
+    ─ The language L₆ of arithmetic is ℒ[full] expanded with the unary function
+      symbols 'g' and 'h'.
+
+    ─ The L₆-sentences DEF₀(g), DEF₊(g), DEF₀(h) and DEF₊(h) are defined by
+
+            DEF₀(g) :≡ g(0) = 1,
+
+            DEF₊(g) :≡ ∀x. g(x+1) = (x+2)²×g(x)+h(x),
+
+            DEF₀(h) :≡ h(0) = 1,
+
+            DEF₊(h) :≡ ∀x. h(x+1) = (x+2)²×h(x).
+
+    ─ The theory T₆ of L₆-arithmetic is defined by
+
+            T₆ :≡ T[full],DEF₀(g),DEF₊(g),DEF₀(h),DEF₊(h).
+
+    ─ The L₆-formulas φ₆(x) and ψ₆(x) are defined by
+
+             φ₆(x) :≡ g(x) < 2×h(x),
+
+             ψ₆(x) :≡ (x+1)×g(x)+h(x) ≤ 2×(x+1)×h(x).
+
+                                       ∗∗
+
+FACT 6.5. ψ₆(x) witnesses that T₆ proves ∀x.φ₆(x) by necessarily non-analytic
+induction.
+
+                                       ∗∗
+
+To prove Fact 6.5 we will proceed similarly to the alternative proof of
+Fact 5.3.
+
+                                       ∗∗
+
+DEFINITION 6.6.
+
+    ─ L₆' is L₆ expanded with the constant symbol 'c'.
+
+    ─ The L₆'-theories T₆' and T₆'' are defined by
+
+             T₆' :≡ T₆,φ₆(c),¬φ₆(c+1),c>0,c>1,c>2,...
+
+            T₆'' :≡ T₆'-DEF₀(g).
+
+                                       ∗∗
+
+LEMMA 6.7. If T₆'' has a model then so does T₆'.
+
+PROOF. Similar to the proof of Lemma 5.5.                                      □
+
+                                       ∗∗
+
+To easier make sense of the following two definitions, first recall that
+g₂ : ℕ → ℚ was recursively defined (in §2) such that
+
+      for all n: g₂(n) = 1+2⁻²+3⁻²+⋅⋅⋅+(n+1)⁻².
+
+Then recall Euler's famous solution to "the Basel problem" (Lemma C.1):
+
+      g₂(n) → π²/6 as n → ∞.
+
+                                       ∗∗
+
+DEFINITION 6.8. For each natural number m, ξₘ : ℕ → ℝ is defined by
+
+      ξₘ(n) := 2+(m+1)⁻¹+g₂(n)-π²/6.
+
+                                       ∗∗
+
+DEFINITION 6.9. For each natural number m, γₘ : ℕ → ℝ is defined recursively by
+
+        γₘ(0) := 3+(m+1)⁻¹-π²/6,
+
+      γₘ(n+1) := (n+2)²γₘ(n)+h₆(n).
+
+                                       ∗∗
+
+LEMMA 6.10. For all natural numbers m:
+
+      γₘ(n)/h₆(n) = ξₘ(n).
+
+PROOF. See §C.                                                                 □
+
+                                       ∗∗
+
+LEMMA 6.11. For each natural number m there is a unique natural number n such
+that
+
+      ξₘ(n) < 2
+
+and
+
+      ξₘ(n+1) ≮ 2.
+
+PROOF. See §C.                                                                 □
+
+                                       ∗∗
+
+DEFINITION 6.12.
+
+         μ :  ℕ → ℕ
+
+      μ(m) := the n such that ξₘ(n) < 2 and ξₘ(n+1) ≮ 2.
+
+                                       ∗∗
+
+LEMMA 6.13. μ is unbounded.
+
+PROOF. See §C.
+
+                                       ∗∗
+
+We now reuse the notation 'N(m)' (that is, Definition 5.9 does not apply
+anymore).
+
+                                       ∗∗
+
+DEFINITION 6.14. For each natural number m, N(m) is the L₆'-expansion of ℕ[full]
+defined by
+
+      gᴺ⁽ᵐ⁾ := γₘ,
+
+      hᴺ⁽ᵐ⁾ := h₆,
+
+      cᴺ⁽ᵐ⁾ := μ(m).
+
+                                       ∗∗
+
+LEMMA 6.15. For all natural numbers m:
+
+  (a) N(m) ⊨ T[full],
+
+  (b) N(m) ⊨ DEF₊(g),
+
+  (c) N(m) ⊨ DEF₀(h),
+
+  (d) N(m) ⊨ DEF₊(h),
+
+  (e) N(m) ⊨ φ₆(c),
+
+  (f) N(m) ⊨ ¬φ₆(c+1).
+
+PROOF. We have (a) since N(m) is an ℕ[full]-expansion. We have (b) by
+Definitions 6.4, 6.9 and 6.14. We have (c) and (d) by Definitions 6.1, 6.4
+and 6.14. By Lemma 6.10 (and Definitions 6.4 and 6.14), (e) and (f) are
+equivalent to ξₘ(μ(m)) < 2 and ξₘ(μ(m)+1) ≮ 2, respectively, which we have by
+Definition 6.12.                                                               □
+
+                                       ∗∗
+
+LEMMA 6.16. T₆'' has a model.
+
+PROOF. Let T be a finite fragment of T₆''. By Lemmas 6.13 and 6.15 (and by
+Definitions 6.4, 6.6 and 6.14), we have N(m) ⊨ T for m sufficiently large. Thus
+any finite fragment of T₆'' has a model and thus, by compactness, T₆'' has a
+model.                                                                         □
+
+                                       ∗∗
+
+PROOF OF FACT 6.5. Conditions (2)–(5) of Definition 4.4 are easy. Condition (1)
+follows from Lemmas 4.6, 6.7 and 6.16.                                         □
+
+                                       ∗∗
+
+Is there a "more direct" construction of a non-standard model satisfying the
+conditions of Lemma 4.6? I have not been able to come up with one. We might try
+to adapt the method used to prove Fact 5.3──that is, we might try to cleverly
+expand an arbitrary non-standard ℒ[full]-model M₀ ⊨ T[full] to an L₆-model
+M ⊨ T₆ such that there is a non-standard c such that
+
+      M ⊨ φ₆(c)
+
+and
+
+      M ⊭ φ₆(c+1).
+
+Thus we need a c in M₀ and interpetations gᴹ,hᴹ : M₀ → M₀ such that
+
+  (a) gᴹ(0) = hᴹ(0) = 1,
+
+  (b) for all n in M₀:
+
+          ─ gᴹ(n+1) = (n+2)²gᴹ(n)+hᴹ(n),
+
+          ─ hᴹ(n+1) = (n+2)²hᴹ(n),
+
+  (c) gᴹ(c) < 2hᴹ(c),
+
+  (d) gᴹ(c+1) ≮ 2hᴹ(c+1).
+
+By (c) we must have hᴹ(c) ≠ 0. Then we must have
+
+      hᴹ(c) = hᴹ((c-1)+1)
+
+            = (c+1)²hᴹ(c-1)                (by (b))
+
+            = (c+1)²hᴹ((c-2)+1)
+
+            = (c+1)²c²hᴹ(c-2)              (by (b))
+
+            = (c+1)²c²(c-1)²hᴹ(c-3)        (by (b))
+
+            = (c+1)²c²(c-1)²(c-2)²hᴹ(c-4)  (by (b))
+
+            ⋮
+
+Thus it is necessary that hᴹ(c) is non-zero and divisible by each of
+
+      (c+1)²,c²,(c-1)²,(c-2)²,...
+
+We get similar requirements on gᴹ. This makes it tricky to come up with explicit
+definitions that simultaneously satisfy (a)–(d)──or at least, I have not been
+able to do so.
+
+                                       ∗∗
+
+§7 Fact 3.2c must be proved by non-analytic induction
+─────────────────────────────────────────────────────
+
+DEFINITION 7.1.
+
+    ─ The language L₇ of arithmetic is ℒ[full] expanded with the binary function
+      symbol 'acc₇'.
+
+    ─ The L₇-sentence DEF(acc₇) is defined by
+
+            DEF(acc₇) :≡
+
+              ∀a. acc₇(a,0) = a ∧ ∀a∀x. acc₇(a,x+1) = acc₇(a×(x+1),x).
+
+    ─ The theory T₇ of L₇-arithmetic is defined by
+
+            T₇ :≡ T[full],DEF(acc₇).
+
+    ─ The L₇-formulas φ₇(x) and ψ₇(x) are defined by
+
+            φ₇(x) :≡ x! = acc₇(1,x),
+
+            ψ₇(x) :≡ ∀a. acc₇(a,x) = a×x!.
+
+                                       ∗∗
+
+FACT 7.2. ψ₇(x) witnesses that T₇ proves ∀x.φ₇(x) by necessarily non-analytic
+induction.
+
+                                       ∗∗
+
+To prove Fact 7.2 we will proceed as in the proof of Fact 5.3.
+Conditions (2)–(5) of Definition 4.4 are straightforward. To prove (1) we take
+any non-standard model M₀ ⊨ T[full] and expand it to an L₇-model M, interpreting
+acc₇ such that we get M ⊨ T₇ and a non-standard c such that M ⊨ φ₇(c) and
+M ⊭ φ₇(c+1).
+
+                                       ∗∗
+
+ASSUMPTION 7.3.
+
+    ─ Let M₀ ⊨ T[full] be a non-standard ℒ[full]-model.
+
+    ─ Let c be a non-standard number in M₀.
+
+                                       ∗∗
+
+We will expand M₀ to an L₇-model M ⊨ T₇ such that M ⊨ φ₇(c) and M ⊭ φ₇(c+1). The
+defining equations for acc₇ (that is, the sentence DEF(acc₇)) fix all its
+interpretations acc₇ᴹ(a,n) where n is standard. For non-standard n we have quite
+some leeway. To achieve M ⊨ φ₇(c) and M ⊭ φ₇(c+1) we will put
+
+      acc₇ᴹ(1,c) := c!
+
+and
+
+      acc₇ᴹ(1,c+1) := 0.
+
+These together with the second conjunct of DEF(acc₇) then gives
+
+      c! = acc₇ᴹ(1,c)
+
+         = acc₇ᴹ(c,c-1)
+
+         = acc₇ᴹ(c(c-1),c-2)
+
+         = acc₇ᴹ(c(c-1)(c-2),c-3)
+
+         ⋮
+
+respectively
+
+      0 = acc₇ᴹ(1,c+1),
+
+        = acc₇ᴹ(c+1,c),
+
+        = acc₇ᴹ((c+1)c,c-1),
+
+        = acc₇ᴹ((c+1)c(c-1),c-2),
+
+        = acc₇ᴹ((c+1)c(c-1)(c-2),c-3),
+
+        ⋮
+
+The defining equations impose no further restrictions so we can put
+acc₇ᴹ(n,m) := 0 for all yet to be defined cases.
+
+                                       ∗∗
+
+We will now make the construction in the preceding paragraph precise.
+
+                                       ∗∗
+
+DEFINITION 7.4.
+
+    ─ The set A ⊆ M₀² is defined by
+
+            A := {(a,n) : n is standard},
+
+    ─ The set B ⊆ M₀² is defined inductively by
+
+                                (a,n+1) is in B
+            ───────────────   ────────────────────
+             (1,c) is in B     (a(n+1),n) is in B .
+
+    ─ The set C ⊆ M₀² is defined by
+
+            C := M₀²-(A∪B).
+
+                                       ∗∗
+
+REMARK. The elements of B are thus
+
+    (1,c),
+
+    (c,c-1),
+
+    (c(c-1),c-2),
+
+    (c(c-1)(c-2),c-3),
+
+    ⋮
+
+                                       ∗∗
+
+LEMMA 7.5. A, B and C partitions M₀².
+
+PROOF. Clearly:
+
+    ─ A∪B∪C = M₀².
+
+    ─ C is disjoint from A and from B.
+
+It thus remains to show that A and B are disjoint. If (a,n) is in A then n is
+standard but if (a,n) is in B then n is non-standard. Thus A and B have no
+common elements and thus they are disjoint.                                    □
+
+                                       ∗∗
+
+By Lemma 7.5 the following definition is well-formed.
+
+                                       ∗∗
+
+DEFINITION 7.6. acc₇ᴹ : M₀² → M₀ is defined by
+
+      acc₇ᴹ(a,n) := a×n!  if n is standard,
+
+      acc₇ᴹ(a,n) := c!    if (a,n) is in B,
+
+      acc₇ᴹ(a,n) := 0     if (a,n) is in C.
+
+                                       ∗∗
+
+LEMMA 7.7. Let X be A, B or C. For all a and n in M₀, (a,n+1) is in X if and
+only if (a(n+1),n) is.
+
+PROOF. It suffices to show this for X = A and X = B (since then it must hold for
+C, by definition of C).
+
+    ─ Case X = A:
+
+            (a,n+1) is in A  iff  n+1 is standard
+
+                             iff  n is standard
+
+                             iff  (a(n+1),n) is in A.
+
+    ─ Case X = B: The 'only if' direction holds by definition. For the 'if'
+      direction, suppose (a(n+1),n) is in B. Case splitting on the inductive
+      definition of B gives the following.
+
+          ─ Case (a(n+1),n) = (1,c): Then n = c and a(n+1) = 1, so
+            a(c+1) = 1 so a = c+1 = 1, so c = 0. Since c is non-standard this is
+            a contradiction so this case is not possible.
+
+          ─ Case (a(n+1),n) = (a'(n'+1),n') for some a' and n' in M₀ such
+            that (a',n'+1) is in B: Then a(n+1) = a'(n'+1) and n = n' so
+            a(n+1) = a'(n+1) so a = a' (by the appropriate well-known theorem of
+            T[full]). Thus (a,n+1) = (a',n'+1) and since (a',n'+1) is in B so is
+            (a,n+1).                                                           □
+
+                                       ∗∗
+
+LEMMA 7.8. For all a and n in M₀, if (a,n) is in B then n ≤ c.
+
+PROOF. Induction on "(a,n) is in B".
+
+    ─ Case (a,n) = (1,c): Immediate.
+
+    ─ Case (a,n) = (a'(n+1),n) for some a' in M₀ and with induction hypothesis
+      n+1 ≤ c: Immediate.                                                      □
+
+                                       ∗∗
+
+LEMMA 7.9.
+
+  (1) M ⊨ T₇.
+
+  (2) M ⊨ φ₇(c).
+
+  (3) M ⊭ φ₇(c+1).
+
+PROOF.
+
+  (1) We need to show:
+
+        (a) M ⊨ T[full],
+
+        (b) M ⊨ ∀a. acc₇(a,0) = a,
+
+        (c) M ⊨ ∀a∀x. acc₇(a,x+1) = acc₇(a×(x+1),x).
+
+      (a) holds since M is an M₀-expansion. (b) holds by Definition 7.6. For
+      (c), suppose a and n are in M₀. We need to show
+
+        (∗) acc₇ᴹ(a,n+1) = acc₇ᴹ(a(n+1),n).
+
+      By Lemma 7.5 it suffices to consider the following cases.
+
+          ─ Case (a,n+1) is in A:
+
+                  acc₇ᴹ(a,n+1) = a(n+1)!          (by Definition 7.6)
+
+                               = a((n+1)n!)       (by Definition 3.1c)
+
+                               = (a(n+1))n!       (by associativity)
+
+                               = acc₇ᴹ(a(n+1),n)  (by Definition 7.6)
+
+          ─ Case (a,n+1) is in B: Then, by Lemma 7.7, (a(n+1),n) is in B as well
+            so, by Definition 7.6, both sides of (∗) are c! and thus (∗) holds.
+
+          ─ Case (a,n+1) is in C: Similar to the previous case.
+
+  (2) We need to show
+
+            c! = acc₇ᴹ(1,c).
+
+      Since (1,c) is in B, this holds by Definition 7.6.
+
+  (3) We need to show
+
+        (∗) (c+1)! ≠ acc₇ᴹ(1,c+1).
+
+      c+1 is non-standard so (1,c+1) is not in A. We have c+1 > c, so by
+      Lemma 7.8, (1,c+1) is not in B. Thus (1,c+1) is in C and thus, by
+      Definition 7.6, we have acc₇ᴹ(1,c+1) = 0. Thus (∗) holds since M ⊨ T[full]
+      and
+
+            ∀x. x! ≠ 0
+
+      is a theorem of T[full].
+
+                                       ∗∗
+
+PROOF OF FACT 7.2. We need to show (1)–(5) of Definition 4.4. (1) follows from
+Lemmas 4.6 and 7.9. (2)–(5) are easy to verify.                                □
+
+                                       ∗∗
+
+§8 Facts 3.2a, 3.2b and 3.6 must be proved by non-analytic induction
+────────────────────────────────────────────────────────────────────
+
+In this section I present a general result which shows that facts like
+Facts 3.2a and 3.2b must be proved by non-analytic induction. Since Fact 3.6 is
+a generalization of Facts 3.2a and 3.2b, this means that Fact 3.6 too must be
+proved by non-analytic induction. The proof method is basically the same as for
+Fact 7.2, only a bit more complicated.
+
+                                       ∗∗
+
+We now reuse '∙' and '∙∙'. They were used in §3 but those usages does thus not
+apply anymore.
+
+                                       ∗∗
+
+ASSUMPTION 8.1.
+
+    ─ Let ∙ : ℕ² → ℕ.
+
+    ─ Let n₀ be a natural number.
+
+    ─ Let M₀ ⊨ T[full] be non-standard ℒ[full]-model.
+
+    ─ Let c be a non-standard number in M₀.
+
+                                       ∗∗
+
+REMARK. In §3 we had the more general ∙ : A×A → A, with A an arbitrary set.
+Since the notions introduced in §4 only covers arithmetic we now consider only
+the case A = ℕ, but I do not think there should be any problems generalizing to
+a more general setting (once the notions in §4 have been appropriately
+generalized).
+
+                                       ∗∗
+
+DEFINITION 8.2. ∙∙ : ℕ² → ℕ is defined recursively by
+
+          n∙∙0 := n₀,
+
+      n∙∙(m+1) := (n∙∙m)∙n.
+
+                                       ∗∗
+
+DEFINITION 8.3.
+
+    ─ The language L₈ of arithmetic is ℒ[full] expanded with the ternary
+      function symbol 'acc₈'.
+
+    ─ The L₈-sentence DEF(acc₈) is defined by
+
+            DEF(acc₈) :≡
+
+              ∀a∀x. acc₈(a,x,0) = a ∧ ∀a∀x∀y. acc₈(a,x,y+1) = acc₈(a∙x,x,y).
+
+    ─ The theory T₈ of L₈-arithmetic is defined by
+
+            T₈ :≡ T[full],DEF(acc₈).
+
+    ─ The L₈-formula φ₈(y) is defined by
+
+            φ₈(y) :≡ ∀x. acc₈(n₀,x,y) = x∙∙y.
+
+                                       ∗∗
+
+Proceeding similarly to §5 and §7, we will expand M₀ to an L₈-model M ⊨ T₈ such
+that M ⊨ φ(c-1) and M ⊭ φ(c). To achieve M ⊨ φ(c-1) we will put
+
+      acc₈ᴹ(n₀,n,c-1) := n∙∙(c-1)
+
+for all n in M₀. To achieve M ⊭ φ(c) we will put
+
+      acc₈ᴹ(n₀,n,c) := (n∙∙c)+1
+
+for some n in M₀. Now whether we can do this while satisfying DEF(acc₈) depends
+on ∙ and n₀. For example, for ∙ = + and n₀ = 0, we would put
+
+      acc₈ᴹ(0,n,c-1) := n(c-1).
+
+To satisfy the second conjunct of DEF(acc₈) we would then need, for all n in M₀,
+
+       n(c-1) = acc₈ᴹ(0,n,c-1)
+
+              = acc₈ᴹ(n,n,c-2)
+
+              = acc₈ᴹ(2n,n,c-3)
+
+              = acc₈ᴹ(3n,n,c-4)
+
+              ⋮
+
+and
+
+            0 = 0(c-1)
+
+              = acc₈ᴹ(0,0,c-1)
+
+              = acc₈ᴹ(0,0,c)
+
+              = acc₈ᴹ(0,0,c+1)
+
+              = acc₈ᴹ(0,0,c+2)
+
+              ⋮
+
+We will now make the construction precise.
+
+                                       ∗∗
+
+DEFINITION 8.4.
+
+    ─ The set A ⊆ M₀³ is defined by
+
+            A := {(a,n,m) : m is standard},
+
+    ─ The set B ⊆ M₀³ is defined inductively by
+
+                 n is in M₀        (a,n,m+1) is in B    (a∙n,n,m) is in B
+            ────────────────────  ───────────────────  ───────────────────
+             (n₀,n,c-1) is in B    (a∙n,n,m) is in B    (a,n,m+1) is in B .
+
+    ─ The set C ⊆ M₀³ is defined by
+
+            C := M₀³-(A∪B).
+
+                                       ∗∗
+
+EXAMPLE 8.5.
+
+  (a) If ∙ = + and n₀ = 0 then B consists of the triples
+
+            (0,0,c),
+
+            (0,0,c+1),
+
+            (0,0,c+2),
+
+            ⋮
+
+      together with all triples that are on one of the forms
+
+            (0,n,c-1),
+
+            (n,n,c-2),
+
+            (2n,n,c-3),
+
+            (3n,n,c-4),
+
+            ⋮
+
+  (b) If ∙ = × and n₀ = 1 then B consists of the triples
+
+            (1,1,c),
+
+            (1,1,c+1),
+
+            (1,1,c+2),
+
+            ⋮
+
+      together with all triples that are on one of the forms
+
+            (1,n,c-1),
+
+            (n,n,c-2),
+
+            (n²,n,c-3),
+
+            (n³,n,c-4),
+
+            ⋮
+
+                                       ∗∗
+
+LEMMA 8.6. A, B and C partitions M₀³.
+
+PROOF. Clearly:
+
+    ─ A∪B∪C = M₀³.
+
+    ─ C is disjoint from A and from B.
+
+It thus remains to show that A and B are disjoint. If (a,n,m) is in A then m is
+standard but if (a,n,m) is in B then n is non-standard. Thus A and B have no
+common elements and thus they are disjoint.                                    □
+
+                                       ∗∗
+
+By Lemma 8.6, the following definition is well-formed.
+
+                                       ∗∗
+
+DEFINITION 8.7. acc₈ᴹ : M₀³ → M₀ is defined by
+
+        acc₈ᴹ(a,n,0) := a,
+
+      acc₈ᴹ(a,n,m+1) := acc₈ᴹ(a∙n,n,m)  if m is standard,
+
+        acc₈ᴹ(a,n,m) := n∙∙(c-1)        if (a,n,m) is in B,
+
+        acc₈ᴹ(a,n,m) := (n∙∙c)+1        if (a,n,m) is in C.
+
+                                       ∗∗
+
+LEMMA 8.8. Let X be A, B or C. For all a, n and m in M₀, (a,n,m+1) is in X
+if and only if (a∙n,n,m) is.
+
+PROOF. It suffices to show this for X = A and X = B (since then it must hold for
+C, by definition of C). For X = B this holds by definition. For X = A:
+
+      (a,n,m+1) is in A  iff  m+1 is standard
+
+                         iff  m is standard
+
+                         iff  (a∙n,n,m) is in A.                               □
+
+                                       ∗∗
+
+ASSUMPTION 8.9. There is n in M₀ such that (n₀,n,c) is in C.
+
+                                       ∗∗
+
+LEMMA 8.10.
+
+  (1) M ⊨ T₈.
+
+  (2) M ⊨ φ₈(c-1).
+
+  (3) M ⊭ φ₈(c).
+
+PROOF.
+
+  (1) We need to show:
+
+        (a) M ⊨ T[full],
+
+        (b) M ⊨ ∀a∀x. acc₈(a,x,0) = a,
+
+        (c) M ⊨ ∀a∀x∀y. acc₈(a,x,y+1) = acc₈(a∙x,x,y).
+
+      (a) holds since M is an M₀-expansion. (b) holds by Definition 8.6. For
+      (c), suppose a, n and m are in M₀. We need to show
+
+        (∗) acc₈ᴹ(a,n,m+1) = acc₈ᴹ(a∙n,n,m).
+
+      By Lemma 8.6 it suffices to consider the following cases.
+
+          ─ Case (a,n,m+1) is in A: Then (∗) holds by Definition 8.7.
+
+          ─ Case (a,n,m+1) is in B: Then, by Lemma 8.8, (a∙n,n,m) is in B
+            as well. Thus, by Definition 8.7, both sides of (∗) are equal.
+
+          ─ Case (a,n,m+1) is in C: Similar to the previous case.
+
+  (2) We need to show that
+
+            acc₈ᴹ(n₀,n,c-1) = n∙∙(c-1)
+
+      for all n in M₀. Since (n₀,n,c-1) is in B for all n in M₀, this holds by
+      Definition 8.7.
+
+  (3) We need to exhibit an n in M₀ such that
+
+            acc₈ᴹ(n₀,n,c) ≠ n∙∙c.
+
+      By Assumption 8.9 we have an n in M₀ such that (n₀,n,c) is in C, so for
+      this n we have
+
+            acc₈(n₀,n,c) = (n∙∙c)+1     (by Definition 8.7)
+
+                         ≠ n∙∙c         (by well-known theorem of T[full]).    □
+
+                                       ∗∗
+
+FACT 8.11. With ∙ = + and n₀ = 0, or with ∙ = × and n₀ = 1, T₈ proves ∀y.φ(y) by
+necessarily non-analytic induction.
+
+PROOF. Both cases are similar. We prove the case ∙ = +. We must exhibit an
+L₈-formula ψ(y) such that conditions (1)–(5) of Definition 4.4 are satisfied. As
+the proof of Fact 3.2 shows,
+
+      ψ(y) :≡ ∀a∀x. acc₈(a,x,y) = a+x×y
+
+will work. Conditions (2)–(5) are then straightforward. Condition (1) follows
+from Lemmas 4.6 and 8.10. It remains to verify that Assumption 8.9 is true when
+∙ = + and n₀ = 0, which it is since for example (0,1,c) is in C (see
+Example 8.5a).                                                                 □
+
+                                       ∗∗
+
+§9 Discussion and future work
+─────────────────────────────
+
+What does results like Facts 5.3, 6.5, 7.2 and 8.11 tell us about the necessity
+of non-analytic induction in mathematical practice? Consider, for example,
+Fact 5.3 and consider a working mathematician who have just introduced the
+function f₂ : ℕ → ℕ by Definition 2.1──that is, by the recursive definition
+
+        f₂(0) := 0,
+
+      f₂(n+1) := f₂(n)+2n+1.
+
+Fact 5.3 tells us that if our working mathematician wants to prove──by the means
+provided by first-order arithmetic──that f₂(n) is a perfect square for all n,
+then no matter what facts have been previously established, a non-analytic
+induction proof is necessary (or put differently: a non-analytic induction axiom
+is needed). As Fact 5.3 shows, even if our working mathematician would somehow
+have established all first-order facts of arithmetic in a language without 'f₂',
+a non-analytic induction axiom would still be needed. Thus results like Fact 5.3
+say that some non-analytic induction proofs are necessarily non-analytic in this
+rather strong sense.
+
+                                       ∗∗
+
+PA⁻, in the language ℒ₀, is "the theory of the non-negative parts of discretely
+ordered commutative rings" (see §A). Hetzl and Wong (2017) consider the problem
+of finding non-analytic induction proofs from PA⁻. This is motivated by the fact
+that for any ℒ₀-sentence σ, if PA ⊢ σ then there is a φ(x) such that
+PA⁻,IND(φ) ⊢ σ. In previous work, we stated and proved Facts 5.3 and 7.2 with
+PA⁻ instead of T[full] (in the definition of T₅ and T₇, respectively).
+Naturally, one might wonder whether one could always replace PA⁻ with T[full] in
+such results. This is not the case for trivial reasons: facts formulated using
+only ℒ₀ might need non-analytic induction axioms added to PA⁻ to be provable,
+but these non-analytic induction axioms are of course already in T[full].
+Facts 5.3, 6.5, 7.2 and 8.11 concern results formulated in an impure language.
+Perhaps one could find some general criterion that says that for some class of
+statements in such languages, if PA⁻,T proves them by necessarily non-analytic
+induction then so does T[full],T (where T would typically consist of axioms
+governing the symbols from the impure part of the language). For example one
+could investigate the following conjecture, which is inspired by Facts 7.2
+and 8.11.
+
+                                       ∗∗
+
+CONJECTURE 9.1.
+
+    ─ Let L be ℒ[full] expanded with the (n+m)-ary function symbol 'f'.
+
+    ─ Let T be an L-theory of arithmetic.
+
+    ─ Let t₁,...,tₙ be closed ℒ₀-terms.
+
+    ─ Let t(x₁,...,xₘ) be an ℒ₀-term.
+
+    ─ Suppose PA⁻,T proves
+
+            σ :≡ ∀x₁⋅⋅⋅∀xₘ. t(x₁,...,xₘ) = f(t₁,...,tₙ,x₁,...,xₘ).
+
+      by necessarily non-analytic induction.
+
+Then T[full],T proves σ by necessarily non-analytic induction.
+
+                                       ∗∗
+
+To more systematically settle whether different facts require non-analytic
+induction proofs one could attempt to establish more general results──instead of
+hand-crafting countermodels for each particular case. This might be difficult.
+As a starting point one could try to develop general methods and results for
+comparatively simple theories, like fragments of Presburger arithmetic.
+
+                                       ∗∗
+
+Another possible future line of work would be to consider other settings than
+arithmetic. For example, in computer science, many basic facts about functions
+on inductive structures seem to require non-analytic induction proofs.
+
+                                       ∗∗
+
+One might also approach the problem of non-analytic induction proofs from the
+more proof-theoretical side, for example by studying derivations in natural
+deduction. Dag Prawitz's (2018) recent work might be useful.
+
+                                       ∗∗
+
+§A Some definitions and results
+───────────────────────────────
+
+DEFINITION A.1. The ℒ₀-theory PA⁻ is axiomatized by the following.
+
+    ─ 0 and 1 are distinct:
+
+            0 ≠ 1.
+
+    ─ Associativity of addition and multiplication:
+
+            (x+y)+z = x+(y+z),
+
+            (x×y)×z = x×(y×z).
+
+    ─ Commutativity of addition and multiplication:
+
+            x+y = y+x,
+
+            x×y = y×x.
+
+    ─ Distributivity of addition over multiplication:
+
+            x×(y+z) = x×y+x×z.
+
+    ─ 0 is an additive identity and a multiplicative zero:
+
+            x+0 = x,
+
+            x×0 = 0.
+
+    ─ The order is irreflexive:
+
+            x ≮ x.
+
+    ─ The order is transitive:
+
+            x < y ∧ y < z → x < z.
+
+    ─ The order is total:
+
+            x < y ∨ x = y ∨ y < x.
+
+    ─ The order is discrete:
+
+            x = 0 ∨ x = 1 ∨ 1 < x.
+
+    ─ Addition and multiplication respect the order:
+
+            x < y → x+z < y+z,
+
+            x < y ∧ 0 ≠ z → x×z < y×z.
+
+    ─ Smaller elements can be subtracted from larger elements:
+
+            x < y → ∃z. x+z = y.
+
+                                       ∗∗
+
+FACT A.2.
+
+    ─ For all ℒ₀-structures M: M ⊨ PA⁻ if and only if M is the non-negative part
+      of a nontrivial discretely ordered commutative ring.
+
+    ─ PA⁻ is a theory of ℒ₀-arithmetic.
+
+    ─ PA ≡ PA⁻+{IND(φ) : φ an ℒ₀-formula in one free variable}.
+
+PROOFS. See for example Chapter 2 of Kaye's (1991) book.                       □
+
+                                       ∗∗
+
+§B Proofs of Lemmas 5.7 and 5.8
+───────────────────────────────
+
+LEMMA B.1. For all natural numbers m and n:
+
+      βₘ₊₁(n) = βₘ(n)+2.
+
+PROOF. Induction on n.
+
+    ─ Base case:
+
+            βₘ₊₁(0) = 2(m+1)+1  (by Definition 5.6)
+
+                    = (2m+1)+2
+
+                    = βₘ(0)+2   (by Definition 5.6).
+
+    ─ Induction step:
+
+            βₘ₊₁(n+1) = βₘ₊₁(n)+2n+1    (by Definition 5.6)
+
+                      = βₘ(n)+2+2n+1    (by induction hypothesis)
+
+                      = (βₘ(n)+2n+1)+2
+
+                      = βₘ(n+1)+2       (by Definition 5.6).                   □
+
+                                       ∗∗
+
+LEMMA 5.7. For all natural numbers m:
+
+      βₘ(m) = (m+1)².
+
+PROOF. Induction on m.
+
+    ─ Base case:
+
+            βₘ(0) = 2×0+1  (by Definition 5.6)
+
+                  = (0+1)².
+
+    ─ Induction step:
+
+            βₘ₊₁(m+1) = βₘ(m+1)+2     (by Lemma B.1)
+
+                      = βₘ(m)+2m+1+2  (by Definition 5.6)
+
+                      = βₘ(m)+2m+3
+
+                      = (m+1)²+2m+3   (by induction hypothesis)
+
+                      = (m+2)²
+
+                      = ((m+1)+1)².                                            □
+
+                                       ∗∗
+
+LEMMA 5.8. For all natural numbers m:
+
+      βₘ(m+1) is not a perfect square.
+
+PROOF. We have
+
+      βₘ(m+1) = βₘ(m)+2m+1   (by Definition 5.6)
+
+              = (m+1)²+2m+1  (by Lemma 5.7)
+
+              = (m+2)²-2.
+
+Thus we have
+
+      (m+1)² < βₘ(m+1) < (m+2)².
+
+Thus βₘ(m+1) is not a perfect square.                                          □
+
+                                       ∗∗
+
+§C Proofs of Lemmas 6.10, 6.11 and 6.13
+───────────────────────────────────────
+
+LEMMA C.1. g₂(n) → π²/6 as n → ∞.
+
+PROOF. This is Euler's (1740) famous solution to "the Basel problem".          □
+
+                                       ∗∗
+
+LEMMA C.2. For each natural number m, ξₘ(n) → 2+(m+1)⁻¹ as n → ∞.
+
+PROOF. Immediate from Lemma C.1 and Definition 6.8.                            □
+
+                                       ∗∗
+
+LEMMA C.3. For each natural number n there is a natural number m such that
+
+      ξₘ(n) < 2.
+
+PROOF. Let n be a natural number. By Lemma C.1 and since g₂ is strictly
+increasing we have
+
+  (∗) g₂(n) = π²/6-ε
+
+for some ε > 0. Thus for any m we have
+
+      ξₘ(n) = 2+(m+1)⁻¹+g₂(n)-π²/6   (by Definition 6.8)
+
+            = 2+(m+1)⁻¹+π²/6-ε-π²/6  (by (∗))
+
+            = 2+(m+1)⁻¹-ε.
+
+Thus for m large enough, ξₘ(n) < 2.                                            □
+
+                                       ∗∗
+
+LEMMA 6.10. For all natural numbers m:
+
+      γₘ(n)/h₆(n) = ξₘ(n).
+
+PROOF. Induction on n.
+
+    ─ Base case:
+
+            γₘ(0)/h₆(0) = (3+(m+1)⁻¹-π²/6)/1    (by Definitions 6.1 and 6.9)
+
+                        = 2+(m+1)⁻¹+1-π²/6
+
+                        = 2+(m+1)⁻¹+g₂(0)-π²/6  (by Definition 2.3)
+
+                        = ξₘ(0)                 (by Definition 6.8).
+
+    ─ Induction step:
+
+            γₘ(n+1)/h₆(n+1)
+
+              = ((n+2)²γₘ(n)+h₆(n))/((n+2)²h₆(n))  (by Definitions 6.1 and 6.9)
+
+              = γₘ(n)/h₆(n)+(n+2)⁻²
+
+              = ξₘ(n)+(n+2)⁻²                      (by induction hypothesis)
+
+              = 2+(m+1)⁻¹+g₂(n)-π²/6+(n+2)⁻²       (by Definition 6.8)
+
+              = 2+(m+1)⁻¹+g₂(n)+(n+2)⁻²-π²/6
+
+              = 2+(m+1)⁻¹+g₂(n+1)-π²/6             (by Definition 2.3)
+
+              = ξₘ(n+1)                            (by Definition 6.8).        □
+
+                                       ∗∗
+
+LEMMA 6.11. For each natural number m there is a unique natural number n such
+that
+
+      ξₘ(n) < 2
+
+and
+
+      ξₘ(n+1) ≮ 2.
+
+PROOF. Let m be any natural number. By Lemma C.2 there is a natural number n'
+such that
+
+      ξₘ(n') > 2.
+
+Since ξₘ(0) < 2 we thus have a natural number n < n' such that
+
+      ξₘ(n) < 2
+
+and
+
+      ξₘ(n+1) ≮ 2.
+
+Since ξₘ is strictly increasing n must be unique.                              □
+
+                                       ∗∗
+
+LEMMA 6.13. μ is unbounded.
+
+PROOF. We show that for any m there is k such that μ(k) > μ(m). Let m be any
+natural number. By Lemma C.3 there is a natural number k such that
+
+  (∗) ξₖ(μ(m)+1) < 2.
+
+Thus
+
+      μ(k) ≥ μ(m)+1  (by Definition 6.12 and (∗) and since ξₖ is increasing)
+
+           > μ(m).                                                             □
+
+                                       ∗∗
+
+References
+──────────
+
+Euler, Leonhard (1740): "De summis serierum reciprocarum", Commentarii academiae
+scientiarum Petropolitanae 7, pp. 123-134.
+
+Hetzl, Stefan and Tin Lok Wong (2017): "Some observations on the logical
+foundations of inductive theorem proving", Logical Methods in Computer Science
+13(4).
+
+Kaye, Richard (1991): "Models of Peano arithmetic". Clarendon Press.
+
+Prawitz, Dag (2018): "The concepts of proof and ground", preprint.

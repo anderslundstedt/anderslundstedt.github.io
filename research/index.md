@@ -11,9 +11,9 @@ title: Research
   Seminar presentation (also, the linked blog post adresses some problems in the
   slides).
   - Summary of results
-    - version 2019-08-29:
-      [pdf](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20190829.pdf),
-      [txt](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20190829.txt)
+    - version 2020-01-22:
+      [pdf](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20200122.pdf),
+      [txt](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20200122.txt)
     - [all versions](non-analytic-induction/summary/)
   - [JAF 38](https://jaf2019nyc.com) presentation (2019)
     - [extended abstract (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_extended_abstract_2019.pdf)
