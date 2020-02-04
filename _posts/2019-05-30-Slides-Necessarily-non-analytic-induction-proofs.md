@@ -16,7 +16,7 @@ problems with our definitions. Instead of modifying the slides I will address
 those problems here.
 
 **UPDATE 2019-08-29:** *In the latest summary that I have uploaded to the
-research page, the following problem has been addressed.*
+research page, the following problem has been addressed.*  
 At the FLoV talk,
 [Mattias Granberg Olsson](https://flov.gu.se/english/about/linguistics--logic-and-theory-of-science-unit/linguistics--logic-and-theory-of-science-unit?languageId=100001&userId=xgranb)
 pointed out a problem with our definition of first-order languages of arithmetic
@@ -31,6 +31,8 @@ a first-order language of arithmetic. Since it would still be nice to be able to
 define the standard model for any language of arithmetic, we will probably have
 to come up with some other solution.
 
+**UPDATE 2020-02-02:** *I have uploaded to the research page a note reflecting
+on terminology. This note includes a discussion of the following problem.*  
 At the FLoV talk, [Graham Leigh](https://flov.gu.se/english/about/linguistics--logic-and-theory-of-science-unit/linguistics--logic-and-theory-of-science-unit?languageId=100001&userId=xleigr)
 pointed out that the terminology "necessarily non-analytic" might be a bit
 unfortunate. The reason is that we can construct cases where we have "ψ(x)

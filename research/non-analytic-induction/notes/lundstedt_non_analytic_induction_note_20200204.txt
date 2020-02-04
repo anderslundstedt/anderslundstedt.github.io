@@ -1,0 +1,149 @@
+REFLECTIONS ON THE TERMINOLOGY OF "NECESSARILY NON-ANALYTIC INDUCTION PROOFS"
+═════════════════════════════════════════════════════════════════════════════
+
+Anders Lundstedt (anders.lundstedt@philosophy.su.se)
+
+2020-02-04
+
+
+In my research project with the preliminary title "Necessarily non-analytic
+induction proofs" I investigate the phenomenon where some mathematical facts
+seem to not lend themselves to a "straightforward" induction proof. Sometimes it
+does not seem possible to prove a fact ∀x.φ(x) by induction with φ(x) as
+induction hypothesis. Instead what works is to prove some other fact ∀x.ψ(x) by
+induction (with ψ(x) as induction hypothesis), and ∀x.φ(x) then follows from
+∀x.ψ(x). Typically this proof method is called something like "strengthening of
+the induction hypothesis". However, there need not always be any precise sense
+in which ψ(x) is stronger than φ(x). Thus a more general terminology is wanted.
+
+                                       ∗∗
+
+Hetzl and Wong (2017) have made precise sense of what it would mean that a
+fact cannot be proved by "straightforward induction". They proved that
+"inductive theorem proving requires non-analytic induction axioms", which can be
+phrased precisely as follows. An induction axiom
+
+      φ(0)∧∀x(φ(x)→φ(x+1))→∀x.φ(x)
+
+is ∗non-analytic∗ for a sentence σ if φ(x) is not an instance of a subformula of
+σ. Then there are consequences PA ⊢ σ any derivation of which must make use of
+induction axioms that are non-analytic for σ.
+
+                                       ∗∗
+
+Based on the notions introduced by Hetzl and Wong, I have made the following
+definitions (Lundstedt, 2020).
+
+                                       ∗∗
+
+DEFINITIONS.
+
+─ A first-order language is a ∗(first-order) language of arithmetic∗ if and only
+  if it is an expansion of the language ⟨0,1,+⟩.
+
+─ Let L be a language of arithmetic.
+
+  ─ Let φ(x) be an L-formula in the free variable x. The ∗induction instance∗
+    for φ is the L-sentence
+
+          IND(φ) :≡ φ(0)∧∀x(φ(x)→φ(x+1))→∀x.φ(x).
+
+  ─ Let T be an L-theory and let φ(x) and ψ(x) be L-formulas in the free
+    variable x. Say that ∗ψ(x) witnesses that T proves ∀x.φ(x) by necessarily
+    non-analytic induction∗ if and only if
+
+    (1)   T,IND(φ) ⊬ ∀x.φ(x),
+
+    (2)   T ⊢ φ(0),
+
+    (3)   T ⊢ ψ(0),
+
+    (4)   T ⊢ ∀x: ψ(x)→ψ(x+1),
+
+    (5)   T ⊢ ∀x.ψ(x)→∀x.φ(x).
+
+                                       ∗∗
+
+As used here, there are at least two problems with the terminology "T proves
+∀x.φ(x) by necessarily non-analytic induction":
+
+(P1)  If (1)–(5) holds then T does not actually prove ∀x.φ(x)──rather it is T
+      together with an appropriate induction axiom that prove ∀x.φ(x). Thus "T
+      proves ∀x.φ(x) ..." is a bit misleading.
+
+(P2)  It is possible to construct T, φ(x) and ψ(x) such that (1)–(5) holds while
+      IND(ψ) is not non-analytic for ∀x.φ(x). Indeed, suppose we have:
+
+            ψ(x) witnesses that T proves ∀x.φ(x) by necessarily non-analytic
+            induction.
+
+      Suppose we also have the following strengthening of (5):
+
+      (5')  T ⊢ ∀x: ψ(x)→φ(x).
+
+      (See for example my summary of results (Lundstedt, 2020) for cases where
+      (5') holds in addition to (1)–(5).) Then it is an easy exercise to verify
+      that we have:
+
+            ψ(x) witnesses that T proves ∀x: φ(x)∨ψ(x) by necessarily
+            non-analytic induction.
+
+      But ψ(x) is a subformula of φ(x)∨ψ(x) and thus IND(ψ) is not non-analytic
+      for ∀x: φ(x)∨ψ(x). Thus we should not say that T proves ∀x: φ(x)∨ψ(x) by
+      necessarily non-analytic induction.
+
+                                       ∗∗
+
+I think a good solution to (P2) would be to simply replace 'non-analytic' with
+'non-straightforward'. For solving (P1) I could change the terminology to
+something like "T IND-proves ∀x.φ(x) ..." where IND-proves would mean that T
+proves ∀x.φ(x) in a first-order logic extended with an induction rule. Right now
+I do not know whether this would be a good solution. To avoid extra work I will
+keep the terminology as it is until I have solutions to both (P1) and (P2) that
+I am happy with.
+
+                                       ∗∗
+
+I will probably replace 'non-analytic' with 'non-straightforward'. But perhaps
+it would also make sense to keep an alternative version of the definition where
+we keep 'non-analytic' and replace (1) with
+
+(1')  T,IND(β) ⊬ ∀x.φ(x) for all instances β(x) of subformulas of φ(x).
+
+                                       ∗∗
+
+OPEN QUESTION: Would there be any point in point in having such an alternative
+definition? Put differently, would there be any point in distinguishing between
+'necessarily non-analytic' and the more general 'necessarily
+non-straightforward'?
+
+                                       ∗∗
+
+Another terminological problem concerns the title of the research project, even
+if changed to "Necessarily non-straightforward induction proofs". The problem is
+roughly that it is superfluous to call a non-straightforward induction proof
+'necessarily non-straightforward'. On the most reasonable (at least in my
+opinion) literal reading, any non-straightforward induction proof is necessarily
+non-straightforward, since any straightforward induction proof of the same fact
+would be a different proof.
+
+                                       ∗∗
+
+I think the following radical change of terminology would solve all above
+problems. Simply call a consequence T ⊢ ∀x.φ(x) 'non-straightforward' if any
+derivation of it must make use of induction axioms other than IND(φ). (We could
+define 'non-analytic' consequences similarly.) A drawback with this solution is
+that 'non-straightforward consequence' is quite non-descriptive.
+
+                                       ∗∗
+
+References
+──────────
+
+Hetzl, Stefan and Tin Lok Wong (2017): "Some observations on the logical
+foundations of inductive theorem proving", Logical Methods in Computer Science
+13(4).
+
+Lundstedt, Anders (2020): "Necessarily non-analytic induction proofs──summary of
+some results", manuscript, version 2020-01-22,
+https://anderslundstedt.com/research/non-analytic-induction/all-files.html.

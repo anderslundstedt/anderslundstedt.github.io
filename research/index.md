@@ -15,6 +15,10 @@ title: Research
       [pdf](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20200122.pdf),
       [txt](non-analytic-induction/summary/lundstedt_non_analytic_induction_summary_20200122.txt)
     - [all versions](non-analytic-induction/summary/)
+  - A note reflecting on terminology
+    - version 2020-02-04:
+      [pdf](non-analytic-induction/notes/lundstedt_non_analytic_induction_note_20200204.pdf),
+      [txt](non-analytic-induction/notes/lundstedt_non_analytic_induction_note_20200204.txt)
   - [JAF 38](https://jaf2019nyc.com) presentation (2019)
     - [extended abstract (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_extended_abstract_2019.pdf)
     - [slides (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_slides_2019.pdf)
