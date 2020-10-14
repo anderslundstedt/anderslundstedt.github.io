@@ -24,3 +24,4 @@ title: TODOs
 - {{ "TODO: validate tags/categories" | log_warning }}
 - {{ "TODO: ellipsis research" | log_warning }}
 - {{ "TODO: redirect changed links" | log_warning }}
+- {{ "TODO: JuliaMono web font?" | log_warning }}
