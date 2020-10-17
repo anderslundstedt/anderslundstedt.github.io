@@ -6,7 +6,7 @@ title: TODOs
   - github pages and ssl for both apex and www subdomains
     - DNS settings
     - temporarily change URL trick:
-      https://github.community/t5/GitHub-Pages/Does-GitHub-Pages-Support-HTTPS-for-www-and-subdomains/td-p/7116/page/3
+      https://github.community/t/does-github-pages-support-https-for-www-and-subdomains/10360/53
   - jekyll review
     - comment syntax
     - array creation
