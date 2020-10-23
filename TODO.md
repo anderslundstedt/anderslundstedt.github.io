@@ -3,6 +3,10 @@ layout: default
 title: TODOs
 ---
 - blog posts
+  - Horace Engdahl behärskar inte svenska språket
+    https://www.aftonbladet.se/kultur/a/y30x2g/horace-pa-tyska-skriver-man-med-stor-bokstav?fbclid=IwAR0iLz-NMr9GRbm7DIuymu9_BWgvAlPh1iuJyV7Qmwniv-0UQIncJ_Pjj2Q
+  - Quine och gambling
+  - Quiddities
   - github pages and ssl for both apex and www subdomains
     - DNS settings
     - temporarily change URL trick:
