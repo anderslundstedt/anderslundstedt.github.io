@@ -15,6 +15,7 @@ title: TODOs
     - comment syntax
     - array creation
     - exceptions, warning and error logs
+  - are there alternatives to the phrase 'see below'?
   - my mac os keyboard config
   - html bullet list problem
     - https://stackoverflow.com/questions/31677241/how-to-indent-the-text-in-a-custom-unordered-list
