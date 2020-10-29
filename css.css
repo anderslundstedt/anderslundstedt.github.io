@@ -12,12 +12,16 @@ body {
 header, nav, #content, footer {
   margin-top: 1em;
   margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
   padding-left: 1ch;
   padding-right: 1ch;
 }
+header, nav, footer {
+  margin-left: 1px;
+  margin-right: 1px;
+}
 #content {
+  margin-left: 0;
+  margin-right: 0;
   border: 1px solid;
   border-radius: 3px;
   line-height: 165%;
@@ -25,7 +29,7 @@ header, nav, #content, footer {
 nav {
   word-spacing: 1.4ch;
 }
-nav a{
+nav a {
   font-size: 1.1em;
 }
 h1, h2, h3, h4, h5, h6 {
