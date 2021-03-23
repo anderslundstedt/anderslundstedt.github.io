@@ -28,6 +28,7 @@ header, nav, footer {
 }
 nav {
   word-spacing: 1.4ch;
+  line-height: 165%;
 }
 nav a {
   font-size: 1.1em;
