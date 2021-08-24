@@ -8,6 +8,13 @@ particular if you want to discuss ideas related to logic or philosophy of
 mathematics. I might also be a possible supervisor.
 
 ## Upcoming, current and past courses
+- Fall 2021:
+  - [*Satslogik*](https://www.su.se/sok-kurser-och-program/fitf1l-1.500784)  
+    [English: *Propositional logic*]  
+    lecturer
+  - [*Predikatlogik*](https://www.su.se/sok-kurser-och-program/fitf1l-1.500784)  
+    [English: *Predicate logic*]  
+    lecturer
 - Fall 2019:
   - [*Logic in Computer Science and Artificial Intelligence*](https://www2.philosophy.su.se/goranko/Courses2019/LiCSAI-2019.html)  
     teaching assistant
