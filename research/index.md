@@ -3,7 +3,8 @@ layout: default
 title: Research
 ---
 ## Current research
-- *Necessarily non-analytic induction proofs*  
+- {: #induction}
+  *Necessarily non-analytic induction proofs*  
   Collaborating with [Eric Johannesson](https://sites.google.com/view/ericjohannesson).  
   For the latest technical results see the summary. For a more conceptual
   discussion see the Stockholm Logic Seminar presentation. For slides, the
