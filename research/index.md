@@ -7,7 +7,8 @@ title: Research
   *Necessarily non-analytic induction proofs*  
   Collaborating with [Eric Johannesson](https://sites.google.com/view/ericjohannesson).  
   **Note:**  
-  *Most of this is very outdated. Updates expected in ~~April~~ May 2022.*  
+  *Most of this is very outdated. Updates expected in ~~April~~ ~~May~~
+  June 2022.*  
   For the latest technical results see the summary. For a more conceptual
   discussion see the Stockholm Logic Seminar presentation. For slides, the
   JAF 38 presentation is more or less a condensed version of the FLoV Logic
