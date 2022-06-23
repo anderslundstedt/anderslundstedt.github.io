@@ -1,4 +1,5 @@
 *.view
+/.bundle
 /.direnv
 /_site
 # we should not check in the Gemfile.lock file since we always want the latest
