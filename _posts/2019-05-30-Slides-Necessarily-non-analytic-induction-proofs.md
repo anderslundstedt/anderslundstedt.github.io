@@ -6,9 +6,9 @@ title: "Slides: Necessarily non-analytic induction proofs"
 I recently gave two talks on the research project "Necessarily non-analytic
 induction proofs".
 The first talk was in Gothenburg at the
-[FLoV logic seminar](https://flov.gu.se/english/research/seminars/logic).
+[FLoV logic seminar](https://www.gu.se/en/flov/our-research/research-seminars-at-flov#Logic).
 The second talk was in New York at
-[JAF 38](https://jaf2019nyc.com).
+[JAF 38](http://lacl.univ-paris12.fr/jaf/issues/jaf38.html).
 I have uploaded slides for each talk to the research page.
 
 At both talks I received useful feedback. Some feedback pointed out some

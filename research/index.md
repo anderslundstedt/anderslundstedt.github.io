@@ -23,12 +23,12 @@ title: Research
     - version 2020-02-04:
       [pdf](non-analytic-induction/notes/lundstedt_non_analytic_induction_note_20200204.pdf),
       [txt](non-analytic-induction/notes/lundstedt_non_analytic_induction_note_20200204.txt)
-  - [JAF 38](https://jaf2019nyc.com) presentation (2019)
+  - [JAF 38](http://lacl.univ-paris12.fr/jaf/issues/jaf38.html) presentation (2019)
     - [extended abstract (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_extended_abstract_2019.pdf)
     - [slides (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_slides_2019.pdf)
     - [blog post]({% post_url 2019-05-30-Slides-Necessarily-non-analytic-induction-proofs %})
       adressing some feedback
-  - [The FLoV Logic Seminar](https://flov.gu.se/english/research/seminars/logic)
+  - [The FLoV Logic Seminar](https://www.gu.se/en/flov/our-research/research-seminars-at-flov#Logic)
     presentation (2019)
     - [slides (pdf)](non-analytic-induction/FLoV-logsem-2019/lundstedt_non_analytic_induction_FLoV_logsem_2019.pdf)
     - [blog post]({% post_url 2019-05-30-Slides-Necessarily-non-analytic-induction-proofs %})
