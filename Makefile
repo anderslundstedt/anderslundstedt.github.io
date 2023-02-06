@@ -1,13 +1,13 @@
-.PHONY: install update clean build serve serve-all
+.PHONY: install clean build serve serve-all test doctor
 
-install: .direnv/bin/github-pages
+.direnv:
+	direnv allow
+	direnv reload
 
-update: install
-	bundle update
+install: .direnv
 
 clean:
 	rm -rf .direnv
-	rm -rf .bundle
 	rm -rf _site
 	rm -f Gemfile.lock
 
@@ -25,6 +25,3 @@ test: build
 
 doctor: build
 	jekyll doctor --config _config.yml,_doctor_config.yml
-
-.direnv/bin/github-pages:
-	bundle install
