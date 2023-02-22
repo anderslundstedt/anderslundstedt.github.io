@@ -18,7 +18,7 @@ those problems here.
 **UPDATE 2019-08-29:** *In the latest summary that I have uploaded to the
 research page, the following problem has been addressed.*  
 At the FLoV talk,
-[Mattias Granberg Olsson](https://flov.gu.se/english/about/linguistics--logic-and-theory-of-science-unit/linguistics--logic-and-theory-of-science-unit?languageId=100001&userId=xgranb)
+[Mattias Granberg Olsson](https://web.archive.org/web/20200814235409/https://flov.gu.se/english/about/linguistics--logic-and-theory-of-science-unit/linguistics--logic-and-theory-of-science-unit?languageId=100001&userId=xgranb)
 pointed out a problem with our definition of first-order languages of arithmetic
 and their corresponding standard models. The problem is that a language of
 arithmetic (as we defined it) can have at most one function symbol (or predicate
