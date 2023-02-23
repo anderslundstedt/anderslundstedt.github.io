@@ -33,7 +33,7 @@ to come up with some other solution.
 
 **UPDATE 2020-02-02:** *I have uploaded to the research page a note reflecting
 on terminology. This note includes a discussion of the following problem.*  
-At the FLoV talk, [Graham Leigh](https://flov.gu.se/english/about/linguistics--logic-and-theory-of-science-unit/linguistics--logic-and-theory-of-science-unit?languageId=100001&userId=xleigr)
+At the FLoV talk, [Graham Leigh](https://www.gu.se/om-universitetet/hitta-person/grahamleigh)
 pointed out that the terminology "necessarily non-analytic" might be a bit
 unfortunate. The reason is that we can construct cases where we have "ψ(x)
 witnesses that T proves ∀x.φ(x) by necessarily non-analytic induction" and where

@@ -44,7 +44,7 @@ presentation (also, the linked blog post adresses some problems in the slides).
   - [slides (pdf)](non-analytic-induction/FLoV-logsem-2019/lundstedt_non_analytic_induction_FLoV_logsem_2019.pdf)
   - [blog post]({% post_url 2019-05-30-Slides-Necessarily-non-analytic-induction-proofs %})
     adressing some feedback
-- [Stockholm Logic Seminar](http://logic.math.su.se/seminar)
+- [Stockholm Logic Seminar](https://logic.math.su.se/seminar/)
   presentation (2017)
   - extended manuscript:
     - [pdf](non-analytic-induction/STHLM-logsem-2017/lundstedt_non_analytic_induction_STHLM_logsem_2017.pdf)
@@ -57,7 +57,7 @@ presentation (also, the linked blog post adresses some problems in the slides).
 
 ### Ellipsis usage in mathematics {#ellipsis}
 Collaborating with [Stefan Buijsman](https://online-learning.tudelft.nl/instructors/stefan-buijsman/).
-- [Stockholm PhD seminar in theoretical philosophy](https://www.philosophy.su.se/om-oss/evenemang/seminarier/doktorandseminarium/phd-seminar-in-theoretical-philosophy-1.246387)
+- [Stockholm PhD student seminar in theoretical philosophy](https://web.archive.org/web/20200930063021/https://www.philosophy.su.se/om-oss/evenemang/seminarier/doktorandseminarium/phd-seminar-in-theoretical-philosophy-1.246387)
   presentation (2018)  
   manuscript:
   - [pdf](ellipsis/STHLM-PhD-seminar-2018/lundstedt_ellipsis_STHLM_PhD_seminar_2018.pdf)
