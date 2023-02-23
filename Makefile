@@ -9,7 +9,6 @@ install: .direnv
 clean:
 	rm -rf .direnv
 	rm -rf _site
-	rm -f Gemfile.lock
 
 build: install
 	jekyll build
