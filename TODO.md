@@ -24,9 +24,7 @@ title: TODOs
 - {{ "TODO: validate published page" | log_warning }}
 - {{ "TODO: check validation test---duplicate title tag not detected for example" | log_warning }}
 - {{ "TODO: last modified" | log_warning }}
-- {{ "TODO: LiCSAI 2019 link" | log_warning }}
 - {{ "TODO: latest blog posts on start page" | log_warning }}
 - {{ "TODO: validate tags/categories" | log_warning }}
-- {{ "TODO: ellipsis research" | log_warning }}
 - {{ "TODO: redirect changed links" | log_warning }}
 - {{ "TODO: JuliaMono web font?" | log_warning }}
