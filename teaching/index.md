@@ -3,11 +3,13 @@ layout: default
 title: Teaching
 ---
 ## Theses
+
 Feel free to contact me to discuss ideas for bachelor's or master's theses, in
 particular if you want to discuss ideas related to logic or philosophy of
 mathematics. I might also be a possible supervisor.
 
 ## Upcoming, current and past courses
+
 - Spring 2023:
   - [*Metod – argumentation, semantik och formell logik*](https://web.archive.org/web/20230222045647/https://www.su.se/sok-kurser-och-program/fitf10-1.413316) (kvällskurs)  
     [English: *Methodology – argumentation, semantics and formal logic* (evening course)]  
