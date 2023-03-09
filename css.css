@@ -33,7 +33,6 @@ nav {
   line-height: 165%;
 }
 nav a {
-  font-size: 1.1em;
   padding-bottom: 0.1em;
 }
 nav a.active {
@@ -147,6 +146,9 @@ h6 {
   font-size: smaller;
   font-weight: 400;
   font-style: italic;
+}
+nav a {
+  font-size: 1.1em;
 }
 
 
