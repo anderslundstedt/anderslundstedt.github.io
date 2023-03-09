@@ -34,6 +34,14 @@ nav {
 }
 nav a {
   font-size: 1.1em;
+  padding-bottom: 0.1em;
+}
+nav a.active {
+  border-top: 0;
+  border-bottom: 3px;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
@@ -150,6 +158,9 @@ body {
 }
 #content {
   background-color: #fdf6e3;
+}
+nav a.active {
+  border-color: #28d;
 }
 a, nav a:visited, .nav_link:visited {
   color: #28d;

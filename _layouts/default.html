@@ -10,10 +10,10 @@
   <body>
     <header><h1>Anders Lundstedt</h1></header>
     <nav>
-      <a href="/">Home</a>
-      <a href="/teaching/">Teaching</a>
-      <a href="/research/">Research</a>
-      <a href="/blog/">Blog</a>
+      {% include nav_link.liquid url="/" text="Home" %}
+      {% include nav_link.liquid url="/teaching/" text="Teaching" %}
+      {% include nav_link.liquid url="/research/" text="Research" %}
+      {% include nav_link.liquid url="/blog/" text="Blog" %}
     </nav>
     <div id="content">
       {{ content }}

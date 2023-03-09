@@ -1,0 +1,12 @@
+{% assign url_split = page.url | split: "/" %}
+{% assign url_split_size = url_split | size %}
+{% if url_split_size == 0 %}
+  {% assign url_prefix = "/" %}
+{% else %}
+  {% assign url_prefix = "/" | append: url_split[1] | append: "/" %}
+{% endif %}
+{% if url_prefix == include.url %}
+  <a href="{{ include.url }}" class="active">{{ include.text }}</a>
+{% else %}
+  <a href="{{ include.url }}">{{ include.text }}</a>
+{% endif %}
