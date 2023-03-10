@@ -8,7 +8,7 @@ title: Research
   - [Necessarily non-analytic induction proofs](#induction)
   - [Ellipsis usage in mathematics](#ellipsis)
 - [Past research](#past-research)
-  - [A Coq formalization of partial combinatory algebras andrealizability](#coq-realizability)
+  - [A Coq formalization of partial combinatory algebras and realizability](#coq-realizability)
   - [My BA thesis in philosophy](#BA-thesis)
 
 ## Current research
@@ -23,7 +23,7 @@ Collaborating with [Eric Johannesson](https://ericjohannesson.com).
 For the latest technical results see the summary. For a more conceptual
 discussion see the Stockholm Logic Seminar presentation. For slides, the JAF 38
 presentation is more or less a condensed version of the FLoV Logic Seminar
-presentation (also, the linked blog post adresses some problems in the slides).
+presentation (also, the linked blog post addresses some problems in the slides).
 
 - Summary of results
   - version 2020-01-22:
