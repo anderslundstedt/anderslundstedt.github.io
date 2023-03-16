@@ -14,6 +14,8 @@ plugins:
   - jekyll-seo-tag
 exclude:
   - "Makefile"
+  - "TODO.md"
   - "css.css.view"
   - "flake.lock"
   - "flake.nix"
+  - "test.html"
