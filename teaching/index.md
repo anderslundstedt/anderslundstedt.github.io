@@ -10,6 +10,14 @@ mathematics. I might also be a possible supervisor.
 
 ## Upcoming, current and past courses
 
+- Spring 2024
+  - [*Språkfilosofi I*](https://www.su.se/sok-kurser-och-program/fipl1g-1.430085?semester=VT24&eventcode=10010)  
+    [English: *Philosophy of language I*]  
+    guest lecturer
+    {% comment %}
+      wayback URL:
+      https://web.archive.org/web/20240227183229/https://www.su.se/sok-kurser-och-program/fipl1g-1.430085?semester=VT24&eventcode=10010
+    {% endcomment %}
 - Spring 2023:
   - [*Metod – argumentation, semantik och formell logik*](https://web.archive.org/web/20230222045647/https://www.su.se/sok-kurser-och-program/fitf10-1.413316) (kvällskurs)  
     [English: *Methodology – argumentation, semantics and formal logic* (evening course)]  
