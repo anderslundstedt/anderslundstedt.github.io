@@ -17,9 +17,10 @@ title: Research
 
 Collaborating with [Eric Johannesson](https://ericjohannesson.com).
 
-*Most of this is very outdated. Updates expected in ~~April~~ ~~May~~
-~~June~~ ~~2022~~ ~~2023~~ sometime in the future. (In the meantime, anyone
-interested may contact me for unfinished manuscripts.)*
+*Most of this is very outdated. Some manuscripts contain errors that I have
+corrected in manuscripts not yet made public. Updates expected in ~~April~~
+~~May~~ ~~June~~ ~~2022~~ ~~2023~~ sometime in the future. (In the meantime,
+anyone interested may contact me for unfinished manuscripts.)*
 
 For the latest technical results see the summary. For a more conceptual
 discussion see the Stockholm Logic Seminar presentation. For slides, the JAF 38
