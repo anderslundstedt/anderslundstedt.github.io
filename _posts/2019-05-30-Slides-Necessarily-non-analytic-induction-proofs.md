@@ -8,7 +8,11 @@ induction proofs".
 The first talk was in Gothenburg at the
 [FLoV logic seminar](https://www.gu.se/en/flov/our-research/research-seminars-at-flov#Logic).
 The second talk was in New York at
-[JAF 38](http://lacl.univ-paris12.fr/jaf/issues/jaf38.html).
+[JAF 38](https://www.lacl.fr/jaf/issues/jaf38.html).
+{% comment %}
+  archive URL:
+  https://web.archive.org/web/20241112160302/https://www.lacl.fr/jaf/issues/jaf38.html
+{% endcomment %}
 I have uploaded slides for each talk to the research page.
 
 At both talks I received useful feedback. Some feedback pointed out some

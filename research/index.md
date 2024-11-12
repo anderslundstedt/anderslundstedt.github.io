@@ -36,7 +36,11 @@ presentation (also, the linked blog post addresses some problems in the slides).
   - version 2020-02-04:
     - [pdf](non-analytic-induction/notes/lundstedt_non_analytic_induction_note_20200204.pdf)
     - [txt](non-analytic-induction/notes/lundstedt_non_analytic_induction_note_20200204.txt)
-- [JAF 38](http://lacl.univ-paris12.fr/jaf/issues/jaf38.html) presentation (2019)
+- [JAF 38](https://www.lacl.fr/jaf/issues/jaf38.html) presentation (2019)
+  {% comment %}
+    archive URL:
+    https://web.archive.org/web/20241112160302/https://www.lacl.fr/jaf/issues/jaf38.html
+  {% endcomment %}
   - [extended abstract (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_extended_abstract_2019.pdf)
   - [slides (pdf)](non-analytic-induction/JAF38/lundstedt_non_analytic_induction_JAF38_slides_2019.pdf)
   - [blog post]({% post_url 2019-05-30-Slides-Necessarily-non-analytic-induction-proofs %})
