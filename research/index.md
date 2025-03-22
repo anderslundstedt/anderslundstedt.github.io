@@ -63,7 +63,6 @@ presentation (also, the linked blog post addresses some problems in the slides).
 
 ### Ellipsis usage in mathematics {#ellipsis}
 
-Collaborating with [Stefan Buijsman](https://online-learning.tudelft.nl/instructors/stefan-buijsman/).
 
 - [Stockholm PhD student seminar in theoretical philosophy](https://web.archive.org/web/20200930063021/https://www.philosophy.su.se/om-oss/evenemang/seminarier/doktorandseminarium/phd-seminar-in-theoretical-philosophy-1.246387)
   presentation (2018)  
