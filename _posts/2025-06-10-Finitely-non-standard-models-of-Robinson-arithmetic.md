@@ -18,7 +18,7 @@ verbatim in the draft.
 In the process of completing my thesis, I expect no substantial changes to the
 uploaded draft's content. In that sense the draft may be seen as an
 all-but-finished version of the chapter. A sense in which it may not be seen
-thus is given by its multitude of typographical mishaps: missing characters,
+thus is given by its multitude of typographical mishaps: missing glyphs,
 inconsistent vertical and horizontal spacings, margin overflows, et cetera.
 These mishaps will of course be fixed before inclusion in the final version of
 the thesis. Thus in case anyone wants to refer to the draft: do include the
