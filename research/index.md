@@ -18,7 +18,7 @@ title: Research
 
 The above heading is the working title of my PhD thesis.
 
-#### Chapter drafts
+#### Chapter drafts {#induction-drafts}
 
 - *Finitely non-standard models of Robinson arithmetic*
   - version: 2025-06-10
