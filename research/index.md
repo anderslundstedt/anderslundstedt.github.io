@@ -28,6 +28,15 @@ The above heading is the working title of my PhD thesis.
     - [The Python source in § 5.D.1](./PhD-thesis/drafts/lundstedt_PhD-thesis_attachment_non_expandable_fns_Q+_models_2025-06-10.py)
   - [blog post announcement]({% post_url 2025-06-10-Finitely-non-standard-models-of-Robinson-arithmetic %})
 
+#### Talks
+
+- *Non-straightforward induction proofs and the comparative strength of
+  inductive solutions*
+  - Presentation at the online seminar of the Computational Logic group of the
+    Institute of Discrete Mathematics and Geometry, TU Wien
+  - 2021-05-12
+  - [pdf](PhD-thesis/talks/lundstedt_talk_vienna_online_seminar_2021-05-12.pdf)
+
 #### Old material
 
 What has now turned into my thesis project was previously “just” a research
