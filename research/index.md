@@ -27,6 +27,9 @@ The above heading is the working title of my PhD thesis.
     - [The Coq source in § 5.C](PhD-thesis/drafts/lundstedt_PhD-thesis_attachment_fns_model_example_2025-06-10.v)
     - [The Python source in § 5.D.1](./PhD-thesis/drafts/lundstedt_PhD-thesis_attachment_non_expandable_fns_Q+_models_2025-06-10.py)
   - [blog post announcement]({% post_url 2025-06-10-Finitely-non-standard-models-of-Robinson-arithmetic %})
+- *Comparing inductive solutions*
+  - version: 2026-05-18
+  - [pdf](PhD-thesis/drafts/lundstedt_phd_thesis_ch_draft_comparing_inductive_solutions_20260519.pdf)
 
 #### Talks
 
