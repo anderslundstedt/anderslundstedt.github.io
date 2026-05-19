@@ -6,6 +6,7 @@ title: Research
 
 - [Current research](#current-research)
   - [Natural induction (a model-theoretic study)](#induction)
+  - [On Caesar=0](#on-caesar0)
   - [Ellipsis usage in mathematics](#ellipsis)
 - [Past research](#past-research)
   - [A Coq formalization of partial combinatory algebras and realizability](#coq-realizability)
@@ -40,7 +41,21 @@ The above heading is the working title of my PhD thesis.
   - 2021-05-12
   - [pdf](PhD-thesis/talks/lundstedt_talk_vienna_online_seminar_2021-05-12.pdf)
 
-#### Old material
+### On Caesar=0
+
+Collaborating with [Eric Johannesson](https://ericjohannesson.com).
+
+- *On Caesar=0*
+  - Abstract for presentation at
+    [Filosofidagarna 2026](https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026)
+  - [pdf](caesar/abstract.pdf)
+  - [txt](caesar/abstract.txt)
+    {% comment %}
+      archive URL:
+      https://web.archive.org/web/20260519103812/https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026
+    {% endcomment %}
+
+### Old thesis material
 
 What has now turned into my thesis project was previously “just” a research
 project, which went under the title ‘Necessarily non-analytic induction proofs’.

@@ -1,0 +1,19 @@
+TITLE:
+On Caesar=0
+
+AUTHORS:
+Eric Johannesson
+Anders E.V. Lundstedt
+
+
+Frege found it problematic that his logicist project did not rule out the
+identification of Caesar with the number zero. Since the logicist
+project—together with its later reincarnations—must be given up on, the problem
+in its original formulation is no longer of interest. We nevertheless treat the
+question ‘Is Caesar=0?’. We show the perhaps surprising result that it is
+perfectly consistent with our best scientific theories that Caesar=0. More
+generally, we show that any “abstract object” may be identified with a
+space-time object; furthermore, the number of abstracts objects that may be
+simultaneously identified with space-time objects is equal to the cardinality of
+the set of space-time objects. Our findings are not only curiosities—for
+example, to some extent they may allow for a nominalistic theory of the world.
