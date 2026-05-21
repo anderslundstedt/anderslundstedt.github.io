@@ -46,10 +46,10 @@ The above heading is the working title of my PhD thesis.
 Collaborating with [Eric Johannesson](https://ericjohannesson.com).
 
 - *On Caesar=0*
-  - Abstract for presentation at
-    [Filosofidagarna 2026](https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026)
-  - [pdf](caesar/abstract.pdf)
-  - [txt](caesar/abstract.txt)
+  - Presentation at
+    [The Swedish Congress of Philosophy 2026](https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026)
+  - [pdf abstract](caesar/abstract.pdf)
+  - [txt abstract](caesar/abstract.txt)
     {% comment %}
       archive URL:
       https://web.archive.org/web/20260519103812/https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026
