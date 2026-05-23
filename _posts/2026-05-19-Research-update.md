@@ -8,7 +8,7 @@ title: "Research update"
 - For Filosofidagarna 2026,* I will give the talk *On Caesar=0*. The talk presents
   joint work with [Eric Johannesson](https://ericjohannesson.com).  
   Abstract:
-  - [pdf](../research/caesar/abstract.pdf)
-  - [txt](../research/caesar/abstract.txt)
+  - [pdf](../research/caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
+  - [txt](../research/caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_abstract_Swedish-Congress-of-Philosophy-2026.txt)
 
-  \* English: *Philosophy days 2026*
+  \* English: *The Swedish Congress of Philosophy 2026*
