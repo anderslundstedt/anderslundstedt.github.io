@@ -48,12 +48,13 @@ Collaborating with [Eric Johannesson](https://ericjohannesson.com).
 - *On Caesar=0*
   - Presentation at
     [The Swedish Congress of Philosophy 2026](https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026)
-  - [pdf abstract](caesar/abstract.pdf)
-  - [txt abstract](caesar/abstract.txt)
-    {% comment %}
-      archive URL:
-      https://web.archive.org/web/20260519103812/https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026
-    {% endcomment %}
+  - abstract
+    - [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
+    - [txt](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_abstract_Swedish-Congress-of-Philosophy-2026.txt)
+{% comment %}
+  archive URL:
+  https://web.archive.org/web/20260519103812/https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026
+{% endcomment %}
 
 ### Old thesis material
 
