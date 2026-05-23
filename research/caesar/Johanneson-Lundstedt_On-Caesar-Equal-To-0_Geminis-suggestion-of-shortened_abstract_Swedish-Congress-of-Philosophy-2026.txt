@@ -1,0 +1,192 @@
+════════════════════════════════════════════════════════════════════════════════
+GEMINI'S SUGGESTION OF A SHORTENING OF AN ABSTRACT SUBMITTED TO THE SWEDISH
+CONGRESS OF PHILOSOPHY 2026
+════════════════════════════════════════════════════════════════════════════════
+
+(For the prompt, it is in the last part of this document.)
+
+════════════════════════════════════════════════════════════════════════════════
+
+The Swedish congress of philosophy 2026 required a 100-word shortening of our
+submitted (127-word) abstract. If we did not provide a 100-word shortening then
+they would AI let it do it for us. While I had no problem shortening the
+abstract without the help of AI, I was curious to see what that could have
+resulted in. Turns out the result could have been almost catastrophic, which I
+found curious and unexpected. Thus this document.
+
+════════════════════════════════════════════════════════════════════════════════
+
+ORIGINAL ABSTRACT
+─────────────────
+
+TITLE:
+On Caesar=0
+
+AUTHORS:
+Eric Johannesson       (eric@ericjohannesson.com)
+Anders E.V. Lundstedt  (a@anderslundstedt.se)
+
+Frege found it problematic that his logicist project did not rule out the
+identification of Caesar with the number zero. Since the logicist
+project---together with its later reincarnations---must be given up on, the
+problem in its original formulation is no longer of interest. We nevertheless
+treat the question ‘Is Caesar=0?’. We show the perhaps surprising result that it
+is perfectly consistent with our best scientific theories that Caesar=0. More
+generally, we show that any “abstract object” may be identified with a
+space-time object; furthermore, the number of abstracts objects that may be
+simultaneously identified with space-time objects is equal to the cardinality of
+the set of space-time objects. Our findings are not only curiosities---for
+example, to some extent they may allow for a nominalistic theory of the world.
+
+════════════════════════════════════════════════════════════════════════════════
+
+MY SHORTENED ABSTRACT
+─────────────────────
+
+Frege found it problematic that his logicist project did not rule out the
+identification of Caesar with the number zero. Since the logicist project must
+be given up on, the problem in its original formulation is no longer of
+interest. We nevertheless treat the question ‘Is Caesar=0?’. We show the perhaps
+surprising result that it is perfectly consistent with our best scientific
+theories that Caesar=0. More generally, we show that any “abstract object” may
+be identified with a space-time object. Our findings are not only
+curiosities---for example, to some extent they may allow for a nominalistic
+theory of the world.
+
+════════════════════════════════════════════════════════════════════════════════
+
+GEMINI'S SUGGESTION
+───────────────────
+
+A "Tightened" Alternative (75 Words)
+
+If you want to make the text feel less like a "trimmed" version and more like a
+cohesive short abstract, you could try a version like this:
+
+Frege’s logicism famously failed to rule out identifying Julius Caesar with the
+number zero. While the original logicist project is defunct, we revisit the
+question "Is Caesar = 0?" and demonstrate that identifying abstract objects with
+space-time objects is entirely consistent with modern scientific theories.
+Beyond being a mere curiosity, our finding that any abstract object can be
+mapped to a physical one offers a potential foundation for a nominalistic theory
+of the world.
+
+Feature     Your Shortened Version     Suggested "Tight" Version
+────────────────────────────────────────────────────────────────
+Word Count  88 words                   75 words
+Tone        Academic/Formal            Direct/Punchy
+Focus       Direct cuts from original  Synthesis of ideas
+
+Overall, your version is perfectly functional and accurate. You avoided the
+common mistake of cutting the conclusion, which is often the most important part
+of an abstract!
+
+════════════════════════════════════════════════════════════════════════════════
+
+MY COMMENTS
+───────────
+
+─ I find AI to be very useful in many cases, but in this case I was surprised by
+  how poorly Gemini performed. Gemini performed remarkably poorly---in fact, its
+  performance was worse than poor, since it changed the meaning of the original
+  abstract.
+
+─ While the writing is bad, and the style inappropriate for an abstract for a
+  conference presentation, there are two main grave mistakes.
+
+  ─ The first grave mistake is in
+
+      “... any abstract object can be mapped to a physical one ...”
+
+    The mistake is that ‘mapped’ does not mean the same as ‘identified’, which
+    thus erroneously represents our findings.
+
+  ─ The second grave mistake is omitting any reformulation of the central point
+
+      “... it is perfectly consistent with our best scientific theories that
+      Caesar=0.”
+
+    Gemini leaves this point for the reader to infer from
+
+      “... identifying abstract objects with space-time objects is entirely
+      consistent with modern scientific theories.”
+
+    This is especially ironic given Gemini's concluding comment:
+
+      “You avoided the common mistake of cutting the conclusion, which is often
+      the most important part of an abstract!”
+
+    I do not believe this is a common mistake, but at least Gemini made it.
+
+─ The very much meaning-conveying scare quotes around ‘abstract object’ are
+  missing.
+
+─ Gemini changes ‘our best scientific theories’ to ‘modern scientific theories’
+  in:
+
+    “... identifying abstract objects with space-time objects is entirely
+    consistent with modern scientific theories.”
+
+  This choice removes important information.
+
+─ In
+
+    “... is defunct”,
+
+  ‘defunct’ is a catastrophic choice.
+
+─ In
+
+    “... demonstrate that identifying abstract ...”,
+
+  the original ‘show’ would be better Gemini's ‘demonstrate’.
+
+─ Overall, Gemini's version has signs of influence from bad writing advice. In
+  particular:
+
+  ─ the use of extravagant words;
+
+  ─ the unnecessary (attempted) use of synonyms, which is not only silly but in
+    this case also changes the original meaning, and causes loss of clarity and
+    precision.
+
+─ “Direct/Punchy” is absolutely not appropriate for an academic abstract. I did
+  not include in my prompt that the context was an abstract for an academic
+  conference, but I would have expected Gemini to infer that.
+
+─ Actually Gemini's suggestion is 74 words.
+
+─ Actually my shortened version is exactly 100 words (which in a separate
+  prompt Gemini got right).
+
+════════════════════════════════════════════════════════════════════════════════
+
+PROMPT
+──────
+
+Here follows two texts. The second one is a shorter version of the first. The
+second text was needed to write because a shorter version, limited to 100 words,
+of the first txt was requested. Do you have any comments on how I made a shorter
+version of the first text?
+
+Frege found it problematic that his logicist project did not rule out the
+identification of Caesar with the number zero. Since the logicist
+project---together with its later reincarnations---must be given up on, the
+problem in its original formulation is no longer of interest. We nevertheless
+treat the question ‘Is Caesar=0?’. We show the perhaps surprising result that it
+is perfectly consistent with our best scientific theories that Caesar=0. More
+generally, we show that any “abstract object” may be identified with a
+space-time object; furthermore, the number of abstracts objects that may be
+simultaneously identified with space-time objects is equal to the cardinality of
+the set of space-time objects. Our findings are not only curiosities---for
+example, to some extent they may allow for a nominalistic theory of the world.
+
+Frege found it problematic that his logicist project did not rule out the
+identification of Caesar with the number zero. Since the logicist project must
+be given up on, the problem in its original formulation is no longer of
+interest. We nevertheless treat the question ‘Is Caesar=0?’. We show the perhaps
+surprising result that it is perfectly consistent with our best scientific
+theories that Caesar=0. More generally, we show that any “abstract object” may
+be identified with a space-time object. Our findings are not only
+curiosities---for example, to some extent they may allow for a nominalistic
+theory of the world.

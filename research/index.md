@@ -51,6 +51,13 @@ Collaborating with [Eric Johannesson](https://ericjohannesson.com).
   - abstract
     - [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
     - [txt](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_abstract_Swedish-Congress-of-Philosophy-2026.txt)
+  - shortened abstract in exactly 100 words (an additional abstract in
+    ≤ 100 words was requested)
+    - [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_shortened-abstract_Swedish-Congress-of-Philosophy-2026.pdf)
+    - [txt](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_shortened-abstract_Swedish-Congress-of-Philosophy-2026.txt)
+  - Gemini's suggestion of a shortened abstract (a very poor suggestion)
+    - [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_Geminis-suggestion-of-shortened_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
+    - [txt](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_Geminis-suggestion-of-shortened_abstract_Swedish-Congress-of-Philosophy-2026.txt)
 {% comment %}
   archive URL:
   https://web.archive.org/web/20260519103812/https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026
