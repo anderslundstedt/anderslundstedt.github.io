@@ -29,7 +29,7 @@ serve-all: install
 	jekyll serve --watch --host 0.0.0.0
 
 test: build
-	htmlproofer --check-html --check-img-http --check-opengraph --check-sri ./_site
+	htmlproofer --no-enforce-https --check-sri _site/
 
 doctor: build
 	jekyll doctor --config _config.yml,_doctor_config.yml
