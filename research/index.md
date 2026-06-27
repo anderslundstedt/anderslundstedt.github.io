@@ -32,8 +32,17 @@ The above heading is the working title of my PhD thesis.
   - version: 2026-05-18
   - [pdf](PhD-thesis/drafts/lundstedt_phd_thesis_ch_draft_comparing_inductive_solutions_20260519.pdf)
 
-#### Talks
+#### Selected talks
 
+- *Finitely non-standard models of Robinson arithmetic*
+  - Presentation at JAF45, September 16–18 2026, Warsaw  
+    <https://jaf45warsaw.wfz.uw.edu.pl>
+  - abstract  
+    [pdf](PhD-thesis/talks/lundstedt_abstract_JAF45_fns_models_of_Q.pdf)
+    {% comment %}
+      archive URL:
+      https://web.archive.org/web/20260627153340/https://jaf45warsaw.wfz.uw.edu.pl/
+    {% endcomment %}
 - *Non-straightforward induction proofs and the comparative strength of
   inductive solutions*
   - Presentation at the online seminar of the Computational Logic group of the
