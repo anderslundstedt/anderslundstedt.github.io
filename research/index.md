@@ -10,6 +10,7 @@ title: Research
   - [Ellipsis usage in mathematics](#ellipsis)
 - [Past research](#past-research)
   - [A Coq formalization of partial combinatory algebras and realizability](#coq-realizability)
+    (includes my MSc thesis in mathematics)
   - [My BA thesis in philosophy](#BA-thesis)
   - [My BSc thesis in Engineering Physics](#BSc-thesis)
 
