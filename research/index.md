@@ -62,30 +62,13 @@ The above heading is the working title of my PhD thesis.
   - 2021-05-12
   - [pdf](PhD-thesis/talks/lundstedt_talk_vienna_online_seminar_2021-05-12.pdf)
 
-### On Caesar=0
+#### Misc
 
-Collaborating with [Eric Johannesson](https://ericjohannesson.com).
+- MathOverflow:
+  [When must one strengthen one's induction hypothesis?](https://mathoverflow.net/questions/258761/when-must-one-strengthen-ones-induction-hypothesis)
+  (2017)
 
-- *On Caesar=0*
-  - Presentation at
-    [The Swedish Congress of Philosophy 2026](https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026)
-  - abstract  
-    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
-  - slides  
-    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_slides_Swedish-Congress-of-Philosophy-2026.pdf)
-  - script for the talk accompanying the slides  
-    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_talk_Swedish-Congress-of-Philosophy-2026.pdf)
-  - shortened abstract in exactly 100 words (an additional abstract in
-    ≤ 100 words was requested)  
-    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_shortened-abstract_Swedish-Congress-of-Philosophy-2026.pdf)
-  - Gemini's suggestion of a shortened abstract (a very poor suggestion)  
-    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_Geminis-suggestion-of-shortened_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
-{% comment %}
-  archive URL:
-  https://web.archive.org/web/20260519103812/https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026
-{% endcomment %}
-
-### Old thesis material
+#### Old material
 
 What has now turned into my thesis project was previously “just” a research
 project, which went under the title ‘Necessarily non-analytic induction proofs’.
@@ -136,6 +119,29 @@ the linked blog post addresses some problems in the slides).
   (2017)
 - [old material](non-analytic-induction/old-material.html)
 - [all files](non-analytic-induction/all-files.html)
+
+### On Caesar=0
+
+Collaborating with [Eric Johannesson](https://ericjohannesson.com).
+
+- *On Caesar=0*
+  - Presentation at
+    [The Swedish Congress of Philosophy 2026](https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026)
+  - abstract  
+    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
+  - slides  
+    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_slides_Swedish-Congress-of-Philosophy-2026.pdf)
+  - script for the talk accompanying the slides  
+    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_talk_Swedish-Congress-of-Philosophy-2026.pdf)
+  - shortened abstract in exactly 100 words (an additional abstract in
+    ≤ 100 words was requested)  
+    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_shortened-abstract_Swedish-Congress-of-Philosophy-2026.pdf)
+  - Gemini's suggestion of a shortened abstract (a very poor suggestion)  
+    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_Geminis-suggestion-of-shortened_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
+{% comment %}
+  archive URL:
+  https://web.archive.org/web/20260519103812/https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026
+{% endcomment %}
 
 ### Ellipsis usage in mathematics {#ellipsis}
 
