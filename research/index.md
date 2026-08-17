@@ -36,6 +36,17 @@ The above heading is the working title of my PhD thesis.
 #### Selected talks
 
 - *Finitely non-standard models of Robinson arithmetic*
+  - Presentation at the
+    [Computational Logic Seminar](https://www.dmg.tuwien.ac.at/fb2/seminar/)
+    of the Computational Logic group at the Institute of Discrete Mathematics
+    and Geometry, TU Wien
+  - 2026-09-23
+    {% comment %}
+      archive URL:
+      https://web.archive.org/web/20260817142210/https://www.dmg.tuwien.ac.at/fb2/seminar/
+    {% endcomment %}
+
+- *Finitely non-standard models of Robinson arithmetic*
   - Presentation at JAF45, September 16–18 2026, Warsaw  
     <https://jaf45warsaw.wfz.uw.edu.pl>
   - abstract  
