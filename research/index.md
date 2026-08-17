@@ -57,7 +57,7 @@ The above heading is the working title of my PhD thesis.
     {% endcomment %}
 - *Non-straightforward induction proofs and the comparative strength of
   inductive solutions*
-  - Presentation at the online seminar of the Computational Logic group of the
+  - Presentation at the online seminar of the Computational Logic group at the
     Institute of Discrete Mathematics and Geometry, TU Wien
   - 2021-05-12
   - [pdf](PhD-thesis/talks/lundstedt_talk_vienna_online_seminar_2021-05-12.pdf)
