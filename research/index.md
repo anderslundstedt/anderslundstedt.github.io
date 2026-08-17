@@ -68,7 +68,10 @@ The above heading is the working title of my PhD thesis.
   [When must one strengthen one's induction hypothesis?](https://mathoverflow.net/questions/258761/when-must-one-strengthen-ones-induction-hypothesis)
   (2017)
 
-#### Old material
+<details markdown="1">
+<summary>
+<h4 style="display: inline;">Old material</h4> (click arrow to expand/collapse)
+</summary>
 
 What has now turned into my thesis project was previously “just” a research
 project, which went under the title ‘Necessarily non-analytic induction proofs’.
@@ -119,6 +122,8 @@ the linked blog post addresses some problems in the slides).
   (2017)
 - [old material](non-analytic-induction/old-material.html)
 - [all files](non-analytic-induction/all-files.html)
+
+</details>
 
 ### On Caesar=0
 
