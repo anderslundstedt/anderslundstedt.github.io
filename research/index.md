@@ -9,7 +9,7 @@ title: Research
   - [On Caesar=0](#on-caesar0)
   - [Ellipsis usage in mathematics](#ellipsis)
 - [Past research](#past-research)
-  - [A Coq formalization of partial combinatory algebras and realizability](#coq-realizability)
+  - [A Rocq formalization of partial combinatory algebras and realizability](#rocq-realizability)
     (includes my MSc thesis in mathematics)
   - [My BA thesis in philosophy](#BA-thesis)
   - [My BSc thesis in Engineering Physics](#BSc-thesis)
@@ -25,8 +25,8 @@ The above heading is the working title of my PhD thesis.
 - *Finitely non-standard models of Robinson arithmetic*
   - version: 2025-06-10
   - [pdf](PhD-thesis/drafts/lundstedt_phd_thesis_ch_draft_fns_models_of_Q_20250610.pdf)
-  - Python and Coq sources referenced (and included verbatim) in the chapter:
-    - [The Coq source in § 5.C](PhD-thesis/drafts/lundstedt_PhD-thesis_attachment_fns_model_example_2025-06-10.v)
+  - Python and Rocq sources referenced (and included verbatim) in the chapter
+    - [The Rocq source in § 5.C](PhD-thesis/drafts/lundstedt_PhD-thesis_attachment_fns_model_example_2025-06-10.v)
     - [The Python source in § 5.D.1](./PhD-thesis/drafts/lundstedt_PhD-thesis_attachment_non_expandable_fns_Q+_models_2025-06-10.py)
   - [blog post announcement]({% post_url 2025-06-10-Finitely-non-standard-models-of-Robinson-arithmetic %})
 - *Comparing inductive solutions*
@@ -160,7 +160,7 @@ Collaborating with [Eric Johannesson](https://ericjohannesson.com).
 
 ## Past research
 
-### A Coq formalization of partial combinatory algebras and realizability {#coq-realizability}
+### A Rocq formalization of partial combinatory algebras and realizability {#rocq-realizability}
 
 - GitHub repository:  
   <https://github.com/anderslundstedt/pca-realizability>
