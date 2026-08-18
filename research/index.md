@@ -152,7 +152,7 @@ Collaborating with [Eric Johannesson](https://ericjohannesson.com).
     - shortened abstract in exactly 100 words (an additional abstract in
       ≤ 100 words was requested)  
       [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_shortened-abstract_Swedish-Congress-of-Philosophy-2026.pdf)
-    - Gemini's suggestion of a shortened abstract (a very poor suggestion)  
+    - Gemini's suggestion of a ≤ 100 words abstract (a very poor suggestion)  
       [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_Geminis-suggestion-of-shortened_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
 
     </details>
