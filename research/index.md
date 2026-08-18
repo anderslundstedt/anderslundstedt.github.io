@@ -25,9 +25,15 @@ The above heading is the working title of my PhD thesis.
 - *Finitely non-standard models of Robinson arithmetic*
   - version: 2025-06-10
   - [pdf](PhD-thesis/drafts/lundstedt_phd_thesis_ch_draft_fns_models_of_Q_20250610.pdf)
-  - Python and Rocq sources referenced (and included verbatim) in the chapter
+  - <details markdown="1">
+    <summary>
+    Python and Rocq sources referenced (and included verbatim) in the chapter
+    </summary>
+
     - [The Rocq source in § 5.C](PhD-thesis/drafts/lundstedt_PhD-thesis_attachment_fns_model_example_2025-06-10.v)
     - [The Python source in § 5.D.1](./PhD-thesis/drafts/lundstedt_PhD-thesis_attachment_non_expandable_fns_Q+_models_2025-06-10.py)
+
+    </details>
   - [blog post announcement]({% post_url 2025-06-10-Finitely-non-standard-models-of-Robinson-arithmetic %})
 - *Comparing inductive solutions*
   - version: 2026-08-10
@@ -138,11 +144,18 @@ Collaborating with [Eric Johannesson](https://ericjohannesson.com).
     [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_slides_Swedish-Congress-of-Philosophy-2026.pdf)
   - script for the talk accompanying the slides  
     [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_talk_Swedish-Congress-of-Philosophy-2026.pdf)
-  - shortened abstract in exactly 100 words (an additional abstract in
-    ≤ 100 words was requested)  
-    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_shortened-abstract_Swedish-Congress-of-Philosophy-2026.pdf)
-  - Gemini's suggestion of a shortened abstract (a very poor suggestion)  
-    [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_Geminis-suggestion-of-shortened_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
+  - <details markdown="1">
+    <summary>
+    a <em>slightly</em> shorter abstract
+    </summary>
+
+    - shortened abstract in exactly 100 words (an additional abstract in
+      ≤ 100 words was requested)  
+      [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_shortened-abstract_Swedish-Congress-of-Philosophy-2026.pdf)
+    - Gemini's suggestion of a shortened abstract (a very poor suggestion)  
+      [pdf](caesar/Johanneson-Lundstedt_On-Caesar-Equal-To-0_Geminis-suggestion-of-shortened_abstract_Swedish-Congress-of-Philosophy-2026.pdf)
+
+    </details>
 {% comment %}
   archive URL:
   https://web.archive.org/web/20260519103812/https://www.su.se/enheter/filosofiska-institutionen/forskning/konferenser-och-seminarier/filosofidagarna-2026
