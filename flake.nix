@@ -4,8 +4,7 @@
   inputs.pins.url = "github:anderslundstedt/nix-pins";
 
   inputs.nixpkgs-unstable.follows = "pins/nixpkgs-unstable";
-
-  inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs.flake-utils.follows      = "pins/flake-utils";
 
   outputs = {nixpkgs-unstable,flake-utils,...}:
     flake-utils.lib.eachDefaultSystem (system:
