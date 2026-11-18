@@ -47,6 +47,8 @@ The above heading is the working title of my PhD thesis.
     of the Computational Logic group at the Institute of Discrete Mathematics
     and Geometry, TU Wien
   - 2026-09-23
+  - slides  
+    [pdf](PhD-thesis/talks/lundstedt_talk_fns_models_TU_Wien_2026.pdf)
     {% comment %}
       archive URL:
       https://web.archive.org/web/20260817142210/https://www.dmg.tuwien.ac.at/fb2/seminar/
@@ -57,6 +59,7 @@ The above heading is the working title of my PhD thesis.
     <https://jaf45warsaw.wfz.uw.edu.pl>
   - abstract  
     [pdf](PhD-thesis/talks/lundstedt_abstract_JAF45_fns_models_of_Q.pdf)
+  - slides: see the Vienna presentation above
     {% comment %}
       archive URL:
       https://web.archive.org/web/20260627153340/https://jaf45warsaw.wfz.uw.edu.pl/
