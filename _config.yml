@@ -13,9 +13,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 exclude:
+  - ".direnv"
   - "Makefile"
   - "TODO.md"
-  - "css.css.view"
   - "flake.lock"
   - "flake.nix"
   - "test.html"
