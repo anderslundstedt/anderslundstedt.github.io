@@ -10,6 +10,13 @@ mathematics. I might also be a possible supervisor.
 
 ## Upcoming, current and past courses
 
+- Fall 2026
+  - [*Logic in Computer Science and Artificial Intelligence*](https://www2.philosophy.su.se/goranko/Courses2026/LiCSAI-2026.html)  
+    teaching assistant
+    {% comment %}
+      archive URL:
+      https://web.archive.org/web/20260317004512/https://www.su.se/utbildning/utbildningskatalog/fi/filocs
+    {% endcomment %}
 - Spring 2024
   - [*Språkfilosofi I*](https://web.archive.org/web/20240227183229/https://www.su.se/sok-kurser-och-program/fipl1g-1.430085?semester=VT24&eventcode=10010)  
     [English: *Philosophy of language I*]  
