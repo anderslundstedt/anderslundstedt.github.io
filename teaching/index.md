@@ -13,6 +13,7 @@ mathematics. I might also be a possible supervisor.
 - Fall 2026
   - [*Logic in Computer Science and Artificial Intelligence*](https://www2.philosophy.su.se/goranko/Courses2026/LiCSAI-2026.html)  
     teaching assistant
+    - [*Introduction to Prolog (slides)*](LiCSAI-2026/lundstedt_introduction_to_prolog_2026.pdf)
     {% comment %}
       archive URL:
       https://web.archive.org/web/20260317004512/https://www.su.se/utbildning/utbildningskatalog/fi/filocs
@@ -39,7 +40,6 @@ mathematics. I might also be a possible supervisor.
 - Fall 2019:
   - [*Logic in Computer Science and Artificial Intelligence*](https://web.archive.org/web/20230222050428/https://sisu.it.su.se/search/archive_info/FILOCS/en)  
     teaching assistant
-    - [*Introduction to Prolog (slides)*](LiCSAI-2019/lundstedt_introduction_to_prolog_2019.pdf)
   - *Predikatlogik*
     [English: *Predicate logic*]  
     lecturer
